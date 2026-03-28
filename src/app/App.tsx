@@ -5,6 +5,7 @@ import { HowItWorks } from "./components/HowItWorks";
 import { FutureVision } from "./components/FutureVision";
 import { LeadCapture } from "./components/LeadCapture";
 import { Footer } from "./components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <FutureVision />
       <LeadCapture />
       <Footer />
+      <Analytics />
     </div>
   );
 }

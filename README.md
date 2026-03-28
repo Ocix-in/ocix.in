@@ -1,7 +1,7 @@
 
   # Implement Design Steps
 
-  This is a code bundle for Implement Design Steps. The original project is available at https://www.figma.com/design/HqLsnfbagmANrnPYM0goaH/Implement-Design-Steps.
+The landing Page for the ocix ecosystem.
 
   ## Running the code
 

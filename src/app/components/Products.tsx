@@ -195,10 +195,6 @@ export function Products() {
                 Future tools extend the same execution loop.
               </h3>
             </div>
-            <p className="max-w-xl text-sm leading-6 text-[#57534E]">
-              These should remain secondary until they become real products. The homepage should
-              earn trust by showing what exists first.
-            </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">

@@ -1,117 +1,214 @@
-import { motion, useMotionTemplate, useMotionValue } from "motion/react";
-import { GitBranch, Lock } from "lucide-react";
-import React from "react";
+import { motion } from "motion/react";
+import {
+  ArrowRight,
+  CalendarCheck2,
+  Github,
+  GitCommitHorizontal,
+  LineChart,
+  Lock,
+  Target,
+  TimerReset,
+  TriangleAlert,
+} from "lucide-react";
 
-const products = [
+const enforcementSteps = [
   {
-    name: "Vigilante",
-    status: "Live",
-    description: "Expose the gap between effort and output.",
-    detail: "Connects to Git activity to expose the gap between what a developer claims and what they actually ship. Enforces discipline through a strict scoring system.",
-    icon: GitBranch,
-    available: true,
+    title: "Audit the record",
+    description: "Start with a GitHub username and inspect the last 30 days of visible output.",
+    icon: Github,
   },
   {
-    name: "Coming Soon",
-    status: "In Development",
-    description: "Next-generation developer tools.",
-    detail: "More tools designed for serious execution are in development. No distractions. No compromises.",
-    icon: Lock,
-    available: false,
+    title: "Find the gaps",
+    description: "Surface quiet days, broken streaks, and the distance between intention and proof.",
+    icon: TriangleAlert,
+  },
+  {
+    title: "Set the rule",
+    description: "Use the no-zero-commit challenge to turn consistency into a simple daily line.",
+    icon: Target,
+  },
+  {
+    title: "Return to work",
+    description: "The product does not distract you with dashboards. It sends you back to shipping.",
+    icon: TimerReset,
   },
 ];
 
-function ProductCard({ product, index }: { product: any, index: number }) {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  function handleMouseMove({
-    currentTarget,
-    clientX,
-    clientY,
-  }: React.MouseEvent) {
-    const { left, top } = currentTarget.getBoundingClientRect();
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
-  }
-
-  const isVigilante = product.name === "Vigilante";
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ type: "spring", stiffness: 100, damping: 20 }}
-      whileHover={{ scale: 1.02 }}
-      onMouseMove={handleMouseMove}
-      onClick={() => isVigilante ? window.open("https://vigilante.ocix.in", "_blank") : null}
-      className={`relative p-8 rounded-xl bg-[#111827] border border-[#1F2937] hover:border-[#374151] transition-all overflow-hidden group ${isVigilante ? 'cursor-pointer' : 'cursor-default'}`}
-    >
-      <motion.div
-        className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
-        style={{
-          background: useMotionTemplate`
-            radial-gradient(
-              600px circle at ${mouseX}px ${mouseY}px,
-              rgba(34, 211, 238, 0.05),
-              transparent 80%
-            )
-          `,
-        }}
-      />
-      <div className="flex items-start justify-between mb-6 relative z-10">
-        <div className={`p-3 rounded-lg flex items-center justify-center ${product.available ? 'bg-[#22D3EE]/10' : 'bg-[#1F2937]/50'}`}>
-           <product.icon className={`w-8 h-8 ${product.available ? 'text-[#22D3EE]' : 'text-[#6B7280]'}`} />
-        </div>
-        <span
-          className={`px-3 py-1 rounded-full text-xs font-semibold ${
-            product.available
-              ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
-              : "bg-amber-500/10 text-amber-400 border border-amber-500/20"
-          }`}
-        >
-          {product.status}
-        </span>
-      </div>
-      <h3 className="text-2xl mb-3 font-semibold relative z-10">{product.name}</h3>
-      <p className="text-lg text-[#E5E7EB] mb-4 relative z-10">{product.description}</p>
-      <p className="text-[#9CA3AF] relative z-10">{product.detail}</p>
-    </motion.div>
-  );
-}
+const roadmapTools = [
+  {
+    name: "Execution Planner",
+    description: "Turn daily intention into a small, visible work plan.",
+    icon: CalendarCheck2,
+  },
+  {
+    name: "Consistency Tracker",
+    description: "Track streaks and patterns without creating another productivity chore.",
+    icon: LineChart,
+  },
+  {
+    name: "Focus Systems",
+    description: "Lightweight deep-work structures for builders, students, and creators.",
+    icon: Lock,
+  },
+];
 
 export function Products() {
   return (
-    <section id="products" className="px-6 py-24">
-      <div className="max-w-6xl mx-auto">
+    <section id="products" className="bg-white px-5 py-20 text-[#171717] sm:px-6 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-7xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="mb-16"
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="max-w-3xl"
         >
-          <h2 className="text-4xl md:text-5xl mb-4 font-bold tracking-tight">Products</h2>
-          <p className="text-xl text-[#9CA3AF]">Built for execution, not excuses.</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2563EB]">
+            Product ecosystem
+          </p>
+          <h2 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
+            OCIX starts with one clear behavior: prove the work happened.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-[#57534E]">
+            The ecosystem begins with Vigilante, a frontend-first GitHub productivity
+            auditor for developers who want accountability without accounts, setup, or noise.
+          </p>
         </motion.div>
 
-        <motion.div 
-           initial="hidden"
-           whileInView="visible"
-           viewport={{ once: true }}
-           variants={{
-             visible: {
-               transition: {
-                 staggerChildren: 0.1
-               }
-             }
-           }}
-           className="grid md:grid-cols-2 gap-6"
+        <div className="mt-12 grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+          <motion.article
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            className="rounded-lg border border-[#E7E5E4] bg-[#FAFAF8] p-6 sm:p-8"
+          >
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-[#171717] text-white">
+                  <GitCommitHorizontal className="h-6 w-6" aria-hidden="true" />
+                </div>
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2563EB]">
+                  Live now
+                </p>
+                <h3 className="mt-3 text-3xl font-semibold tracking-normal sm:text-4xl">
+                  Vigilante
+                </h3>
+              </div>
+              <span className="w-fit rounded-full border border-[#BBF7D0] bg-[#F0FDF4] px-3 py-1 text-sm font-semibold text-[#15803D]">
+                No signup
+              </span>
+            </div>
+
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#57534E]">
+              Vigilante audits public GitHub activity so developers can see whether they are
+              building consistently. It is not a motivational app. It is a mirror for output.
+            </p>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+              <div className="rounded-lg border border-[#E7E5E4] bg-white p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#78716C]">
+                  Input
+                </p>
+                <p className="mt-2 text-base font-semibold">GitHub username</p>
+              </div>
+              <div className="rounded-lg border border-[#E7E5E4] bg-white p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#78716C]">
+                  Output
+                </p>
+                <p className="mt-2 text-base font-semibold">Consistency audit</p>
+              </div>
+              <div className="rounded-lg border border-[#E7E5E4] bg-white p-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#78716C]">
+                  Loop
+                </p>
+                <p className="mt-2 text-base font-semibold">7-day challenge</p>
+              </div>
+            </div>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="https://vigilante.ocix.in"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#171717] px-5 py-3 font-semibold text-white transition-colors hover:bg-[#2B2926]"
+              >
+                Run GitHub Audit
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <a
+                href="https://vigilante.ocix.in/#mechanism"
+                className="inline-flex min-h-12 items-center justify-center rounded-lg border border-[#D9D6CF] bg-white px-5 py-3 font-semibold text-[#171717] transition-colors hover:border-[#BEB8AD]"
+              >
+                See how Vigilante works
+              </a>
+            </div>
+          </motion.article>
+
+          <motion.div
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+            className="rounded-lg border border-[#E7E5E4] bg-[#171717] p-6 text-white sm:p-8"
+          >
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#93C5FD]">
+              Enforcement model
+            </p>
+            <h3 className="mt-3 text-3xl font-semibold tracking-normal">
+              Proof before planning.
+            </h3>
+            <p className="mt-4 leading-7 text-[#D4D4D4]">
+              OCIX products should push users through a clear behavior loop instead of
+              asking them to organize forever.
+            </p>
+
+            <div className="mt-7 space-y-4">
+              {enforcementSteps.map((step, index) => (
+                <div key={step.title} className="flex gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-4">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-[#171717]">
+                    <step.icon className="h-5 w-5" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-white">
+                      {String(index + 1).padStart(2, "0")}. {step.title}
+                    </p>
+                    <p className="mt-1 text-sm leading-6 text-[#A3A3A3]">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-14"
         >
-          {products.map((product, index) => (
-            <ProductCard key={product.name} product={product} index={index} />
-          ))}
+          <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#78716C]">
+                Planned ecosystem
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold tracking-normal">
+                Future tools extend the same execution loop.
+              </h3>
+            </div>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {roadmapTools.map((tool) => (
+              <article
+                key={tool.name}
+                className="rounded-lg border border-[#E7E5E4] bg-[#FAFAF8] p-5"
+              >
+                <tool.icon className="h-5 w-5 text-[#2563EB]" aria-hidden="true" />
+                <h4 className="mt-4 text-lg font-semibold">{tool.name}</h4>
+                <p className="mt-2 text-sm leading-6 text-[#57534E]">{tool.description}</p>
+              </article>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

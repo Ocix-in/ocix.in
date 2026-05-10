@@ -14,19 +14,19 @@ export function Footer() {
           className="flex flex-col md:flex-row justify-between items-center gap-6"
         >
           <div>
-            <h3 className="text-2xl mb-2">Ocix</h3>
+            <p className="text-2xl mb-2">OCIX</p>
             <p className="text-[#9CA3AF]">Built for execution.</p>
           </div>
 
           <div className="flex gap-8 text-sm">
-            <a href="#" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
-              Documentation
+            <a href="#products" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
+              Products
             </a>
-            <a href="#" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
-              Privacy
+            <a href="https://vigilante.ocix.in" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
+              Vigilante
             </a>
-            <a href="#" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
-              Terms
+            <a href="#request-access" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
+              Request Access
             </a>
           </div>
         </motion.div>

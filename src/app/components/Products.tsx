@@ -54,7 +54,7 @@ const roadmapTools = [
 
 export function Products() {
   return (
-    <section id="products" className="bg-white px-5 py-20 text-[#171717] sm:px-6 lg:px-8 lg:py-28">
+    <section id="products" className="bg-white px-5 py-20 text-[#171717] sm:px-6 lg:px-8 lg:py-28" aria-labelledby="products-title">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -66,12 +66,12 @@ export function Products() {
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2563EB]">
             Product ecosystem
           </p>
-          <h2 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
-            OCIX starts with one clear behavior: prove the work happened.
+          <h2 id="products-title" className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
+            OCIX starts with one clear behavior: PROVE the work happened.
           </h2>
           <p className="mt-5 text-lg leading-8 text-[#57534E]">
-            The ecosystem begins with Vigilante, a frontend-first GitHub productivity
-            auditor for developers who want accountability without accounts, setup, or noise.
+            The ecosystem begins with Vigilante, a GitHub productivity
+            auditor for developers who want accountability with very less friction.
           </p>
         </motion.div>
 
@@ -101,7 +101,7 @@ export function Products() {
             </div>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#57534E]">
-              Vigilante audits public GitHub activity so developers can see whether they are
+              Vigilante audits GitHub activity so developers can see whether they are
               building consistently. It is not a motivational app. It is a mirror for output.
             </p>
 
@@ -120,7 +120,7 @@ export function Products() {
               </div>
               <div className="rounded-lg border border-[#E7E5E4] bg-white p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#78716C]">
-                  Loop
+                  TRY
                 </p>
                 <p className="mt-2 text-base font-semibold">7-day challenge</p>
               </div>

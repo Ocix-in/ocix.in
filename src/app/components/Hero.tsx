@@ -9,7 +9,7 @@ const proofPoints = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#FAFAF8] px-5 py-8 text-[#171717] sm:px-6 lg:px-8">
+    <section className="relative min-h-screen overflow-hidden bg-[#FAFAF8] px-5 py-8 text-[#171717] sm:px-6 lg:px-8" aria-labelledby="hero-title">
       <div
         className="pointer-events-none absolute inset-0 opacity-70"
         style={{
@@ -49,7 +49,7 @@ export function Hero() {
               Result-driven productivity tools. No fluffs.
             </div>
 
-            <h1 className="max-w-5xl text-balance text-5xl font-semibold leading-[1.02] tracking-normal text-[#171717] sm:text-6xl lg:text-7xl">
+            <h1 id="hero-title" className="max-w-5xl text-balance text-5xl font-semibold leading-[1.02] tracking-normal text-[#171717] sm:text-6xl lg:text-7xl">
               Build with proof. Stay consistent without excuses.
             </h1>
 

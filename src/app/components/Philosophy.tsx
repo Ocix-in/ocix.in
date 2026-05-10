@@ -8,7 +8,7 @@ const statements = [
 
 export function Philosophy() {
   return (
-    <section className="px-6 py-24 bg-[#111827]">
+    <section id="philosophy" className="px-6 py-24 bg-[#111827]" aria-labelledby="philosophy-title">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,7 +17,7 @@ export function Philosophy() {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-4xl md:text-5xl mb-4">Philosophy</h2>
+          <h2 id="philosophy-title" className="text-4xl md:text-5xl mb-4">Philosophy</h2>
         </motion.div>
 
         <div className="space-y-8">

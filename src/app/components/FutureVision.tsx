@@ -3,7 +3,7 @@ import { Layers } from "lucide-react";
 
 export function FutureVision() {
   return (
-    <section className="px-6 py-24 bg-[#111827]">
+    <section id="ecosystem" className="px-6 py-24 bg-[#111827]" aria-labelledby="ecosystem-title">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -13,7 +13,7 @@ export function FutureVision() {
           className="text-center"
         >
           <Layers className="w-16 h-16 mx-auto mb-6 text-[#22D3EE]" />
-          <h2 className="text-4xl md:text-5xl mb-6">The Ecosystem</h2>
+          <h2 id="ecosystem-title" className="text-4xl md:text-5xl mb-6">The Ecosystem</h2>
           <p className="text-xl md:text-2xl text-[#9CA3AF] max-w-3xl mx-auto mb-8">
             Ocix is not a single product. It's a complete ecosystem built for developers who execute.
           </p>

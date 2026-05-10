@@ -24,7 +24,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="px-6 py-24">
+    <section id="how-it-works" className="px-6 py-24" aria-labelledby="how-it-works-title">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-4xl md:text-5xl mb-4">How It Works</h2>
+          <h2 id="how-it-works-title" className="text-4xl md:text-5xl mb-4">How It Works</h2>
           <p className="text-xl text-[#9CA3AF]">Three steps. Zero complexity.</p>
         </motion.div>
 

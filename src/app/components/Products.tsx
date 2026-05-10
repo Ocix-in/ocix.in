@@ -54,7 +54,7 @@ const roadmapTools = [
 
 export function Products() {
   return (
-    <section id="products" className="bg-white px-5 py-20 text-[#171717] sm:px-6 lg:px-8 lg:py-28">
+    <section id="products" className="bg-white px-5 py-20 text-[#171717] sm:px-6 lg:px-8 lg:py-28" aria-labelledby="products-title">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -66,7 +66,7 @@ export function Products() {
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2563EB]">
             Product ecosystem
           </p>
-          <h2 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
+          <h2 id="products-title" className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
             OCIX starts with one clear behavior: prove the work happened.
           </h2>
           <p className="mt-5 text-lg leading-8 text-[#57534E]">

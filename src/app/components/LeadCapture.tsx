@@ -6,7 +6,7 @@ export function LeadCapture() {
   const [state, handleSubmit] = useForm("mqeggddz");
 
   return (
-    <section id="request-access" className="px-6 py-24">
+    <section id="request-access" className="px-6 py-24" aria-labelledby="request-access-title">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,7 +15,7 @@ export function LeadCapture() {
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl mb-4 font-bold tracking-tight">Request Access</h2>
+          <h2 id="request-access-title" className="text-4xl md:text-5xl mb-4 font-bold tracking-tight">Request Access</h2>
           <p className="text-xl text-[#9CA3AF]">
             Limited early access. No waitlist games.
           </p>

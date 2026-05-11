@@ -96,7 +96,7 @@ export function Products() {
                 </h3>
               </div>
               <span className="w-fit rounded-full border border-[#BBF7D0] bg-[#F0FDF4] px-3 py-1 text-sm font-semibold text-[#15803D]">
-                No signup
+                Auto-proof 
               </span>
             </div>
 
@@ -139,6 +139,27 @@ export function Products() {
                 className="inline-flex min-h-12 items-center justify-center rounded-lg border border-[#D9D6CF] bg-white px-5 py-3 font-semibold text-[#171717] transition-colors hover:border-[#BEB8AD]"
               >
                 See how Vigilante works
+              </a>
+            </div>
+
+            <div className="mt-8 border-t border-[#E7E5E4] pt-6">
+              <p className="mb-3 text-sm font-medium text-[#57534E]">
+                Featured on Product Hunt
+              </p>
+              <a
+                href="https://www.producthunt.com/products/vigilante-3?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-vigilante-3"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Vigilante on Product Hunt"
+                className="inline-flex w-fit rounded-lg transition-opacity hover:opacity-85"
+              >
+                <img
+                  alt="Vigilante - Either you build or You don't belong here | Product Hunt"
+                  width="250"
+                  height="54"
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1143843&theme=light&t=1778528463161"
+                  loading="lazy"
+                />
               </a>
             </div>
           </motion.article>

@@ -18,7 +18,7 @@ export function Footer() {
             <p className="text-[#9CA3AF]">Built for execution.</p>
           </div>
 
-          <div className="flex gap-8 text-sm">
+          <div className="flex flex-wrap justify-center gap-6 text-sm md:justify-end">
             <a href="#products" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
               Products
             </a>
@@ -27,6 +27,18 @@ export function Footer() {
             </a>
             <a href="#request-access" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
               Request Access
+            </a>
+            <a href="mailto:support@ocix.in" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
+              Email
+            </a>
+            <a href="https://x.com/Ocixdotin" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
+              X
+            </a>
+            <a href="https://www.instagram.com/ocix.in" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
+              Instagram
+            </a>
+            <a href="https://www.reddit.com/user/ocix_dot_in/" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
+              Reddit
             </a>
           </div>
         </motion.div>

@@ -1,112 +1,107 @@
 import { motion } from "motion/react";
-import { ArrowRight } from "lucide-react";
-import { useForm, ValidationError } from "@formspree/react";
+import { ArrowRight, Github, LockKeyhole, MousePointerClick, TimerReset } from "lucide-react";
+
+const steps = [
+  {
+    title: "Open Vigilante",
+    description: "Simply login with your GitHub username. No accounts, setup, or permissions required.",
+    icon: MousePointerClick,
+  },
+  {
+    title: "Enter GitHub",
+    description: "Select the Github repository you want to audit.",
+    icon: Github,
+  },
+  {
+    title: "Start the rule",
+    description: "Start the no-zero-commit challenge until you think your project will be completed.",
+    icon: TimerReset,
+  },
+];
 
 export function LeadCapture() {
-  const [state, handleSubmit] = useForm("mqeggddz");
-
   return (
-    <section id="request-access" className="px-6 py-24" aria-labelledby="request-access-title">
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="text-center mb-12"
-        >
-          <h2 id="request-access-title" className="text-4xl md:text-5xl mb-4 font-bold tracking-tight">Request Access</h2>
-          <p className="text-xl text-[#9CA3AF]">
-            Limited early access. No waitlist games.
-          </p>
-        </motion.div>
-
-        {state.succeeded ? (
+    <section
+      id="request-access"
+      className="bg-[#171717] px-5 py-20 text-white sm:px-6 lg:px-8 lg:py-28"
+      aria-labelledby="request-access-title"
+    >
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-10 lg:grid-cols-[1fr_0.85fr] lg:items-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-[#111827] border border-[#22D3EE]/30 rounded-xl p-12 shadow-2xl relative overflow-hidden text-center"
-          >
-            <div className="absolute top-0 right-0 w-64 h-64 opacity-20 blur-3xl rounded-full bg-[#22D3EE] pointer-events-none"></div>
-            <h3 className="text-3xl font-bold mb-4 text-white relative z-10">Request Received</h3>
-            <p className="text-[#9CA3AF] relative z-10">We'll review your request and get back to you soon. Keep building.</p>
-          </motion.div>
-        ) : (
-          <motion.form
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }}
-            onSubmit={handleSubmit}
-            className="bg-[#111827] border border-[#1F2937] rounded-xl p-8 shadow-2xl relative overflow-hidden group"
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="absolute top-0 right-0 p-32 opacity-10 blur-3xl rounded-full bg-[#22D3EE] pointer-events-none group-hover:opacity-20 transition-opacity duration-1000"></div>
-
-            <div className="space-y-6 relative z-10">
-              <div className="relative">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  className="peer w-full px-4 pt-6 pb-2 rounded-lg bg-[#0B0F1A] border border-[#1F2937] text-[#E5E7EB] placeholder-transparent focus:outline-none focus:ring-2 focus:ring-[#22D3EE]/30 focus:border-[#22D3EE] transition-all"
-                  placeholder="your@email.com"
-                  required
-                />
-                <label htmlFor="email" className="absolute left-4 top-2 text-xs font-medium text-[#9CA3AF] transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs peer-focus:text-[#22D3EE] pointer-events-none">
-                  Email
-                </label>
-                <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-sm mt-1" />
-              </div>
-
-              <div className="relative">
-                <select
-                  id="role"
-                  name="role"
-                  defaultValue=""
-                  className="peer w-full px-4 pt-6 pb-2 rounded-lg bg-[#0B0F1A] border border-[#1F2937] text-[#E5E7EB] focus:outline-none focus:ring-2 focus:ring-[#22D3EE]/30 focus:border-[#22D3EE] transition-all appearance-none"
-                  required
-                >
-                  <option value="" disabled className="text-gray-500">Select...</option>
-                  <option value="developer">Developer</option>
-                  <option value="student">Student</option>
-                  <option value="founder">Founder</option>
-                  <option value="other">Other</option>
-                </select>
-                <label htmlFor="role" className="absolute left-4 top-2 text-xs font-medium text-[#9CA3AF] transition-all peer-focus:text-[#22D3EE] pointer-events-none">
-                  Role
-                </label>
-                <ValidationError prefix="Role" field="role" errors={state.errors} className="text-red-500 text-sm mt-1" />
-              </div>
-
-              <motion.div
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.99 }}
-                className="relative group/btn cursor-pointer"
-              >
-                 <div className="absolute -inset-0.5 bg-[#22D3EE] rounded-lg opacity-40 blur-md group-hover/btn:opacity-60 transition duration-500"></div>
-                 <button
-                    type="submit"
-                    disabled={state.submitting}
-                    className="relative w-full px-8 py-4 rounded-lg text-white flex items-center justify-center gap-2 bg-[#0B0F1A] shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)] border border-[#1F2937] font-semibold tracking-wide overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed"
-                 >
-                   <div className="absolute inset-0 opacity-10 bg-[linear-gradient(90deg,#22D3EE,#A855F7)] pointer-events-none"></div>
-                   {state.submitting ? "Sending..." : "Request Access"}
-                   {!state.submitting && <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />}
-                 </button>
-              </motion.div>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.06] px-3 py-1.5 text-sm font-medium text-[#E5E5E5]">
+              <LockKeyhole className="h-4 w-4 text-[#93C5FD]" aria-hidden="true" />
+              No login. No waitlist. No access request.
             </div>
-          </motion.form>
-        )}
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-center text-sm text-[#6B7280] mt-6 font-medium"
-        >
-          We review every request. No spam. No mass invites.
-        </motion.p>
+            <h2
+              id="request-access-title"
+              className="max-w-4xl text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl lg:text-6xl"
+            >
+              Start with the audit. Let the proof decide what happens next.
+            </h2>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#D4D4D4]">
+              OCIX does not need an onboarding maze right now. Vigilante is already live:
+              run the GitHub audit, see the consistency record, and use the result to decide whether you want to keep proving your work with Vigilante.
+            </p>
+
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="https://vigilante.ocix.in"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-white px-6 py-3 text-base font-semibold text-[#171717] transition-colors hover:bg-[#E5E5E5]"
+              >
+                Run GitHub Audit
+                <ArrowRight className="h-5 w-5" aria-hidden="true" />
+              </a>
+              <a
+                href="https://vigilante.ocix.in/#challenge"
+                className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-white/[0.08]"
+              >
+                View 7-day challenge
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+            className="rounded-lg border border-white/10 bg-white/[0.04] p-4 sm:p-5"
+          >
+            <div className="rounded-lg border border-white/10 bg-[#101010] p-5">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#93C5FD]">
+                Simplest onboarding
+              </p>
+              <div className="mt-6 space-y-4">
+                {steps.map((step, index) => (
+                  <article key={step.title} className="flex gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white text-[#171717]">
+                      <step.icon className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-white">
+                        {String(index + 1).padStart(2, "0")}. {step.title}
+                      </h3>
+                      <p className="mt-1 text-sm leading-6 text-[#A3A3A3]">
+                        {step.description}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <p className="mt-5 text-sm leading-6 text-[#A3A3A3]">
+              Once, you make a habit of proving your work, Later you can buy premium features like productivity insights, public profile sharing, more than one project tracking, and more. But you can start with the proof right now.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

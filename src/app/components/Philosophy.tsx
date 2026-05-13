@@ -11,19 +11,19 @@ const principles = [
   {
     title: "Friction stays low",
     description:
-      "The first action should be obvious, fast, and useful before accounts or complex setup.",
+      "No complex setup, just 1-click login, add task and continue",
     icon: Gauge,
   },
   {
     title: "Systems stay honest",
     description:
-      "A good productivity tool makes missed days visible without turning the product into punishment theater.",
+      "OCIX tools make missed days visible without turning the product into punishment theater.",
     icon: ShieldCheck,
   },
   {
     title: "The ecosystem compounds",
     description:
-      "Each future product should connect to the same loop: choose the work, verify the output, return with better context.",
+      "Each future product will connect to the same loop: choose the work, verify the output, return with better context.",
     icon: Layers2,
   },
 ];
@@ -53,7 +53,7 @@ export function Philosophy() {
               OCIX is built around execution, not productivity theater.
             </h2>
             <p className="mt-5 text-lg leading-8 text-[#57534E]">
-              The brand should feel calm, but the product logic should be firm. We help users
+              We help users
               reduce self-negotiation by making progress visible and the next action clear.
             </p>
           </motion.div>

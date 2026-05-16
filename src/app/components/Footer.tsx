@@ -1,56 +1,113 @@
 import { motion } from "motion/react";
+import { ArrowUpRight } from "lucide-react";
+
+const footerGroups = [
+  {
+    title: "Product",
+    links: [
+      { label: "Vigilante", href: "https://vigilante.ocix.in", external: true },
+      { label: "7-day challenge", href: "https://vigilante.ocix.in/#challenge", external: true },
+    ],
+  },
+  {
+    title: "Workflows",
+    links: [
+      { label: "Deep work", href: "#philosophy" },
+      { label: "Consistency tracking", href: "#how-it-works" },
+      { label: "Anti-procrastination", href: "#ecosystem" },
+    ],
+  },
+  {
+    title: "OCIX",
+    links: [
+      { label: "Operating principles", href: "#philosophy" },
+      { label: "How it works", href: "#how-it-works" },
+      { label: "Testimonials", href: "#testimonials" },
+      { label: "Start now", href: "#request-access" },
+    ],
+  },
+  {
+    title: "Connect",
+    links: [
+      { label: "Email", href: "mailto:support@ocix.in", external: true },
+      { label: "X", href: "https://x.com/Ocixdotin", external: true },
+      { label: "Instagram", href: "https://www.instagram.com/ocix.in", external: true },
+      { label: "Reddit", href: "https://www.reddit.com/user/ocix_dot_in/", external: true },
+    ],
+  },
+];
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="px-6 py-12 border-t border-[#1F2937]">
-      <div className="max-w-6xl mx-auto">
+    <footer className="border-t border-[#E7E5E4] bg-[#FAFAF8] px-5 py-14 text-[#171717] sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row justify-between items-center gap-6"
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="grid gap-10 lg:grid-cols-[1.1fr_1.4fr]"
         >
           <div>
-            <p className="text-2xl mb-2">OCIX</p>
-            <p className="text-[#9CA3AF]">Built for execution.</p>
+            <a href="/" aria-label="OCIX home" className="inline-flex items-center">
+              <img
+                src="/assets/ocix-logo.png"
+                alt="OCIX"
+                className="h-11 w-auto object-contain"
+              />
+            </a>
+            <p className="mt-5 max-w-md text-base leading-7 text-[#57534E]">
+              Frontend-first productivity tools for people who want execution they can verify.
+              Start with Vigilante, the GitHub consistency auditor.
+            </p>
+            <a
+              href="https://vigilante.ocix.in"
+              className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#171717] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#2B2926]"
+            >
+              Run GitHub Audit
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+            </a>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 text-sm md:justify-end">
-            <a href="#products" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
-              Products
-            </a>
-            <a href="https://vigilante.ocix.in" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
-              Vigilante
-            </a>
-            <a href="#request-access" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
-              Request Access
-            </a>
-            <a href="mailto:support@ocix.in" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
-              Email
-            </a>
-            <a href="https://x.com/Ocixdotin" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
-              X
-            </a>
-            <a href="https://www.instagram.com/ocix.in" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
-              Instagram
-            </a>
-            <a href="https://www.reddit.com/user/ocix_dot_in/" className="text-[#9CA3AF] hover:text-[#E5E7EB] transition-colors">
-              Reddit
-            </a>
-          </div>
+          <nav aria-label="Footer navigation" className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {footerGroups.map((group) => (
+              <div key={group.title}>
+                <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-[#78716C]">
+                  {group.title}
+                </h2>
+                <ul className="mt-4 space-y-3">
+                  {group.links.map((link) => (
+                    <li key={`${group.title}-${link.label}`}>
+                      <a
+                        href={link.href}
+                        target={link.external ? "_blank" : undefined}
+                        rel={link.external ? "noopener noreferrer" : undefined}
+                        className="inline-flex items-center gap-1 text-sm font-medium text-[#3F3A34] transition-colors hover:text-[#171717]"
+                      >
+                        {link.label}
+                        {link.external ? (
+                          <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+                        ) : null}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </nav>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-8 pt-8 border-t border-[#1F2937] text-center text-sm text-[#6B7280]"
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, delay: 0.08 }}
+          className="mt-12 flex flex-col gap-4 border-t border-[#E7E5E4] pt-6 text-sm text-[#78716C] sm:flex-row sm:items-center sm:justify-between"
         >
-          <p>© {currentYear} Ocix. Built for serious developers only.</p>
+          <p>© {currentYear} OCIX. Built for visible execution.</p>
+          {/* <p>Check out our <a href="/privacy" className="text-[#171717] hover:underline">Privacy Policy</a> and <a href="/terms" className="text-[#171717] hover:underline">Terms of Service</a>.</p> */}
         </motion.div>
       </div>
     </footer>

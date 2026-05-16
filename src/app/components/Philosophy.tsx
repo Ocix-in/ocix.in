@@ -11,7 +11,7 @@ const principles = [
   {
     title: "Friction stays low",
     description:
-      "No complex setup, just 1-click login, add task and continue",
+      "Give users value before heavy setup. Ask for sign-in only when monitoring or saved progress needs it.",
     icon: Gauge,
   },
   {
@@ -53,8 +53,8 @@ export function Philosophy() {
               OCIX is built around execution, not productivity theater.
             </h2>
             <p className="mt-5 text-lg leading-8 text-[#57534E]">
-              We help users
-              reduce self-negotiation by making progress visible and the next action clear.
+              We help users across different niches reduce self-negotiation by making progress
+              visible and the next action clear.
             </p>
           </motion.div>
 

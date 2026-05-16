@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { ArrowRight, CheckCircle2, Github, ShieldCheck } from "lucide-react";
 
 const proofPoints = [
-  "30-day GitHub activity scan",
-  "Inactive gap detection",
-  "No-zero-commit challenge",
+  "Free public GitHub audit",
+  "Continuous monitoring with GitHub sign-in",
+  "Built for niche consistency systems",
 ];
 
 export function Hero() {
@@ -46,17 +46,17 @@ export function Hero() {
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#D9D6CF] bg-white px-3 py-1.5 text-sm font-medium text-[#3F3A34] shadow-sm">
               <ShieldCheck className="h-4 w-4 text-[#2563EB]" aria-hidden="true" />
-              Result-driven productivity tools. No fluffs.
+              Productivity tools for consistency. No fluff.
             </div>
 
             <h1 id="hero-title" className="max-w-5xl text-balance text-5xl font-semibold leading-[1.02] tracking-normal text-[#171717] sm:text-6xl lg:text-7xl">
-              Build with proof. Stay consistent without excuses.
+              Consistency systems for people who need to keep showing up.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#57534E] sm:text-xl">
-              OCIX is a productivity ecosystem for people who want execution they can verify.
-              The first product, Vigilante, audits your GitHub activity and turns consistency
-              into something visible.
+              OCIX is the parent ecosystem for focused productivity tools across niches like
+              developers, students, founders, creators, and fitness enthusiasts. The first
+              launched product, Vigilante, helps developers audit and monitor GitHub consistency.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -64,7 +64,7 @@ export function Hero() {
                 href="https://vigilante.ocix.in"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#171717] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#2B2926]"
               >
-                Run GitHub Audit
+                Run free GitHub audit
                 <Github className="h-5 w-5" aria-hidden="true" />
               </a>
               <button
@@ -72,7 +72,7 @@ export function Hero() {
                 onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })}
                 className="inline-flex min-h-12 items-center justify-center rounded-lg border border-[#D9D6CF] bg-white px-6 py-3 text-base font-semibold text-[#171717] shadow-sm transition-colors hover:border-[#BEB8AD]"
               >
-                See the OCIX flow
+                See how OCIX works
               </button>
             </div>
 
@@ -114,7 +114,7 @@ export function Hero() {
                 <p><span className="text-[#60A5FA]">$</span> audit --last-30-days</p>
                 <p className="mt-3 text-[#A3E635]">[SCAN] Commit frequency detected.</p>
                 <p className="text-[#FBBF24]">[SCAN] Inactive gaps detected.</p>
-                <p className="text-[#F87171]">[RESULT] No motivation. Just proof.</p>
+                <p className="text-[#F87171]">[NEXT] Sign in to start continuous monitoring.</p>
               </div>
 
               <div className="mt-5 grid gap-3 sm:grid-cols-3">
@@ -134,7 +134,7 @@ export function Hero() {
                   <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#78716C]">
                     Mode
                   </p>
-                  <p className="mt-2 text-2xl font-semibold">Audit</p>
+                  <p className="mt-2 text-2xl font-semibold">Preview</p>
                 </div>
               </div>
 
@@ -143,7 +143,7 @@ export function Hero() {
                   The enforcement loop
                 </p>
                 <p className="mt-2 text-sm leading-6 text-[#57534E]">
-                  Set the rule, check the proof, expose missed days, and return to the work.
+                  Check your public record first. Sign in with GitHub when you want ongoing monitoring.
                 </p>
               </div>
             </div>

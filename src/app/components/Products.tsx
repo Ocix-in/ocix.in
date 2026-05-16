@@ -14,7 +14,7 @@ import {
 const enforcementSteps = [
   {
     title: "Audit the record",
-    description: "Start with a GitHub username and inspect the last 30 days of visible output.",
+    description: "Start with a public GitHub username and inspect the last 30 days of visible output.",
     icon: Github,
   },
   {
@@ -24,7 +24,7 @@ const enforcementSteps = [
   },
   {
     title: "Set the rule",
-    description: "Use the no-zero-commit challenge to turn consistency into a simple daily line.",
+    description: "Sign in with GitHub when you want the no-zero-commit challenge monitored continuously.",
     icon: Target,
   },
   {
@@ -67,11 +67,12 @@ export function Products() {
             Product ecosystem
           </p>
           <h2 id="products-title" className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
-            OCIX starts with one clear behavior: PROVE the work happened.
+            OCIX starts with one clear behavior: prove the work happened.
           </h2>
           <p className="mt-5 text-lg leading-8 text-[#57534E]">
-            The ecosystem begins with Vigilante, a GitHub productivity
-            auditor for developers who want accountability with very less friction.
+            The ecosystem begins with Vigilante, a GitHub productivity auditor for
+            developers who want a quick consistency check and the option to turn it into
+            ongoing accountability.
           </p>
         </motion.div>
 
@@ -96,13 +97,14 @@ export function Products() {
                 </h3>
               </div>
               <span className="w-fit rounded-full border border-[#BBF7D0] bg-[#F0FDF4] px-3 py-1 text-sm font-semibold text-[#15803D]">
-                Auto-proof 
+                Live
               </span>
             </div>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#57534E]">
-              Vigilante audits GitHub activity so developers can see whether they are
-              building consistently. It is not a motivational app. It is a mirror for output.
+              Vigilante gives developers a free public GitHub audit first. If they want
+              continued tracking, they can sign in with GitHub on My Vigilante and start
+              monitored accountability.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
@@ -110,19 +112,19 @@ export function Products() {
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#78716C]">
                   Input
                 </p>
-                <p className="mt-2 text-base font-semibold">GitHub username</p>
+                <p className="mt-2 text-base font-semibold">Public username</p>
               </div>
               <div className="rounded-lg border border-[#E7E5E4] bg-white p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#78716C]">
                   Output
                 </p>
-                <p className="mt-2 text-base font-semibold">Consistency audit</p>
+                <p className="mt-2 text-base font-semibold">Basic audit</p>
               </div>
               <div className="rounded-lg border border-[#E7E5E4] bg-white p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#78716C]">
-                  TRY
+                  Upgrade
                 </p>
-                <p className="mt-2 text-base font-semibold">7-day challenge</p>
+                <p className="mt-2 text-base font-semibold">GitHub sign-in</p>
               </div>
             </div>
 
@@ -131,14 +133,14 @@ export function Products() {
                 href="https://vigilante.ocix.in"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#171717] px-5 py-3 font-semibold text-white transition-colors hover:bg-[#2B2926]"
               >
-                Run GitHub Audit
+                Run free GitHub audit
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
               <a
-                href="https://vigilante.ocix.in/#mechanism"
+                href="https://myvigilante.ocix.in"
                 className="inline-flex min-h-12 items-center justify-center rounded-lg border border-[#D9D6CF] bg-white px-5 py-3 font-semibold text-[#171717] transition-colors hover:border-[#BEB8AD]"
               >
-                See how Vigilante works
+                Start monitored challenge
               </a>
             </div>
 

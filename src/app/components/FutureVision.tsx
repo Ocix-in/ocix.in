@@ -9,13 +9,13 @@ const ecosystemTracks = [
       "Vigilante turns GitHub activity into a visible consistency record for builders.",
     icon: Code2,
   },
-  {
-    status: "Planned",
-    title: "Student execution",
-    description:
-      "Study sessions, revision cycles, and assignment progress shaped around proof of work.",
-    icon: BookOpenCheck,
-  },
+  // {
+  //   status: "Planned",
+  //   title: "Student execution",
+  //   description:
+  //     "Study sessions, revision cycles, and assignment progress shaped around proof of work.",
+  //   icon: BookOpenCheck,
+  // },
   {
     status: "Planned",
     title: "Creator consistency",
@@ -25,7 +25,14 @@ const ecosystemTracks = [
   },
   {
     status: "Planned",
-    title: "Founder operating rhythm",
+    title: "Fitness consistency",
+    description:
+      "Habit loops that help fitness enthusiasts track effort, missed days, and routine momentum.",
+    icon: Users,
+  },
+  {
+    status: "Planned",
+    title: "Solo founder rhythm",
     description:
       "A lightweight execution layer for weekly priorities, shipping cadence, and accountability.",
     icon: Users,
@@ -58,7 +65,7 @@ export function FutureVision() {
               id="ecosystem-title"
               className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl"
             >
-              One live product now. A broader execution system over time.
+              One live product now. Niche consistency systems over time.
             </h2>
           </div>
         </motion.div>

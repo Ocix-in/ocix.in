@@ -6,21 +6,21 @@ const steps = [
     number: "01",
     title: "Audit your current consistency",
     description:
-      "Start with public activity. No login, OAuth, database, or onboarding wall is needed to check the current state of consistency.",
+      "Start with a public activity check. For Vigilante, a GitHub username is enough to preview the consistency record.",
     icon: ChartBarIncreasing,
   },
   {
     number: "02",
     title: "Read the consistency record",
     description:
-      "Ocix products turns recent activity into signals users can understand: active days, quiet gaps, and streak behavior.",
+      "OCIX products turn recent behavior into signals users can understand: active days, quiet gaps, and streak behavior.",
     icon: ClipboardCheck,
   },
   {
     number: "03",
     title: "Choose the next rule",
     description:
-      "Join the small, achievable loop: pick a rule, build the habit, and return to check the record tomorrow.",
+      "Move from preview to commitment. For Vigilante, that means GitHub sign-in, repository selection, and a monitored rule.",
     icon: ListChecks,
   },
   {

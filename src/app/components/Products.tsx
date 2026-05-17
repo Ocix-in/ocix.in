@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import {
   ArrowRight,
   CalendarCheck2,
+  CheckCircle2,
   Github,
   GitCommitHorizontal,
   LineChart,
@@ -49,6 +50,37 @@ const roadmapTools = [
     name: "Focus Systems",
     description: "Lightweight deep-work structures for builders, students, and creators.",
     icon: Lock,
+  },
+];
+
+const funnelOptions = [
+  {
+    title: "Free public audit",
+    eyebrow: "vigilante.ocix.in",
+    description:
+      "A low-friction preview for developers who want to check their recent GitHub consistency before creating an account.",
+    cta: "Run free audit",
+    href: "https://vigilante.ocix.in",
+    features: [
+      "Enter a public GitHub username",
+      "Preview recent activity and inactive gaps",
+      "Understand whether the work is visible",
+      "No OAuth required for the basic report",
+    ],
+  },
+  {
+    title: "Monitored challenge",
+    eyebrow: "myvigilante.ocix.in",
+    description:
+      "The committed path for developers who want Vigilante to track a repository and hold the no-zero-commit rule over time.",
+    cta: "Start monitored challenge",
+    href: "https://myvigilante.ocix.in",
+    features: [
+      "Sign in with GitHub OAuth",
+      "Select the repository to monitor",
+      "Track the no-zero-commit challenge",
+      "Unlock ongoing accountability and insights",
+    ],
   },
 ];
 
@@ -201,6 +233,56 @@ export function Products() {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-10 rounded-lg border border-[#E7E5E4] bg-[#FAFAF8] p-5 sm:p-6"
+        >
+          <div className="mb-6 max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#2563EB]">
+              Conversion flow
+            </p>
+            <h3 className="mt-2 text-2xl font-semibold tracking-normal sm:text-3xl">
+              Try the proof first. Commit when the result matters.
+            </h3>
+            <p className="mt-3 text-base leading-7 text-[#57534E]">
+              Vigilante should not force account creation before proving value. The public audit
+              creates the first moment of truth; My Vigilante turns that moment into monitoring.
+            </p>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-2">
+            {funnelOptions.map((option) => (
+              <article key={option.title} className="rounded-lg border border-[#E7E5E4] bg-white p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#78716C]">
+                  {option.eyebrow}
+                </p>
+                <h4 className="mt-3 text-2xl font-semibold tracking-normal">{option.title}</h4>
+                <p className="mt-3 text-sm leading-6 text-[#57534E]">{option.description}</p>
+
+                <ul className="mt-5 space-y-3">
+                  {option.features.map((feature) => (
+                    <li key={feature} className="flex gap-2 text-sm leading-6 text-[#3F3A34]">
+                      <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-[#15803D]" aria-hidden="true" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={option.href}
+                  className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#171717] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#2B2926]"
+                >
+                  {option.cta}
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </article>
+            ))}
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 18 }}

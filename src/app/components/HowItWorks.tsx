@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ChartBarIncreasing, ClipboardCheck, ListChecks, RotateCcw } from "lucide-react";
+import { ArrowRight, ChartBarIncreasing, ClipboardCheck, ListChecks, RotateCcw } from "lucide-react";
 
 const steps = [
   {
@@ -90,7 +90,7 @@ export function HowItWorks() {
           ))}
         </div>
 
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -98,17 +98,25 @@ export function HowItWorks() {
           className="mt-10 flex flex-col gap-4 rounded-lg border border-[#D9D6CF] bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6"
         >
           <p className="max-w-2xl text-base leading-7 text-[#3F3A34]">
-            The best onboarding is a useful result. Vigilante should make the user think,
-            "I know exactly what I need to do today."
+            The free audit is the first proof moment. GitHub sign-in is for users who want
+            Vigilante to keep monitoring the work after that moment.
           </p>
-          <a
-            href="https://vigilante.ocix.in"
-            className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-lg bg-[#171717] px-5 py-3 font-semibold text-white transition-colors hover:bg-[#2B2926]"
-          >
-            Try the loop
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </a>
-        </motion.div> */}
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <a
+              href="https://vigilante.ocix.in"
+              className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-lg bg-[#171717] px-5 py-3 font-semibold text-white transition-colors hover:bg-[#2B2926]"
+            >
+              Run free audit
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <a
+              href="https://myvigilante.ocix.in"
+              className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-lg border border-[#D9D6CF] bg-white px-5 py-3 font-semibold text-[#171717] transition-colors hover:border-[#BEB8AD]"
+            >
+              Start monitoring
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

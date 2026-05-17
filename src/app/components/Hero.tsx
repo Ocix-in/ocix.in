@@ -67,13 +67,12 @@ export function Hero() {
                 Run free GitHub audit
                 <Github className="h-5 w-5" aria-hidden="true" />
               </a>
-              <button
-                type="button"
-                onClick={() => document.getElementById("products")?.scrollIntoView({ behavior: "smooth" })}
+              <a
+                href="https://myvigilante.ocix.in"
                 className="inline-flex min-h-12 items-center justify-center rounded-lg border border-[#D9D6CF] bg-white px-6 py-3 text-base font-semibold text-[#171717] shadow-sm transition-colors hover:border-[#BEB8AD]"
               >
-                See how OCIX works
-              </button>
+                Start monitored challenge
+              </a>
             </div>
 
             <div className="mt-8 grid gap-3 text-sm text-[#57534E] sm:grid-cols-3">

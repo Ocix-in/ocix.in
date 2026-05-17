@@ -6,6 +6,8 @@ const footerGroups = [
     title: "Product",
     links: [
       { label: "Vigilante", href: "https://vigilante.ocix.in", external: true },
+      { label: "Free GitHub audit", href: "https://vigilante.ocix.in", external: true },
+      { label: "Monitored challenge", href: "https://myvigilante.ocix.in", external: true },
       { label: "7-day challenge", href: "https://vigilante.ocix.in/#challenge", external: true },
     ],
   },
@@ -59,14 +61,14 @@ export function Footer() {
               />
             </a>
             <p className="mt-5 max-w-md text-base leading-7 text-[#57534E]">
-              Frontend-first productivity tools for people who want execution they can verify.
-              Start with Vigilante, the GitHub consistency auditor.
+              A parent ecosystem for niche productivity tools that help people stay consistent.
+              Start with Vigilante, the GitHub consistency auditor for developers.
             </p>
             <a
               href="https://vigilante.ocix.in"
               className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#171717] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#2B2926]"
             >
-              Run GitHub Audit
+              Run free GitHub audit
               <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </a>
           </div>
@@ -107,6 +109,7 @@ export function Footer() {
           className="mt-12 flex flex-col gap-4 border-t border-[#E7E5E4] pt-6 text-sm text-[#78716C] sm:flex-row sm:items-center sm:justify-between"
         >
           <p>© {currentYear} OCIX. Built for visible execution.</p>
+          <p>Free audits are public previews. Continuous monitoring uses GitHub sign-in.</p>
           {/* <p>Check out our <a href="/privacy" className="text-[#171717] hover:underline">Privacy Policy</a> and <a href="/terms" className="text-[#171717] hover:underline">Terms of Service</a>.</p> */}
         </motion.div>
       </div>

@@ -1,12 +1,9 @@
 import { motion } from "motion/react";
 import {
   ArrowRight,
-  CalendarCheck2,
   CheckCircle2,
   Github,
   GitCommitHorizontal,
-  LineChart,
-  Lock,
   Target,
   TimerReset,
   TriangleAlert,
@@ -32,24 +29,6 @@ const enforcementSteps = [
     title: "Return to work",
     description: "The product does not distract you with dashboards. It sends you back to shipping.",
     icon: TimerReset,
-  },
-];
-
-const roadmapTools = [
-  {
-    name: "Execution Planner",
-    description: "Turn daily intention into a small, visible work plan.",
-    icon: CalendarCheck2,
-  },
-  {
-    name: "Consistency Tracker",
-    description: "Track streaks and patterns without creating another productivity chore.",
-    icon: LineChart,
-  },
-  {
-    name: "Focus Systems",
-    description: "Lightweight deep-work structures for builders, students, and creators.",
-    icon: Lock,
   },
 ];
 
@@ -284,37 +263,6 @@ export function Products() {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-14"
-        >
-          <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#78716C]">
-                Planned ecosystem
-              </p>
-              <h3 className="mt-2 text-2xl font-semibold tracking-normal">
-                Future tools extend the same execution loop.
-              </h3>
-            </div>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-3">
-            {roadmapTools.map((tool) => (
-              <article
-                key={tool.name}
-                className="rounded-lg border border-[#E7E5E4] bg-[#FAFAF8] p-5"
-              >
-                <tool.icon className="h-5 w-5 text-[#2563EB]" aria-hidden="true" />
-                <h4 className="mt-4 text-lg font-semibold">{tool.name}</h4>
-                <p className="mt-2 text-sm leading-6 text-[#57534E]">{tool.description}</p>
-              </article>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

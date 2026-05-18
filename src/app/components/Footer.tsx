@@ -12,14 +12,6 @@ const footerGroups = [
     ],
   },
   {
-    title: "Workflows",
-    links: [
-      { label: "Deep work", href: "#philosophy" },
-      { label: "Consistency tracking", href: "#how-it-works" },
-      { label: "Anti-procrastination", href: "#ecosystem" },
-    ],
-  },
-  {
     title: "OCIX",
     links: [
       { label: "Operating principles", href: "#philosophy" },
@@ -73,7 +65,7 @@ export function Footer() {
             </a>
           </div>
 
-          <nav aria-label="Footer navigation" className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <nav aria-label="Footer navigation" className="grid gap-8 sm:grid-cols-3">
             {footerGroups.map((group) => (
               <div key={group.title}>
                 <h2 className="text-sm font-semibold uppercase tracking-[0.16em] text-[#78716C]">
@@ -110,7 +102,6 @@ export function Footer() {
         >
           <p>© {currentYear} OCIX. Built for visible execution.</p>
           <p>Free audits are public previews. Continuous monitoring uses GitHub sign-in.</p>
-          {/* <p>Check out our <a href="/privacy" className="text-[#171717] hover:underline">Privacy Policy</a> and <a href="/terms" className="text-[#171717] hover:underline">Terms of Service</a>.</p> */}
         </motion.div>
       </div>
     </footer>

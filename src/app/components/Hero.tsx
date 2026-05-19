@@ -1,149 +1,125 @@
 import { motion } from "motion/react";
-import { ArrowRight, CheckCircle2, Github, ShieldCheck } from "lucide-react";
+import { ArrowRight, Github, ShieldCheck, Sparkles } from "lucide-react";
 
-const proofPoints = [
-  "Free public GitHub audit",
-  "Continuous monitoring with GitHub sign-in",
-  "Built for niche consistency systems",
+const stats = [
+  { label: "Audit window", value: "30d" },
+  { label: "Setup", value: "0 OAuth" },
+  { label: "Upgrade", value: "Monitor" },
 ];
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#FAFAF8] px-5 py-8 text-[#171717] sm:px-6 lg:px-8" aria-labelledby="hero-title">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-70"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(23,23,23,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(23,23,23,0.045) 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-        }}
+    <section className="relative min-h-screen overflow-hidden px-5 pb-16 pt-6 sm:px-6 lg:px-8" aria-labelledby="hero-title">
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#F7F3EA_0%,#EEE6D8_58%,#111111_58%,#111111_100%)] lg:bg-[linear-gradient(90deg,#F7F3EA_0%,#F7F3EA_64%,#111111_64%,#111111_100%)]" />
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-0 right-0 top-24 h-px bg-[#111111]/15"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        style={{ transformOrigin: "left" }}
       />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-white to-transparent" />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl flex-col">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-2rem)] max-w-7xl flex-col">
         <header className="flex h-16 items-center justify-between">
-          <a href="/" aria-label="OCIX home" className="flex items-center gap-3">
-            <img
-              src="/assets/ocix-logo.png"
-              alt="OCIX"
-              className="h-10 w-auto object-contain"
-            />
+          <a href="/" aria-label="OCIX home" className="inline-flex items-center">
+            <img src="/assets/ocix-logo.png" alt="OCIX" className="h-10 w-auto object-contain" />
           </a>
+          <nav className="hidden items-center gap-7 text-sm font-semibold text-[#3B352C] md:flex" aria-label="Primary navigation">
+            <a className="transition-colors hover:text-[#111111]" href="#product">Product</a>
+            <a className="transition-colors hover:text-[#111111]" href="#proof">Proof</a>
+            <a className="transition-colors hover:text-[#111111]" href="#trust">Trust</a>
+          </nav>
           <a
             href="https://vigilante.ocix.in"
-            className="hidden items-center gap-2 rounded-lg border border-[#D9D6CF] bg-white px-4 py-2 text-sm font-medium text-[#171717] shadow-sm transition-colors hover:border-[#BEB8AD] sm:inline-flex"
+            className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#111111] px-4 py-2 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(17,17,17,0.18)] transition-transform duration-300 hover:-translate-y-0.5"
           >
-            Explore Vigilante
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            Audit now
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden="true" />
           </a>
         </header>
 
-        <div className="grid flex-1 items-center gap-12 py-16 lg:grid-cols-[1.02fr_0.98fr] lg:py-20">
+        <div className="grid flex-1 items-center gap-10 py-12 lg:grid-cols-[1.02fr_0.98fr] lg:py-20">
           <motion.div
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#D9D6CF] bg-white px-3 py-1.5 text-sm font-medium text-[#3F3A34] shadow-sm">
-              <ShieldCheck className="h-4 w-4 text-[#2563EB]" aria-hidden="true" />
-              Productivity tools for consistency. No fluff.
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#CFC3B0] bg-white/60 px-3 py-1.5 text-sm font-semibold text-[#3B352C] backdrop-blur">
+              <ShieldCheck className="h-4 w-4 text-[#176B87]" aria-hidden="true" />
+              GitHub consistency, made visible.
             </div>
 
-            <h1 id="hero-title" className="max-w-5xl text-balance text-5xl font-semibold leading-[1.02] tracking-normal text-[#171717] sm:text-6xl lg:text-7xl">
-              Consistency systems for people who need to keep showing up.
+            <h1 id="hero-title" className="max-w-5xl text-balance text-5xl font-semibold leading-[0.98] tracking-normal text-[#111111] sm:text-6xl lg:text-7xl">
+              Prove you shipped. Then keep the streak honest.
             </h1>
-
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#57534E] sm:text-xl">
-              OCIX is the parent ecosystem for focused productivity tools across niches like
-              developers, students, founders, creators, and fitness enthusiasts. The first
-              launched product, Vigilante, helps developers audit and monitor GitHub consistency.
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#5F574B] sm:text-xl">
+              OCIX starts with Vigilante: a focused GitHub consistency auditor for developers.
+              Run a free public audit first. Sign in only when you want continuous monitoring.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
                 href="https://vigilante.ocix.in"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#171717] px-6 py-3 text-base font-semibold text-white transition-colors hover:bg-[#2B2926]"
+                className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#176B87] px-6 py-3 text-base font-semibold text-white shadow-[0_18px_48px_rgba(23,107,135,0.28)] transition-transform duration-300 hover:-translate-y-0.5"
               >
                 Run free GitHub audit
-                <Github className="h-5 w-5" aria-hidden="true" />
+                <Github className="h-5 w-5 transition-transform duration-300 group-hover:rotate-[-8deg]" aria-hidden="true" />
               </a>
               <a
                 href="https://myvigilante.ocix.in"
-                className="inline-flex min-h-12 items-center justify-center rounded-lg border border-[#D9D6CF] bg-white px-6 py-3 text-base font-semibold text-[#171717] shadow-sm transition-colors hover:border-[#BEB8AD]"
+                className="inline-flex min-h-12 items-center justify-center rounded-lg border border-[#CFC3B0] bg-white/65 px-6 py-3 text-base font-semibold text-[#111111] backdrop-blur transition-colors hover:bg-white"
               >
-                Start monitored challenge
+                Start monitoring
               </a>
             </div>
 
-            <div className="mt-8 grid gap-3 text-sm text-[#57534E] sm:grid-cols-3">
-              {proofPoints.map((point) => (
-                <div key={point} className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 shrink-0 text-[#15803D]" aria-hidden="true" />
-                  <span>{point}</span>
+            <div className="mt-10 grid max-w-xl grid-cols-3 border-y border-[#CFC3B0]">
+              {stats.map((stat) => (
+                <div key={stat.label} className="border-r border-[#CFC3B0] py-4 last:border-r-0">
+                  <p className="text-2xl font-semibold text-[#111111]">{stat.value}</p>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#766D60]">{stat.label}</p>
                 </div>
               ))}
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
-            aria-label="Vigilante audit preview"
+            initial={{ opacity: 0, y: 30, rotate: 1 }}
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
+            transition={{ duration: 0.75, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+            className="relative mx-auto w-full max-w-xl lg:max-w-none"
+            aria-label="Vigilante product preview"
           >
-            <div className="rounded-lg border border-[#D9D6CF] bg-white p-4 shadow-[0_24px_80px_rgba(23,23,23,0.12)] sm:p-5">
-              <div className="flex items-center justify-between border-b border-[#E7E5E4] pb-4">
+            <div className="absolute -left-5 top-7 hidden h-28 w-28 border border-white/20 lg:block" />
+            <div className="relative overflow-hidden rounded-lg border border-white/12 bg-[#151515] p-4 text-white shadow-[0_30px_90px_rgba(0,0,0,0.28)]">
+              <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#2563EB]">
-                    First OCIX Product
-                  </p>
-                  <h2 className="mt-1 text-2xl font-semibold text-[#171717]">Vigilante</h2>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8ED7C6]">Vigilante audit</p>
+                  <h2 className="mt-1 text-2xl font-semibold tracking-normal">github-username</h2>
                 </div>
-                <span className="rounded-full bg-[#EFF6FF] px-3 py-1 text-xs font-semibold text-[#1D4ED8]">
-                  Live
-                </span>
+                <Sparkles className="h-5 w-5 text-[#F3B664]" aria-hidden="true" />
               </div>
 
-              <div className="mt-5 rounded-lg bg-[#111111] p-5 font-mono text-sm text-[#D4D4D4]">
-                <div className="mb-4 flex items-center gap-2 text-[#FAFAF8]">
-                  <Github className="h-4 w-4" aria-hidden="true" />
-                  <span>github-username</span>
-                </div>
-                <p><span className="text-[#60A5FA]">$</span> audit --last-30-days</p>
-                <p className="mt-3 text-[#A3E635]">[SCAN] Commit frequency detected.</p>
-                <p className="text-[#FBBF24]">[SCAN] Inactive gaps detected.</p>
-                <p className="text-[#F87171]">[NEXT] Sign in to start continuous monitoring.</p>
+              <div className="relative mt-6 h-44 overflow-hidden rounded-lg bg-[#0A0A0A] p-5 font-mono text-sm text-[#D8D4CA]">
+                <motion.div
+                  className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#8ED7C6]/18 to-transparent"
+                  animate={{ y: [0, 128, 0] }}
+                  transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+                />
+                <p><span className="text-[#8ED7C6]">$</span> vigilante audit --last-30-days</p>
+                <p className="mt-4 text-[#A7F3D0]">active days: 21</p>
+                <p className="text-[#F3B664]">quiet gaps: 4</p>
+                <p className="text-[#FCA5A5]">next move: choose a monitored repo</p>
               </div>
 
               <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                <div className="rounded-lg border border-[#E7E5E4] bg-[#FAFAF8] p-4">
-                  <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#78716C]">
-                    Scan
-                  </p>
-                  <p className="mt-2 text-2xl font-semibold">30d</p>
-                </div>
-                <div className="rounded-lg border border-[#E7E5E4] bg-[#FAFAF8] p-4">
-                  <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#78716C]">
-                    Rule
-                  </p>
-                  <p className="mt-2 text-2xl font-semibold">1/day</p>
-                </div>
-                <div className="rounded-lg border border-[#E7E5E4] bg-[#FAFAF8] p-4">
-                  <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#78716C]">
-                    Mode
-                  </p>
-                  <p className="mt-2 text-2xl font-semibold">Preview</p>
-                </div>
-              </div>
-
-              <div className="mt-5 rounded-lg border border-[#E7E5E4] bg-[#FAFAF8] p-4">
-                <p className="text-sm font-semibold text-[#171717]">
-                  The enforcement loop
-                </p>
-                <p className="mt-2 text-sm leading-6 text-[#57534E]">
-                  Check your public record first. Sign in with GitHub when you want ongoing monitoring.
-                </p>
+                {["Public report", "Gap detection", "OAuth monitor"].map((item) => (
+                  <div key={item} className="rounded-lg border border-white/10 bg-white/[0.04] p-4">
+                    <div className="mb-3 h-1.5 rounded-full bg-[#8ED7C6]" />
+                    <p className="text-sm font-semibold text-[#F7F3EA]">{item}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>

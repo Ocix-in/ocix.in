@@ -1,25 +1,23 @@
 import { Hero } from "./components/Hero";
 import { Products } from "./components/Products";
 import { Testimonials } from "./components/Testimonials";
-import { Philosophy } from "./components/Philosophy";
 import { HowItWorks } from "./components/HowItWorks";
-import { FutureVision } from "./components/FutureVision";
+import { TrustClarity } from "./components/TrustClarity";
 import { LeadCapture } from "./components/LeadCapture";
 import { Footer } from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#0B0F1A] text-[#E5E7EB] relative">
-      <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
-      <div className="relative z-10 block">
+    <div className="relative min-h-screen overflow-hidden bg-[#F7F3EA] text-[#111111]">
+      <div className="pointer-events-none fixed inset-0 z-0 opacity-[0.35] [background-image:linear-gradient(rgba(17,17,17,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(17,17,17,0.08)_1px,transparent_1px)] [background-size:56px_56px]" />
+      <div className="relative z-10">
         <main>
           <Hero />
           <Products />
-          <Testimonials />
-          <Philosophy />
           <HowItWorks />
-          <FutureVision />
+          <TrustClarity />
+          <Testimonials />
           <LeadCapture />
         </main>
         <Footer />

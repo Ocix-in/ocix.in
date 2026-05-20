@@ -53,10 +53,10 @@ export function Hero() {
             <h1 id="hero-title" className="max-w-5xl text-balance text-5xl font-semibold leading-[0.98] tracking-normal text-[#111111] sm:text-6xl lg:text-7xl">
               Prove you shipped. Then keep the streak honest.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#5F574B] sm:text-xl">
+            {/* <p className="mt-6 max-w-2xl text-md leading-8 text-[#5F574B] sm:text-xl">
               OCIX starts with Vigilante: a focused GitHub consistency auditor for developers.
               Run a free public audit first. Sign in only when you want continuous monitoring.
-            </p>
+            </p> */}
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a

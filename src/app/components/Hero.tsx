@@ -54,7 +54,7 @@ export function Hero() {
               Prove you shipped. Then keep the streak honest.
             </h1>
             {/* <p className="mt-6 max-w-2xl text-md leading-8 text-[#5F574B] sm:text-xl">
-              OCIX starts with Vigilante: a focused GitHub consistency auditor for developers.
+              OCIX starts with Vigilante: a   focused GitHub consistency auditor for developers.
               Run a free public audit first. Sign in only when you want continuous monitoring.
             </p> */}
 

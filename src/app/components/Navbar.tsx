@@ -9,7 +9,7 @@ export function Navbar() {
     >
       <div className="flex items-center gap-3">
         <div className="bg-white px-2 py-1 rounded-lg flex items-center justify-center">
-            <img src="/assets/ocix-logo.png" alt="ocix logo" className="h-6 w-auto object-contain" />
+            <img src="/assets/ocix-logo-transparent.png" alt="ocix logo" className="h-6 w-auto object-contain" />
         </div>
       </div>
       <div className="flex gap-4">

@@ -16,7 +16,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
         <div>
           <a href="/" aria-label="OCIX home" className="inline-flex items-center">
-            <img src="/assets/ocix-logo.png" alt="OCIX" className="h-10 w-auto object-contain" />
+            <img src="/assets/ocix-logo-transparent.png" alt="OCIX" className="h-10 w-auto object-contain" />
           </a>
           <p className="mt-3 max-w-md text-sm leading-6 text-[#5F574B]">
             OCIX is a parent product studio. Vigilante is live; DraftShield and GymX are in development.

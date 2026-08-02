@@ -23,7 +23,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto flex min-h-[calc(100vh-2rem)] max-w-7xl flex-col">
         <header className="flex h-16 items-center justify-between">
           <a href="/" aria-label="OCIX home" className="inline-flex items-center">
-            <img src="/assets/ocix-logo.png" alt="OCIX" className="h-10 w-auto object-contain" />
+            <img src="/assets/ocix-logo-transparent.png" alt="OCIX" className="h-10 w-auto object-contain" />
           </a>
           <nav className="hidden items-center gap-7 text-sm font-semibold text-[#3B352C] md:flex" aria-label="Primary navigation">
             <a className="transition-colors hover:text-[#111111]" href="#portfolio">Portfolio</a>

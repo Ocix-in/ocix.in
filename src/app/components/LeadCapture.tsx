@@ -13,12 +13,12 @@ export function LeadCapture() {
       >
         <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
           <div className="p-6 sm:p-10 lg:p-14">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#8ED7C6]">Start now</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#8ED7C6]">The live door</p>
             <h2 id="request-access-title" className="mt-4 max-w-3xl text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl lg:text-6xl">
-              Run the audit before motivation fades.
+              Start with the product you can use today.
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-[#CFC8BC]">
-              One username gives you a public consistency read. Monitoring is there when you want the habit watched every day.
+              Vigilante is OCIX’s live GitHub accountability product. Run a free public audit first; sign in only when you want ongoing monitoring.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">

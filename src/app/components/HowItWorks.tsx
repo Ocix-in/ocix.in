@@ -3,18 +3,18 @@ import { ChartNoAxesColumnIncreasing, GitBranch, MousePointerClick } from "lucid
 
 const steps = [
   {
-    title: "Check the record",
-    copy: "A public username is enough for the first audit.",
+    title: "Start narrow",
+    copy: "Begin with a real user problem and a promise we can support.",
     icon: MousePointerClick,
   },
   {
-    title: "Read the gaps",
-    copy: "See active days, quiet patches, and streak risk.",
+    title: "Make the signal useful",
+    copy: "Show the evidence without adding productivity theater.",
     icon: ChartNoAxesColumnIncreasing,
   },
   {
-    title: "Monitor one repo",
-    copy: "Use GitHub sign-in when the habit needs accountability.",
+    title: "Earn the next stage",
+    copy: "Broaden access only after the product and its safeguards are ready.",
     icon: GitBranch,
   },
 ];
@@ -30,9 +30,9 @@ export function HowItWorks() {
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto max-w-3xl text-center"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#176B87]">The loop</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#176B87]">How we build</p>
           <h2 id="proof-title" className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
-            Small enough to repeat. Strict enough to matter.
+            Ship what is useful. Label what is unfinished.
           </h2>
         </motion.div>
 

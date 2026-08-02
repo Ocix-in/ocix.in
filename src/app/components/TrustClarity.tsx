@@ -14,7 +14,7 @@ const details = [
   },
   {
     question: "What is OCIX beyond Vigilante?",
-    answer: "OCIX is the parent brand for focused consistency tools. Vigilante is the live product users can try today.",
+    answer: "OCIX is the parent product studio. Vigilante is live; DraftShield and GymX are in development and do not have public product URLs yet.",
     icon: LockKeyhole,
   },
 ];

@@ -1,6 +1,6 @@
 # OCIX Landing Page
 
-The official landing page for the OCIX ecosystem. Built for developers focused on execution.
+The official parent product studio site for OCIX. It presents Vigilante as the live product and DraftShield/GymX as in-development experiments.
 
 ## Tech Stack
 - **Framework:** React + Vite
@@ -22,5 +22,4 @@ The official landing page for the OCIX ecosystem. Built for developers focused o
 
 ## Integrations
 
-### Formspree (Early Access Form)
-The "Request Access" form on the landing page is connected to Formspree. Submissions are sent via the `@formspree/react` hook (using endpoint ID `mqeggddz` within `LeadCapture.tsx`). Formspree handles the storage, spam filtering, and email forwarding of all incoming leads automatically—no custom backend required.
+The site intentionally has no waitlist or beta form. DraftShield and GymX have no public URLs or signup CTAs until an owned consent and follow-up process exists.

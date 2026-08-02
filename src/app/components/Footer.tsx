@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 
 const links = [
+  { label: "Portfolio", href: "#portfolio" },
   { label: "Vigilante", href: "https://vigilante.ocix.in", external: true },
   { label: "Monitor", href: "https://myvigilante.ocix.in", external: true },
   { label: "Trust", href: "#trust" },
@@ -18,7 +19,7 @@ export function Footer() {
             <img src="/assets/ocix-logo.png" alt="OCIX" className="h-10 w-auto object-contain" />
           </a>
           <p className="mt-3 max-w-md text-sm leading-6 text-[#5F574B]">
-            Focused consistency tools. Vigilante is live for GitHub audits and developer monitoring.
+            OCIX is a parent product studio. Vigilante is live; DraftShield and GymX are in development.
           </p>
         </div>
 

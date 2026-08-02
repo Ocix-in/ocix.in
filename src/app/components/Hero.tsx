@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import { ArrowRight, Github, ShieldCheck, Sparkles } from "lucide-react";
 
 const stats = [
-  { label: "Audit window", value: "30d" },
-  { label: "Setup", value: "0 OAuth" },
-  { label: "Upgrade", value: "Monitor" },
+  { label: "Live today", value: "01" },
+  { label: "In development", value: "02" },
+  { label: "Studio focus", value: "Proof" },
 ];
 
 export function Hero() {
@@ -26,15 +26,15 @@ export function Hero() {
             <img src="/assets/ocix-logo.png" alt="OCIX" className="h-10 w-auto object-contain" />
           </a>
           <nav className="hidden items-center gap-7 text-sm font-semibold text-[#3B352C] md:flex" aria-label="Primary navigation">
-            <a className="transition-colors hover:text-[#111111]" href="#product">Product</a>
-            <a className="transition-colors hover:text-[#111111]" href="#proof">Proof</a>
-            <a className="transition-colors hover:text-[#111111]" href="#trust">Trust</a>
+            <a className="transition-colors hover:text-[#111111]" href="#portfolio">Portfolio</a>
+            <a className="transition-colors hover:text-[#111111]" href="#vigilante">Vigilante</a>
+            <a className="transition-colors hover:text-[#111111]" href="#trust">About</a>
           </nav>
           <a
             href="https://vigilante.ocix.in"
             className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#111111] px-4 py-2 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(17,17,17,0.18)] transition-transform duration-300 hover:-translate-y-0.5"
           >
-            Audit now
+            Run free audit
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden="true" />
           </a>
         </header>
@@ -47,30 +47,31 @@ export function Hero() {
           >
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#CFC3B0] bg-white/60 px-3 py-1.5 text-sm font-semibold text-[#3B352C] backdrop-blur">
               <ShieldCheck className="h-4 w-4 text-[#176B87]" aria-hidden="true" />
-              GitHub consistency, made visible.
+              OCIX / product studio
             </div>
 
             <h1 id="hero-title" className="max-w-5xl text-balance text-5xl font-semibold leading-[0.98] tracking-normal text-[#111111] sm:text-6xl lg:text-7xl">
-              Prove you shipped. Then keep the streak honest.
+              Focused products for commitments that matter.
             </h1>
-            {/* <p className="mt-6 max-w-2xl text-md leading-8 text-[#5F574B] sm:text-xl">
-              OCIX starts with Vigilante: a focused GitHub consistency auditor for developers.
-              Run a free public audit first. Sign in only when you want continuous monitoring.
-            </p> */}
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[#5F574B] sm:text-xl">
+              OCIX is the parent studio behind products that make follow-through visible.
+              One is live. Two are being built carefully.
+            </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
                 href="https://vigilante.ocix.in"
                 className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#176B87] px-6 py-3 text-base font-semibold text-white shadow-[0_18px_48px_rgba(23,107,135,0.28)] transition-transform duration-300 hover:-translate-y-0.5"
               >
-                Run free GitHub audit
+                Try Vigilante live
                 <Github className="h-5 w-5 transition-transform duration-300 group-hover:rotate-[-8deg]" aria-hidden="true" />
               </a>
               <a
-                href="https://myvigilante.ocix.in"
+                href="#portfolio"
                 className="inline-flex min-h-12 items-center justify-center rounded-lg border border-[#CFC3B0] bg-white/65 px-6 py-3 text-base font-semibold text-[#111111] backdrop-blur transition-colors hover:bg-white"
               >
-                Start monitoring
+                See the portfolio
+                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </a>
             </div>
 

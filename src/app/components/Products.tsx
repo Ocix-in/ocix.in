@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, CheckCircle2, Github, LockKeyhole, Radar, ShieldAlert } from "lucide-react";
 
-const signals = ["Active days", "Quiet gaps", "Streak risk", "Repository focus"];
+const signals = ["Daily directive", "Verified pushes", "Campaign state", "Dream City"];
 
 export function Products() {
   return (
@@ -44,9 +44,9 @@ export function Products() {
                   <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#176B87]">Vigilante</p>
                   <span className="rounded-full bg-[#DDF4E9] px-2.5 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#176B4D]">Live</span>
                 </div>
-                <h3 className="mt-3 text-3xl font-semibold tracking-normal sm:text-4xl">GitHub consistency auditor</h3>
+                <h3 className="mt-3 text-3xl font-semibold tracking-normal sm:text-4xl">GitHub accountability game</h3>
                 <p className="mt-5 text-base leading-8 text-[#5F574B]">
-                  A compact audit that turns visible GitHub activity into signals a developer can act on immediately.
+                  Choose one repository, set a daily verified-push mission, and keep a living campaign moving with real GitHub work.
                 </p>
               </div>
 
@@ -78,16 +78,16 @@ export function Products() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href="https://vigilante.ocix.in"
+                href="https://vigilante.ocix.in/briefing"
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#176B87] px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
               >
-                Run free audit <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                Enter the campaign <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
               <a
                 href="https://myvigilante.ocix.in"
                 className="inline-flex min-h-11 items-center justify-center rounded-lg border border-[#CFC3B0] bg-white/70 px-5 py-3 text-sm font-semibold text-[#111111] transition-colors hover:bg-white"
               >
-                Monitor with GitHub
+                Open the app
               </a>
             </div>
           </motion.article>

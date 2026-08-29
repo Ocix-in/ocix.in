@@ -4,12 +4,12 @@ import { ChevronDown, Eye, Github, LockKeyhole } from "lucide-react";
 const details = [
   {
     question: "What can I do without signing in?",
-    answer: "Run a public GitHub consistency audit from a username and preview visible activity patterns.",
+    answer: "Use the free Audit and Roast tools from public GitHub data, or read Vigilante’s complete mission briefing before deciding to register.",
     icon: Eye,
   },
   {
     question: "When is GitHub OAuth needed?",
-    answer: "Only when you want continuous monitoring, repository selection, and ongoing challenge tracking.",
+    answer: "Only after you choose to deploy into Vigilante and want repository selection, verified-push tracking, and an ongoing campaign.",
     icon: Github,
   },
   {
@@ -31,10 +31,10 @@ export function TrustClarity() {
         >
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#176B87]">Trust clarity</p>
           <h2 id="trust-title" className="mt-4 max-w-xl text-balance text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
-            No maze. No forced account wall.
+            Clear doors. No forced account wall.
           </h2>
           <p className="mt-5 max-w-xl text-lg leading-8 text-[#5F574B]">
-            The page keeps the promise visible: free audit first, sign-in only for monitoring.
+            Free utilities stay separate from Vigilante’s game journey. The briefing explains the mission and permissions before registration.
           </p>
         </motion.div>
 

@@ -1,5 +1,6 @@
 import { Hero } from "./components/Hero";
 import { Products } from "./components/Products";
+import { Tools } from "./components/Tools";
 import { HowItWorks } from "./components/HowItWorks";
 import { TrustClarity } from "./components/TrustClarity";
 import { LeadCapture } from "./components/LeadCapture";
@@ -14,6 +15,7 @@ export default function App() {
         <main>
           <Hero />
           <Products />
+          <Tools />
           <HowItWorks />
           <TrustClarity />
           <LeadCapture />

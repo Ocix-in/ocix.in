@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const links = [
   { label: "Portfolio", href: "#portfolio" },
+  { label: "Tools", href: "#tools" },
   { label: "Vigilante", href: "https://vigilante.ocix.in", external: true },
   { label: "Monitor", href: "https://myvigilante.ocix.in", external: true },
   { label: "Trust", href: "#trust" },

@@ -28,13 +28,14 @@ export function Hero() {
           <nav className="hidden items-center gap-7 text-sm font-semibold text-[#3B352C] md:flex" aria-label="Primary navigation">
             <a className="transition-colors hover:text-[#111111]" href="#portfolio">Portfolio</a>
             <a className="transition-colors hover:text-[#111111]" href="#vigilante">Vigilante</a>
+            <a className="transition-colors hover:text-[#111111]" href="#tools">Tools</a>
             <a className="transition-colors hover:text-[#111111]" href="#trust">About</a>
           </nav>
           <a
-            href="https://vigilante.ocix.in"
+            href="#tools"
             className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#111111] px-4 py-2 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(17,17,17,0.18)] transition-transform duration-300 hover:-translate-y-0.5"
           >
-            Run free audit
+            Explore tools
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden="true" />
           </a>
         </header>
@@ -60,10 +61,10 @@ export function Hero() {
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
-                href="https://vigilante.ocix.in"
+                href="https://vigilante.ocix.in/briefing"
                 className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#176B87] px-6 py-3 text-base font-semibold text-white shadow-[0_18px_48px_rgba(23,107,135,0.28)] transition-transform duration-300 hover:-translate-y-0.5"
               >
-                Try Vigilante live
+                Enter Vigilante
                 <Github className="h-5 w-5 transition-transform duration-300 group-hover:rotate-[-8deg]" aria-hidden="true" />
               </a>
               <a
@@ -96,8 +97,8 @@ export function Hero() {
             <div className="relative overflow-hidden rounded-lg border border-white/12 bg-[#151515] p-4 text-white shadow-[0_30px_90px_rgba(0,0,0,0.28)]">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8ED7C6]">Vigilante audit</p>
-                  <h2 className="mt-1 text-2xl font-semibold tracking-normal">github-username</h2>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8ED7C6]">Vigilante // Mission Control</p>
+                  <h2 className="mt-1 text-2xl font-semibold tracking-normal">Campaign status</h2>
                 </div>
                 <Sparkles className="h-5 w-5 text-[#F3B664]" aria-hidden="true" />
               </div>
@@ -108,14 +109,14 @@ export function Hero() {
                   animate={{ y: [0, 128, 0] }}
                   transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
                 />
-                <p><span className="text-[#8ED7C6]">$</span> vigilante audit --last-30-days</p>
-                <p className="mt-4 text-[#A7F3D0]">active days: 21</p>
-                <p className="text-[#F3B664]">quiet gaps: 4</p>
-                <p className="text-[#FCA5A5]">next move: choose a monitored repo</p>
+                <p><span className="text-[#8ED7C6]">$</span> vigilante deploy --repo selected</p>
+                <p className="mt-4 text-[#A7F3D0]">directive: 1 verified push / day</p>
+                <p className="text-[#F3B664]">city signal: stable</p>
+                <p className="text-[#FCA5A5]">next move: ship before cutoff</p>
               </div>
 
               <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                {["Public report", "Gap detection", "OAuth monitor"].map((item) => (
+                {["Daily directive", "Verified proof", "Dream City"].map((item) => (
                   <div key={item} className="rounded-lg border border-white/10 bg-white/[0.04] p-4">
                     <div className="mb-3 h-1.5 rounded-full bg-[#8ED7C6]" />
                     <p className="text-sm font-semibold text-[#F7F3EA]">{item}</p>

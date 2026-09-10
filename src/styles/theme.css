@@ -2,8 +2,8 @@
 
 :root {
   --font-size: 16px;
-  --background: #F7F3EA;
-  --foreground: #111111;
+  --background: #101210;
+  --foreground: #f4f5ef;
   --surface: #EFE6D6;
   --border: #D8CCBA;
   --text-primary: #111111;
@@ -29,7 +29,7 @@
   }
 
   body {
-    @apply bg-[#F7F3EA] text-[#111111];
+    @apply bg-[#101210] text-[#f4f5ef];
     font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-feature-settings: "kern" 1, "liga" 1;
   }

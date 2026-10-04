@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ocix.in/</loc>
-    <lastmod>2026-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-</urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://ocix.in/</loc></url><url><loc>https://ocix.in/about</loc></url><url><loc>https://ocix.in/products/vigilante</loc></url><url><loc>https://ocix.in/products/draftshield</loc></url><url><loc>https://ocix.in/products/gymx</loc></url><url><loc>https://ocix.in/tools</loc></url><url><loc>https://ocix.in/contact</loc></url><url><loc>https://ocix.in/privacy</loc></url><url><loc>https://ocix.in/terms</loc></url><url><loc>https://ocix.in/blog</loc></url></urlset>

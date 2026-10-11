@@ -6,7 +6,7 @@ import path from 'node:path';
 const root = path.resolve('dist');
 const sitemap = readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
 const routes = [...sitemap.matchAll(/<loc>https:\/\/ocix\.in([^<]*)<\/loc>/g)].map(match => match[1]);
-const required = ['/', '/about', '/products/vigilante', '/products/draftshield', '/products/gymx', '/tools', '/contact', '/privacy', '/terms', '/blog'];
+const required = ['/', '/about', '/products/vigilante', '/products/draftshield', '/products/gymx', '/products/do-it', '/tools', '/contact', '/privacy', '/terms', '/blog'];
 const htmlFor = route => readFileSync(path.join(root, route === '/' ? 'index.html' : `${route.slice(1)}.html`), 'utf8');
 
 test('all required routes have substantive HTML, unique metadata and a shared navigation', () => {
@@ -37,7 +37,7 @@ test('all required routes have substantive HTML, unique metadata and a shared na
 });
 
 test('development products remain unavailable, and support and policies are explicit', () => {
-  for (const name of ['draftshield', 'gymx']) assert.ok(htmlFor(`/products/${name}`).includes('In development, not yet available'));
+  for (const name of ['draftshield', 'gymx', 'do-it']) assert.ok(htmlFor(`/products/${name}`).includes('In development, not yet available'));
   assert.ok(htmlFor('/about').includes('Vishal Pandey') && htmlFor('/about').includes('India'));
   assert.ok(htmlFor('/privacy').includes('Google Tag Manager') && htmlFor('/privacy').includes('Google Analytics') && htmlFor('/privacy').includes('Google AdSense'));
   assert.ok(htmlFor('/terms').includes('https://myvigilante.ocix.in/refunds'));

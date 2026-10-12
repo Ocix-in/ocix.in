@@ -7,7 +7,6 @@ import { LeadCapture } from './components/LeadCapture';
 import { SiteHeader } from './components/SiteHeader';
 import { Footer } from './components/Footer';
 import { PageContent } from './pages';
-import { Analytics } from '@vercel/analytics/react';
 import '../styles/studio.css';
 
 export default function App({ path = '/' }: { path?: string }) {
@@ -15,6 +14,6 @@ export default function App({ path = '/' }: { path?: string }) {
     <a href="#main" className="skip-link">Skip to content</a>
     <SiteHeader />
     <main id="main">{path === '/' ? <><Hero/><Products/><Tools/><HowItWorks/><TrustClarity/><LeadCapture/></> : <PageContent path={path}/>}</main>
-    <Footer/><Analytics/>
+    <Footer/>
   </div>;
 }

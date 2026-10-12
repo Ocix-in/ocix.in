@@ -3,7 +3,7 @@ import { mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 import path from 'node:path';
 
-// The browser and build renderer share the same components and route content.
+// React renders complete static pages at build time; the browser only loads analytics.
 await build();
 await build({ build: { ssr: 'src/entry-server.tsx', outDir: '.ssg', emptyOutDir: true }, ssr: { noExternal: ['lucide-react'] } });
 const { pages, articles, render } = await import(pathToFileURL(path.resolve('.ssg/entry-server.js')).href);
@@ -11,11 +11,34 @@ const template = await readFile('dist/index.html', 'utf8');
 if (!template.includes('<!--page-head-->') || !template.includes('<div id="root"></div>')) throw new Error('Missing prerender slots');
 const escape = text => String(text).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const routes = [...pages, { path: '/404', title: 'Page not found | OCIX', description: 'That page is not available. Explore OCIX products, tools and contact options.' }];
+const organization = {
+  '@type': 'Organization', '@id': 'https://ocix.in/#organization', name: 'OCIX',
+  url: 'https://ocix.in/', description: 'An independent software studio run by Vishal Pandey in India.',
+  email: 'support@ocix.in', founder: { '@id': 'https://ocix.in/#founder' },
+  sameAs: ['https://x.com/Ocixdotin', 'https://www.instagram.com/ocix.in', 'https://www.reddit.com/user/ocix_dot_in/'],
+  logo: { '@type': 'ImageObject', url: 'https://ocix.in/assets/ocix-logo.webp', width: 188, height: 96 },
+};
+const founder = {
+  '@type': 'Person', '@id': 'https://ocix.in/#founder', name: 'Vishal Pandey',
+  url: 'https://ocix.in/about', jobTitle: 'Founder', worksFor: { '@id': organization['@id'] },
+};
 for (const page of routes) {
   const url = `https://ocix.in${page.path === '/' ? '/' : page.path}`;
   const article = articles.find(item => page.path === `/blog/${item.slug}`);
-  const graph = article ? { '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description, datePublished: article.publishedAt, dateModified: article.publishedAt, author: { '@type': 'Person', name: article.author }, publisher: { '@type': 'Organization', name: 'OCIX', url: 'https://ocix.in' }, mainEntityOfPage: url, image: 'https://ocix.in/assets/ocix-og.png' } : { '@context': 'https://schema.org', '@type': 'WebPage', name: page.title, description: page.description, url, publisher: { '@type': 'Person', name: 'Vishal Pandey', url: 'https://ocix.in/about' } };
-  const head = `<title>${escape(page.title)}</title>
+  const entity = article ? {
+    '@type': 'Article', '@id': `${url}#article`, headline: article.title,
+    description: article.description, datePublished: article.publishedAt, dateModified: article.publishedAt,
+    author: article.author === founder.name ? { '@id': founder['@id'] } : { '@type': 'Person', name: article.author },
+    publisher: { '@id': organization['@id'] }, mainEntityOfPage: url, image: 'https://ocix.in/assets/ocix-og.png',
+  } : {
+    '@type': page.path === '/about' ? 'ProfilePage' : 'WebPage', '@id': `${url}#webpage`,
+    name: page.title, description: page.description, url, publisher: { '@id': organization['@id'] },
+    ...(page.path === '/about' ? { mainEntity: { '@id': founder['@id'] } } : {}),
+  };
+  const graph = { '@context': 'https://schema.org', '@graph': [organization, founder, entity] };
+  const heroPreload = page.path === '/' ? `<link rel="preload" as="image" href="/assets/vigilante-world-mobile.webp" media="(max-width: 700px)" fetchpriority="high"/>
+    <link rel="preload" as="image" href="/assets/vigilante-world-desktop.webp" media="(min-width: 701px)" fetchpriority="high"/>` : '';
+  const head = `${heroPreload}<title>${escape(page.title)}</title>
     <meta name="description" content="${escape(page.description)}"/>
     <meta name="author" content="Vishal Pandey"/>
     <meta name="robots" content="${page.path === '/404' ? 'noindex, follow' : 'index, follow, max-image-preview:large'}"/>

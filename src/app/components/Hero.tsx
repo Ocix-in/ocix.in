@@ -7,7 +7,7 @@ export function Hero() {
       <h1 id="hero-title">Different ideas.<br/><span>Built with intent.</span></h1>
       <div className="hero-bottom"><p>We build games, productivity tools and growth software.<br className="desktop-break"/> Different products, one standard: worth your time.</p><a className="button button-light" href="#portfolio">Explore our products <ArrowDown size={18} aria-hidden="true"/></a></div>
       <a className="hero-feature" href="https://vigilante.ocix.in/briefing" aria-label="Explore Vigilante — GitHub accountability">
-        <img className="feature-art" src="/assets/vigilante-world.webp" alt="A restored settlement in Vigilante, with the Lantern House, Radio Tower, Clinic and Salvage Yard" width="1070" height="430" fetchPriority="high"/>
+        <picture><source media="(max-width: 700px)" srcSet="/assets/vigilante-world-mobile.webp"/><img className="feature-art" src="/assets/vigilante-world-desktop.webp" alt="A restored settlement in Vigilante, with the Lantern House, Radio Tower, Clinic and Salvage Yard" width="1070" height="430" fetchPriority="high"/></picture>
         <div className="feature-shade"/>
         <div className="feature-top"><span className="eyebrow">Featured product / 01</span><span className="status status-live"><i/>Live</span></div>
         <div className="feature-bottom"><div><p className="eyebrow">Real work. Visible momentum.</p><h2>Vigilante</h2><p>GitHub accountability. With a world to return to.</p></div><span className="round-link"><ArrowUpRight size={30} aria-hidden="true"/></span></div>

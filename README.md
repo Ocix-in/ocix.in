@@ -23,3 +23,9 @@ The official parent product studio site for OCIX. It presents Vigilante as the l
 ## Integrations
 
 The site intentionally has no waitlist or beta form. DraftShield and GymX have no public URLs or signup CTAs until an owned consent and follow-up process exists.
+
+## Production pages and articles
+
+`npm run build` renders every page to HTML with React at build time. Production pages use native links and disclosure controls without React hydration; analytics loads after the page load event. Space Grotesk is self-hosted with `font-display: optional` to prevent late font swaps from moving article text.
+
+Articles live in `src/content/blog/<slug>.md`, with JSON front matter (`title`, `description`, `publishedAt`, `author`, `status: "published"`). Draft filenames ending in `.draft.md` are excluded. Publishing fails if editorial comments or unresolved `[FOUNDER]`, `[CHECK]`, `[SHOT]`, `[ASK]` or similar markers remain. Run `npm run build` and then `npm run test:unit` before release.

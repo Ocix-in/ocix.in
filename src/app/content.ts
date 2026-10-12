@@ -1,3 +1,5 @@
+import { assertNoPlaceholders } from './content-check.mjs';
+
 export type Article = { slug: string; title: string; description: string; publishedAt: string; author: string; body: string };
 const sources = import.meta.glob(['../content/blog/*.md', '!../content/blog/*.draft.md'], { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
 export const articles: Article[] = Object.entries(sources).map(([file, source]) => {
@@ -5,6 +7,7 @@ export const articles: Article[] = Object.entries(sources).map(([file, source]) 
   if (!match) throw new Error(`Missing JSON front matter: ${file}`);
   const meta = JSON.parse(match[1]);
   if (meta.status !== "published") throw new Error(`Only founder-reviewed, published articles belong here: ${file}`);
+  assertNoPlaceholders(source, file);
   const slug = file.split('/').pop()!.replace(/\.md$/, '');
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) throw new Error(`Invalid article slug: ${file}`);
   for (const key of ['title', 'description', 'publishedAt', 'author']) {

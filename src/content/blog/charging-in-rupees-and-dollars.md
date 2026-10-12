@@ -71,7 +71,7 @@ Two details matter:
 Currency is only half the trust story. For a small product, people want to know they won't be surprised later:
 
 - **Prepaid, no auto-renewal.** When a plan ends, it ends. Nobody gets charged again without choosing to.
-- **A clear refund policy.** Ours: full refund on Pro within 7 days; Revival Fluid packs refunded within 7 days if unused; failed or duplicate charges always refunded.
+- **A clear refund policy, shown before payment.** Ours: all sales are final, a free 7-day Pro trial comes first, and failed or duplicate charges are always fixed.
 - **The same product in both currencies.** Same features, same rules. Only the number and the symbol change.
 
 ## Testing it

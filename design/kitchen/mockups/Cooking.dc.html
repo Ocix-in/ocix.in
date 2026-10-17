@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DraftShield — still cooking</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,100;1,9..144,400,100&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#27245A;text-decoration:none}
+.neu{background:linear-gradient(145deg,#F7F5FB,#E2DDEB);box-shadow:8px 8px 18px rgba(39,36,90,.16),-8px -8px 18px rgba(255,255,255,.95)}
+.neu-in{background:#E9E5F0;box-shadow:inset 4px 4px 9px rgba(39,36,90,.16),inset -4px -4px 9px rgba(255,255,255,.95)}
+.glass{background:rgba(255,255,255,.42);-webkit-backdrop-filter:blur(16px) saturate(170%);backdrop-filter:blur(16px) saturate(170%);border:1px solid rgba(255,255,255,.75);box-shadow:0 18px 40px -18px rgba(39,36,90,.35),inset 0 1px 0 rgba(255,255,255,.9)}
+.pop{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(#3D3988,#27245A);color:#fff;box-shadow:0 5px 0 #15133A,0 12px 18px -6px rgba(39,36,90,.55),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .15s,box-shadow .15s}
+.pop:hover{color:#fff;transform:translateY(-2px);box-shadow:0 7px 0 #15133A,0 16px 22px -6px rgba(39,36,90,.55),inset 0 1px 0 rgba(255,255,255,.25)}
+.pop:active{transform:translateY(4px);box-shadow:0 1px 0 #15133A}
+.rise{opacity:0;animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+.d1{animation-delay:.12s}.d2{animation-delay:.24s}.d3{animation-delay:.36s}.d4{animation-delay:.48s}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.zoom{opacity:0;animation:zoom 1.1s cubic-bezier(.2,.9,.25,1.1) .2s forwards}
+@keyframes zoom{from{opacity:0;transform:scale(.6) translateY(60px)}to{opacity:1;transform:none}}
+.drop{opacity:0;animation:drop 1.1s cubic-bezier(.2,.9,.25,1.15) .7s forwards}
+@keyframes drop{0%{opacity:0;transform:translateY(-200px) rotate(-10deg)}65%{opacity:1;transform:translateY(8px) rotate(2deg)}100%{opacity:1;transform:rotate(1.5deg)}}
+.bob{animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,60%,100%{transform:none}66%{transform:translateY(-6px) rotate(-1deg)}72%{transform:none}78%{transform:translateY(-4px) rotate(.8deg)}84%{transform:none}}
+.puff{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.95),rgba(255,255,255,0) 70%);animation:puff 3.2s ease-out infinite;opacity:0}
+.p2{animation-delay:1.05s}.p3{animation-delay:2.1s}
+@keyframes puff{0%{opacity:0;transform:translateY(40px) scale(.5)}25%{opacity:.95}100%{opacity:0;transform:translateY(-110px) scale(1.5)}}
+.knob{animation:spin 9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.heat{animation:heat 1.8s ease-in-out infinite}
+@keyframes heat{0%,100%{box-shadow:0 0 0 0 rgba(242,169,59,.0),inset 3px 3px 7px rgba(39,36,90,.18),inset -3px -3px 7px rgba(255,255,255,.9)}50%{box-shadow:0 0 22px 2px rgba(242,169,59,.55),inset 3px 3px 7px rgba(39,36,90,.18),inset -3px -3px 7px rgba(255,255,255,.9)}}
+</style>
+</helmet>
+<div style="width: 1440px; height: 900px; position: relative; overflow: hidden; background: #ECE8F3; color: #27245A; font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;">
+
+  <header style="position: absolute; left: 48px; right: 48px; top: 28px; display: flex; align-items: center; justify-content: space-between; z-index: 5;">
+    <a href="Main.dc.html" class="neu" aria-label="OCIX home" style="display: flex; align-items: center; height: 60px; padding: 0 22px; border-radius: 22px;"><img src="../../../public/assets/ocix-logo-transparent.png" alt="OCIX" style="display: block; width: 96px; height: 49px; object-fit: contain;"></a>
+    <a href="Main.dc.html" class="neu" style="display: inline-flex; align-items: center; height: 50px; padding: 0 22px; border-radius: 999px; font-size: 15px; font-weight: 500;">← Back to the kitchen</a>
+  </header>
+
+  <!-- Words -->
+  <div style="position: absolute; left: 64px; top: 170px; width: 540px; z-index: 4;">
+    <span class="rise glass" style="display: inline-flex; align-items: center; gap: 10px; height: 36px; padding: 0 16px; border-radius: 999px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F2A93B; box-shadow: 0 0 10px #F2A93B;"></span>Order №02 · Simmering</span>
+    <h1 class="rise d1" style="margin: 26px 0 0; font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-variation-settings: 'opsz' 144, 'SOFT' 100; font-size: 108px; line-height: .9; letter-spacing: -.04em;">DraftShield</h1>
+    <p class="rise d2" style="margin: 8px 0 0; font-family: 'Fraunces', Georgia, serif; font-style: italic; font-variation-settings: 'SOFT' 100; font-size: 54px; line-height: 1; letter-spacing: -.02em; color: #5B4FC4;">is still cooking.</p>
+    <p class="rise d3" style="margin: 28px 0 0; max-width: 430px; font-size: 18px; line-height: 1.55; color: #3F3C6E;">A privacy-first second look at your X drafts, before you hit post. Not ready to taste yet — and we won’t serve it half-done.</p>
+
+    <!-- neumorphic progress: prep / cook / plate -->
+    <div class="rise d4 neu-in" role="list" aria-label="Progress" style="margin-top: 36px; display: inline-flex; gap: 6px; padding: 6px; border-radius: 999px; font-size: 14px; font-weight: 500;">
+      <span role="listitem" style="display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 18px; border-radius: 999px; color: #6B6894;">✓ Prep</span>
+      <span role="listitem" class="neu" style="display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 20px; border-radius: 999px; color: #B4531A;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #F2A93B; box-shadow: 0 0 8px #F2A93B;"></span>Cooking</span>
+      <span role="listitem" style="display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 18px; border-radius: 999px; color: #8A87AE;">Plate</span>
+    </div>
+
+    <div class="rise d4" style="margin-top: 40px;">
+      <a href="Vigilante.dc.html" class="pop" style="height: 52px; padding: 0 24px; border-radius: 999px; font-size: 15px; font-weight: 600;">While you wait, taste Vigilante <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+
+  <!-- The hob -->
+  <div aria-hidden="true" class="neu" style="position: absolute; left: 660px; top: 150px; width: 640px; height: 640px; border-radius: 50%;"></div>
+  <div aria-hidden="true" class="neu-in" style="position: absolute; left: 740px; top: 230px; width: 480px; height: 480px; border-radius: 50%;"></div>
+
+  <div class="zoom" style="position: absolute; left: 740px; top: 140px; width: 480px; height: 514px;">
+    <img class="bob" src="../renders/pot.png" alt="Chef OCIX’s navy pot simmering on a rainbow burner, lid rattling" style="display: block; width: 480px; height: 514px;">
+    <span class="puff" aria-hidden="true" style="left: 250px; top: 40px; width: 90px; height: 90px;"></span>
+    <span class="puff p2" aria-hidden="true" style="left: 290px; top: 20px; width: 110px; height: 110px;"></span>
+    <span class="puff p3" aria-hidden="true" style="left: 220px; top: 30px; width: 70px; height: 70px;"></span>
+  </div>
+
+  <!-- heat dial with the OCIX mark -->
+  <div class="neu heat" style="position: absolute; left: 935px; top: 730px; width: 92px; height: 92px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 3;">
+    <div class="knob" style="width: 56px; height: 56px; overflow: hidden; border-radius: 50%;">
+      <img src="../../../public/assets/ocix-logo-transparent.png" alt="" style="display: block; height: 69px; width: auto; margin-left: -4px; margin-top: -6px;">
+    </div>
+  </div>
+  <span style="position: absolute; left: 1040px; top: 765px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #6B6894;">Low &amp; slow</span>
+
+
+  <!-- other dishes still cooking -->
+  <nav aria-label="Also on the stove" style="position: absolute; left: 64px; top: 790px; display: flex; align-items: center; gap: 16px; z-index: 4;">
+    <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #6B6894; margin-right: 6px;">Also on the stove</span>
+    <a href="#draftshield" class="neu-in" aria-current="page" style="display: inline-flex; align-items: center; gap: 8px; height: 56px; padding: 0 16px 0 6px; border-radius: 18px; font-size: 14px; font-weight: 600;"><img src="../renders/pot.png" alt="" style="width: 44px; height: 47px; object-fit: contain;">DraftShield</a>
+    <a href="#gymx" class="neu" style="display: inline-flex; align-items: center; gap: 8px; height: 56px; padding: 0 16px 0 6px; border-radius: 18px; font-size: 14px; font-weight: 500;"><img src="../renders/dough.png" alt="" style="width: 44px; height: 44px; object-fit: contain;">GymX</a>
+    <a href="#doit" class="neu" style="display: inline-flex; align-items: center; gap: 8px; height: 56px; padding: 0 16px 0 6px; border-radius: 18px; font-size: 14px; font-weight: 500;"><img src="../renders/popcorn.png" alt="" style="width: 44px; height: 48px; object-fit: contain;"><em>Do It!</em></a>
+  </nav>
+
+  <!-- recipe card -->
+  <div class="drop glass" style="position: absolute; right: 56px; top: 170px; width: 280px; box-sizing: border-box; padding: 24px 22px 20px; border-radius: 24px; z-index: 6;">
+    <div style="display: flex; justify-content: space-between; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; color: #6B6894;"><span>RECIPE CARD</span><span>№02</span></div>
+    <div style="margin-top: 14px; font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 100; font-size: 24px; font-weight: 500; line-height: 1.1;">What’s going in</div>
+    <ul style="margin: 14px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: #3F3C6E;">
+      <li style="display: flex; gap: 10px;"><span class="neu" style="flex: 0 0 24px; height: 24px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 11px;">1</span>Rule-risk review in the X composer</li>
+      <li style="display: flex; gap: 10px;"><span class="neu" style="flex: 0 0 24px; height: 24px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 11px;">2</span>Runs privately, in your browser</li>
+      <li style="display: flex; gap: 10px;"><span class="neu" style="flex: 0 0 24px; height: 24px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center; font-size: 11px;">3</span>A pause before you publish</li>
+    </ul>
+    <p style="margin: 16px 0 0; padding-top: 12px; border-top: 1px solid rgba(39,36,90,.12); font-size: 13px; color: #6B6894;">No waitlist, no sign-up. When it’s ready, it goes on the menu.</p>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

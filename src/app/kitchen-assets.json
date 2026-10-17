@@ -1,0 +1,226 @@
+{
+  "chef-body": {
+    "pixelWidth": 600,
+    "pixelHeight": 700
+  },
+  "chef-head": {
+    "pixelWidth": 600,
+    "pixelHeight": 700
+  },
+  "chef-shrug": {
+    "pixelWidth": 600,
+    "pixelHeight": 700
+  },
+  "chef": {
+    "pixelWidth": 600,
+    "pixelHeight": 700
+  },
+  "cloche-body": {
+    "pixelWidth": 700,
+    "pixelHeight": 600
+  },
+  "cloche-dome": {
+    "pixelWidth": 700,
+    "pixelHeight": 600
+  },
+  "cloche": {
+    "pixelWidth": 700,
+    "pixelHeight": 600
+  },
+  "dough-body": {
+    "pixelWidth": 600,
+    "pixelHeight": 600
+  },
+  "dough-rise": {
+    "pixelWidth": 600,
+    "pixelHeight": 600
+  },
+  "dough": {
+    "pixelWidth": 600,
+    "pixelHeight": 600
+  },
+  "fridge": {
+    "pixelWidth": 600,
+    "pixelHeight": 700
+  },
+  "kitchen-base": {
+    "pixelWidth": 1440,
+    "pixelHeight": 600
+  },
+  "kitchen": {
+    "pixelWidth": 1440,
+    "pixelHeight": 600
+  },
+  "popcorn-body": {
+    "pixelWidth": 600,
+    "pixelHeight": 650
+  },
+  "popcorn-kernels": {
+    "pixelWidth": 600,
+    "pixelHeight": 650
+  },
+  "popcorn": {
+    "pixelWidth": 600,
+    "pixelHeight": 650
+  },
+  "pot-body": {
+    "pixelWidth": 700,
+    "pixelHeight": 750
+  },
+  "pot-lid": {
+    "pixelWidth": 700,
+    "pixelHeight": 750
+  },
+  "pot": {
+    "pixelWidth": 700,
+    "pixelHeight": 750
+  },
+  "scene-chef": {
+    "left": 27.673611111111114,
+    "top": 5.333333333333334,
+    "width": 18.71527777777778,
+    "height": 55.08333333333333,
+    "pixelWidth": 270,
+    "pixelHeight": 331
+  },
+  "scene-cloche": {
+    "left": 76.42361111111111,
+    "top": 44.166666666666664,
+    "width": 12.569444444444445,
+    "height": 20.666666666666668,
+    "pixelWidth": 181,
+    "pixelHeight": 124
+  },
+  "scene-dough": {
+    "left": 52.5,
+    "top": 42.833333333333336,
+    "width": 9.409722222222221,
+    "height": 19.166666666666668,
+    "pixelWidth": 136,
+    "pixelHeight": 115
+  },
+  "scene-fridge": {
+    "left": 7.118055555555555,
+    "top": 17.5,
+    "width": 13.645833333333332,
+    "height": 69.08333333333333,
+    "pixelWidth": 197,
+    "pixelHeight": 415
+  },
+  "scene-popcorn": {
+    "left": 63.33333333333333,
+    "top": 36.666666666666664,
+    "width": 12.743055555555555,
+    "height": 25.333333333333336,
+    "pixelWidth": 184,
+    "pixelHeight": 152
+  },
+  "scene-pot": {
+    "left": 40.34722222222222,
+    "top": 17.5,
+    "width": 12.569444444444445,
+    "height": 44.5,
+    "pixelWidth": 181,
+    "pixelHeight": 267
+  },
+  "scene-shelf": {
+    "left": 63.125,
+    "top": 8.166666666666666,
+    "width": 25.65972222222222,
+    "height": 13.583333333333334,
+    "pixelWidth": 370,
+    "pixelHeight": 82
+  },
+  "shelf": {
+    "pixelWidth": 700,
+    "pixelHeight": 350
+  },
+  "steam": {
+    "pixelWidth": 700,
+    "pixelHeight": 750
+  },
+  "home-pot": {
+    "left": 36.21794871794872,
+    "top": 12.235963225113572,
+    "width": 23.333333333333332,
+    "height": 60.00000000000001,
+    "pixelWidth": 336,
+    "pixelHeight": 360
+  },
+  "home-pot-body": {
+    "pixelWidth": 336,
+    "pixelHeight": 360
+  },
+  "home-pot-lid": {
+    "pixelWidth": 336,
+    "pixelHeight": 360
+  },
+  "home-steam": {
+    "pixelWidth": 336,
+    "pixelHeight": 360
+  },
+  "home-cloche": {
+    "left": 73.07692307692307,
+    "top": 32.43807644117634,
+    "width": 19.23076923076923,
+    "height": 39.56043956043956,
+    "pixelWidth": 277,
+    "pixelHeight": 237
+  },
+  "home-cloche-body": {
+    "pixelWidth": 277,
+    "pixelHeight": 237
+  },
+  "home-cloche-dome": {
+    "pixelWidth": 277,
+    "pixelHeight": 237
+  },
+  "home-chef": {
+    "left": 22.45879120879121,
+    "top": 3.0287242393348066,
+    "width": 21.428571428571427,
+    "height": 60.00000000000001,
+    "pixelWidth": 309,
+    "pixelHeight": 360
+  },
+  "home-chef-body": {
+    "pixelWidth": 309,
+    "pixelHeight": 361
+  },
+  "home-chef-head": {
+    "pixelWidth": 309,
+    "pixelHeight": 361
+  },
+  "home-dough": {
+    "left": 48.5576923076923,
+    "top": 29.230769230769226,
+    "width": 17.307692307692307,
+    "height": 41.53846153846154,
+    "pixelWidth": 249,
+    "pixelHeight": 249
+  },
+  "home-dough-body": {
+    "pixelWidth": 249,
+    "pixelHeight": 249
+  },
+  "home-dough-rise": {
+    "pixelWidth": 249,
+    "pixelHeight": 249
+  },
+  "home-popcorn": {
+    "left": 58.98668639053254,
+    "top": 21.28794028329043,
+    "width": 19.526627218934912,
+    "height": 50.76923076923078,
+    "pixelWidth": 281,
+    "pixelHeight": 305
+  },
+  "home-popcorn-body": {
+    "pixelWidth": 281,
+    "pixelHeight": 304
+  },
+  "home-popcorn-kernels": {
+    "pixelWidth": 281,
+    "pixelHeight": 304
+  }
+}

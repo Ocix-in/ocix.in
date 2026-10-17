@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OCIX — The Kitchen</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,100;1,9..144,400,100&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#27245A;text-decoration:none}
+.neu{background:linear-gradient(145deg,#F7F5FB,#E2DDEB);box-shadow:8px 8px 18px rgba(39,36,90,.16),-8px -8px 18px rgba(255,255,255,.95)}
+.neu-in{background:#E9E5F0;box-shadow:inset 4px 4px 9px rgba(39,36,90,.16),inset -4px -4px 9px rgba(255,255,255,.95)}
+.glass{background:rgba(255,255,255,.42);-webkit-backdrop-filter:blur(16px) saturate(170%);backdrop-filter:blur(16px) saturate(170%);border:1px solid rgba(255,255,255,.75);box-shadow:0 18px 40px -18px rgba(39,36,90,.35),inset 0 1px 0 rgba(255,255,255,.9)}
+.nav a{padding:10px 16px;border-radius:999px;transition:all .25s}
+.nav a:hover{box-shadow:inset 3px 3px 7px rgba(39,36,90,.14),inset -3px -3px 7px rgba(255,255,255,.95)}
+.pop{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(#3D3988,#27245A);color:#fff;box-shadow:0 5px 0 #15133A,0 12px 18px -6px rgba(39,36,90,.55),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .15s,box-shadow .15s}
+.chip{display:flex;align-items:center;gap:12px;padding:10px 10px 10px 16px;border-radius:999px;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.chip:hover{transform:translateY(-5px) scale(1.03)}
+.chip:hover .pop{transform:translateY(-2px);box-shadow:0 7px 0 #15133A,0 16px 22px -6px rgba(39,36,90,.55),inset 0 1px 0 rgba(255,255,255,.25)}
+.chip:active .pop{transform:translateY(4px);box-shadow:0 1px 0 #15133A,0 4px 8px -4px rgba(39,36,90,.5)}
+.stem{position:absolute;left:50%;width:2px;margin-left:-1px;background:linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.2))}
+.stem::after{content:"";position:absolute;left:50%;bottom:-6px;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.35)}
+.puff{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.95),rgba(255,255,255,0) 70%);animation:puff 3.2s ease-out infinite;opacity:0}
+.p2{animation-delay:1.05s}.p3{animation-delay:2.1s}
+@keyframes puff{0%{opacity:0;transform:translateY(30px) scale(.5)}25%{opacity:.9}100%{opacity:0;transform:translateY(-70px) scale(1.4)}}
+.glow{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(242,169,59,.45),rgba(242,169,59,0) 65%);animation:glow 3s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.55;transform:scale(.95)}50%{opacity:1;transform:scale(1.08)}}
+.dot{animation:blink 2s ease-in-out infinite}
+@keyframes blink{50%{opacity:.35}}
+</style>
+</helmet>
+<div style="width: 1440px; height: 900px; position: relative; overflow: hidden; background: #ECE8F3; color: #27245A; font-family: 'Geist', ui-sans-serif, system-ui, sans-serif;">
+
+  <!-- Header -->
+  <header style="position: absolute; left: 48px; right: 48px; top: 28px; display: flex; align-items: center; justify-content: space-between; z-index: 5;">
+    <a href="#top" class="neu" aria-label="OCIX home" style="display: flex; align-items: center; height: 60px; padding: 0 22px; border-radius: 22px;"><img src="../../../public/assets/ocix-logo-transparent.png" alt="OCIX" style="display: block; width: 96px; height: 49px; object-fit: contain;"></a>
+    <nav aria-label="Primary" class="neu nav" style="display: flex; align-items: center; gap: 4px; padding: 7px; border-radius: 999px; font-size: 15px; font-weight: 500;">
+      <a href="#menu">The menu</a>
+      <a href="#recipes">Recipes</a>
+      <a href="#tastings">Free tastings</a>
+      <a href="#cook">The cook</a>
+    </nav>
+    <span class="neu-in" style="display: inline-flex; align-items: center; gap: 10px; height: 46px; padding: 0 20px; border-radius: 999px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: .08em; text-transform: uppercase;"><span class="dot" style="width: 8px; height: 8px; border-radius: 50%; background: #2EC4B6; box-shadow: 0 0 10px #2EC4B6;"></span>Kitchen open</span>
+  </header>
+
+  <!-- Headline -->
+  <h1 id="top" style="position: absolute; left: 64px; top: 136px; margin: 0; z-index: 4; font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-variation-settings: 'opsz' 144, 'SOFT' 100; font-size: 84px; line-height: .95; letter-spacing: -.035em;">A small kitchen<br><em style="font-weight: 400; color: #5B4FC4;">for software.</em></h1>
+  <div class="glass" style="position: absolute; right: 64px; top: 140px; width: 340px; box-sizing: border-box; padding: 18px 22px; border-radius: 22px; z-index: 4;">
+    <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #3F3C6E;">Chef OCIX takes every idea as an order. One is served. Three are still cooking — tap anything in the kitchen.</p>
+  </div>
+
+  <!-- The kitchen scene (Blender render) -->
+  <div id="menu" style="position: absolute; left: 0; bottom: 0; width: 1440px; height: 600px;">
+    <div class="glow" aria-hidden="true" style="left: 1103px; top: 230px; width: 180px; height: 180px;"></div>
+    <img src="../renders/kitchen.png" alt="Chef OCIX in a small 3D kitchen: a fridge, a pot simmering, dough proving, popcorn popping, and a finished dish under a glass cloche" style="position: absolute; inset: 0; width: 1440px; height: 600px; display: block;">
+    <span class="puff" aria-hidden="true" style="left: 655px; top: 105px; width: 70px; height: 70px;"></span>
+    <span class="puff p2" aria-hidden="true" style="left: 680px; top: 90px; width: 90px; height: 90px;"></span>
+    <span class="puff p3" aria-hidden="true" style="left: 630px; top: 100px; width: 60px; height: 60px;"></span>
+  </div>
+
+  <!-- Hotspots: glass chips with pop-out buttons -->
+  <div style="position: absolute; left: 1193px; top: 470px; transform: translateX(-50%); z-index: 6;">
+    <a href="Vigilante.dc.html" class="chip glass" aria-label="Vigilante — served. Taste it">
+      <span style="display: flex; flex-direction: column; line-height: 1.1;"><span style="font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 100; font-size: 22px; font-weight: 500;">Vigilante</span><span style="margin-top: 3px; font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: #B4531A;">● Served</span></span>
+      <span class="pop" style="height: 40px; padding: 0 16px; border-radius: 999px; font-size: 13px; font-weight: 600;">Taste →</span>
+    </a>
+    <span class="stem" aria-hidden="true" style="top: 64px; height: 30px;"></span>
+  </div>
+
+  <div style="position: absolute; left: 664px; top: 336px; transform: translateX(-50%); z-index: 6;">
+    <a href="Cooking.dc.html" class="chip glass" aria-label="DraftShield — simmering">
+      <span style="display: flex; flex-direction: column; line-height: 1.1;"><span style="font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 100; font-size: 20px; font-weight: 500;">DraftShield</span><span style="margin-top: 3px; font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: #5B4FC4;">Simmering</span></span>
+      <span class="pop" style="width: 36px; height: 36px; border-radius: 50%; font-size: 15px;" aria-hidden="true">→</span>
+    </a>
+    <span class="stem" aria-hidden="true" style="top: 58px; height: 34px;"></span>
+  </div>
+
+  <div style="position: absolute; left: 836px; top: 492px; transform: translateX(-50%); z-index: 6;">
+    <a href="Cooking.dc.html" class="chip glass" aria-label="GymX — proving">
+      <span style="display: flex; flex-direction: column; line-height: 1.1;"><span style="font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 100; font-size: 20px; font-weight: 500;">GymX</span><span style="margin-top: 3px; font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: #138A80;">Proving</span></span>
+      <span class="pop" style="width: 36px; height: 36px; border-radius: 50%; font-size: 15px;" aria-hidden="true">→</span>
+    </a>
+    <span class="stem" aria-hidden="true" style="top: 58px; height: 22px;"></span>
+  </div>
+
+  <div style="position: absolute; left: 1000px; top: 412px; transform: translateX(-50%); z-index: 6;">
+    <a href="Cooking.dc.html" class="chip glass" aria-label="Do It! — popping">
+      <span style="display: flex; flex-direction: column; line-height: 1.1;"><span style="font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 100; font-size: 20px; font-weight: 500; font-style: italic;">Do It!</span><span style="margin-top: 3px; font-family: 'Geist Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: #B8305F;">Popping</span></span>
+      <span class="pop" style="width: 36px; height: 36px; border-radius: 50%; font-size: 15px;" aria-hidden="true">→</span>
+    </a>
+    <span class="stem" aria-hidden="true" style="top: 58px; height: 40px;"></span>
+  </div>
+
+  <div style="position: absolute; left: 200px; top: 560px; transform: translateX(-50%); z-index: 6;">
+    <a href="#recipes" class="chip glass" style="padding: 8px 8px 8px 16px;" aria-label="Recipes — the blog">
+      <span style="font-size: 14px; font-weight: 600;">Recipes</span>
+      <span class="neu" style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; font-size: 13px;" aria-hidden="true">8</span>
+    </a>
+  </div>
+
+  <div style="position: absolute; left: 1093px; top: 296px; transform: translateX(-50%); z-index: 6;">
+    <a href="#tastings" class="chip glass" style="padding: 8px 16px;" aria-label="Free tastings — free tools">
+      <span style="font-size: 14px; font-weight: 600;">Free tastings</span><span style="font-family: 'Geist Mono', monospace; font-size: 11px; color: #5B4FC4;">×2</span>
+    </a>
+  </div>
+
+  <div style="position: absolute; left: 340px; top: 336px; transform: translateX(-50%); z-index: 6;">
+    <a href="#cook" class="chip glass" style="padding: 8px 16px;" aria-label="The cook — about OCIX">
+      <span style="font-size: 14px; font-weight: 600;">Meet the cook</span>
+    </a>
+  </div>
+
+  <footer style="position: absolute; left: 64px; right: 64px; bottom: 18px; display: flex; justify-content: space-between; z-index: 6; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .05em; color: #6B6894;">
+    <span>© 2026 OCIX · cooked in India by Vishal Pandey</span>
+    <span style="display: flex; gap: 22px;"><a href="mailto:support@ocix.in">support@ocix.in</a><a href="#privacy" style="color: #6B6894;">Privacy</a><a href="#terms" style="color: #6B6894;">Terms</a></span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

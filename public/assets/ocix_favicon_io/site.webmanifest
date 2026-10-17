@@ -1,7 +1,7 @@
 {
   "name": "OCIX",
   "short_name": "OCIX",
-  "description": "Execution-first productivity tools for developers.",
+  "description": "A small kitchen for software. Games, tools and software by OCIX.",
   "icons": [
     {
       "src": "/assets/ocix_favicon_io/android-chrome-192x192.png",
@@ -14,8 +14,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#FAFAF8",
-  "background_color": "#FAFAF8",
+  "theme_color": "#ECE8F3",
+  "background_color": "#ECE8F3",
   "display": "standalone",
   "start_url": "/",
   "scope": "/"

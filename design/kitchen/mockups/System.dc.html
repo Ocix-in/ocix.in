@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OCIX kitchen identity</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,100;1,9..144,400,100&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.neu{background:linear-gradient(145deg,#F7F5FB,#E2DDEB);box-shadow:8px 8px 18px rgba(39,36,90,.16),-8px -8px 18px rgba(255,255,255,.95)}
+.neu-in{background:#E9E5F0;box-shadow:inset 4px 4px 9px rgba(39,36,90,.16),inset -4px -4px 9px rgba(255,255,255,.95)}
+.glass{background:rgba(255,255,255,.42);backdrop-filter:blur(16px) saturate(170%);border:1px solid rgba(255,255,255,.75);box-shadow:0 18px 40px -18px rgba(39,36,90,.35),inset 0 1px 0 rgba(255,255,255,.9)}
+.pop{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(#3D3988,#27245A);color:#fff;box-shadow:0 5px 0 #15133A,0 12px 18px -6px rgba(39,36,90,.55),inset 0 1px 0 rgba(255,255,255,.25)}
+</style>
+</helmet>
+<div style="width: 1200px; height: 1100px; box-sizing: border-box; padding: 52px 60px; background: #ECE8F3; color: #27245A; font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; font-size: 15px; line-height: 1.5; display: flex; flex-direction: column; gap: 36px;">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 22px;">
+      <span class="neu" style="display: flex; align-items: center; height: 64px; padding: 0 22px; border-radius: 22px;"><img src="../../../public/assets/ocix-logo-transparent.png" alt="OCIX" style="display: block; width: 100px; height: 51px; object-fit: contain;"></span>
+      <h1 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 500; font-variation-settings: 'opsz' 144, 'SOFT' 100; font-size: 48px; line-height: 1; letter-spacing: -.025em;">The <em style="font-weight: 400; color: #5B4FC4;">Kitchen</em> · identity v3</h1>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 32px;">
+    <!-- Chef -->
+    <div class="neu" style="flex: 0 0 300px; border-radius: 28px; padding: 18px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;">
+      <img src="../renders/chef.png" alt="Chef OCIX, the studio mascot: a round white robot with a chef hat and a rainbow emblem" style="display: block; width: 220px; height: 257px; object-fit: contain;">
+      <div style="margin-top: 8px; font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 100; font-size: 24px; font-weight: 500;">Chef OCIX</div>
+      <div style="font-size: 13px; color: #4B4878; text-align: center;">The studio’s mascot. Rainbow emblem = the logo’s ring. Appears on home, 404, about and loading.</div>
+    </div>
+
+    <!-- Materials -->
+    <div style="flex: 1 1 auto; display: flex; flex-direction: column; gap: 16px;">
+      <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #6B6894;">Three materials — and when to use each</span>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;">
+        <div class="neu" style="border-radius: 24px; padding: 22px; min-height: 190px; box-sizing: border-box;">
+          <div style="font-weight: 600; font-size: 17px;">Clay (neumorphic)</div>
+          <div style="margin-top: 6px; font-size: 14px; color: #4B4878;">The kitchen surfaces: nav, back buttons, hobs, step tiles. Same colour as the wall, lifted by light.</div>
+          <div class="neu-in" style="margin-top: 14px; height: 40px; border-radius: 999px; display: flex; align-items: center; padding: 0 16px; font-size: 13px; color: #6B6894;">Pressed state</div>
+        </div>
+        <div style="border-radius: 24px; padding: 22px; min-height: 190px; box-sizing: border-box; background: linear-gradient(135deg, #2EC4B6, #7B4FD6 45%, #E0457B 75%, #F2A93B); position: relative; overflow: hidden;">
+          <div class="glass" style="position: absolute; inset: 14px; border-radius: 18px; padding: 16px;">
+            <div style="font-weight: 600; font-size: 17px;">Glass</div>
+            <div style="margin-top: 6px; font-size: 14px; color: #27245A;">Floating info over the 3D scene: labels, recipe cards, the served dock. Blur 16, white 42%.</div>
+          </div>
+        </div>
+        <div class="neu" style="border-radius: 24px; padding: 22px; min-height: 190px; box-sizing: border-box;">
+          <div style="font-weight: 600; font-size: 17px;">Pop (3D buttons)</div>
+          <div style="margin-top: 6px; font-size: 14px; color: #4B4878;">Only for actions. A 5px solid base that squashes on press.</div>
+          <div style="margin-top: 16px; display: flex; gap: 12px;">
+            <span class="pop" style="height: 44px; padding: 0 18px; border-radius: 999px; font-size: 14px; font-weight: 600;">Taste →</span>
+            <span class="pop" style="height: 44px; padding: 0 18px; border-radius: 999px; font-size: 14px; font-weight: 600; background: linear-gradient(#F7BE5C,#E8962A); color: #27245A; box-shadow: 0 5px 0 #B86E14, 0 12px 18px -6px rgba(184,110,20,.5);">Lift the lid</span>
+          </div>
+        </div>
+      </div>
+
+      <span style="margin-top: 8px; font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #6B6894;">Colour — wall, ink, and the logo’s four spices</span>
+      <div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px; font-size: 12px;">
+        <div><div style="height: 56px; border-radius: 14px; background: #ECE8F3; box-shadow: inset 0 0 0 1px rgba(39,36,90,.15);"></div><b style="font-weight: 600;">Wall</b><br><span style="font-family: 'Geist Mono', monospace; color: #6B6894;">#ECE8F3</span></div>
+        <div><div style="height: 56px; border-radius: 14px; background: #27245A;"></div><b style="font-weight: 600;">Navy ink</b><br><span style="font-family: 'Geist Mono', monospace; color: #6B6894;">#27245A</span></div>
+        <div><div style="height: 56px; border-radius: 14px; background: #5B4FC4;"></div><b style="font-weight: 600;">Italic</b><br><span style="font-family: 'Geist Mono', monospace; color: #6B6894;">#5B4FC4</span></div>
+        <div><div style="height: 56px; border-radius: 14px; background: #2EC4B6;"></div><b style="font-weight: 600;">Teal</b><br><span style="font-family: 'Geist Mono', monospace; color: #6B6894;">served / open</span></div>
+        <div><div style="height: 56px; border-radius: 14px; background: #7B4FD6;"></div><b style="font-weight: 600;">Violet</b><br><span style="font-family: 'Geist Mono', monospace; color: #6B6894;">#7B4FD6</span></div>
+        <div><div style="height: 56px; border-radius: 14px; background: #E0457B;"></div><b style="font-weight: 600;">Magenta</b><br><span style="font-family: 'Geist Mono', monospace; color: #6B6894;">#E0457B</span></div>
+        <div><div style="height: 56px; border-radius: 14px; background: #F2A93B;"></div><b style="font-weight: 600;">Amber</b><br><span style="font-family: 'Geist Mono', monospace; color: #6B6894;">heat / CTA</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 32px;">
+    <div class="glass" style="flex: 1 1 0; border-radius: 24px; padding: 22px 24px;">
+      <div style="font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 100; font-size: 26px; font-weight: 500;">Every object is a door</div>
+      <ul style="margin: 10px 0 0; padding-left: 18px; color: #3F3C6E; display: flex; flex-direction: column; gap: 4px;">
+        <li>Cloche → Vigilante (served)</li>
+        <li>Pot → DraftShield · Dough → GymX · Popcorn → Do It!</li>
+        <li>Fridge → Recipes (blog) · Spice shelf → Free tastings</li>
+        <li>Chef → The cook (about) · Logo mark → the burner / heat dial</li>
+      </ul>
+    </div>
+    <div class="glass" style="flex: 1 1 0; border-radius: 24px; padding: 22px 24px;">
+      <div style="font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 100; font-size: 26px; font-weight: 500;">Motion</div>
+      <ul style="margin: 10px 0 0; padding-left: 18px; color: #3F3C6E; display: flex; flex-direction: column; gap: 4px;">
+        <li>Hover an object: it lifts, its glass label pops; the chef turns to look.</li>
+        <li>Click: camera dollies into that object, which becomes the product page’s hero.</li>
+        <li>Steam, lid, dough and popcorn loop; the cloche glows. Reduced motion = still frames.</li>
+        <li>One screen per page on desktop.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1200,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

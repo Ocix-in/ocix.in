@@ -36,8 +36,8 @@ for (const page of routes) {
     ...(page.path === '/about' ? { mainEntity: { '@id': founder['@id'] } } : {}),
   };
   const graph = { '@context': 'https://schema.org', '@graph': [organization, founder, entity] };
-  const heroPreload = page.path === '/' ? `<link rel="preload" as="image" href="/assets/vigilante-world-mobile.webp" media="(max-width: 700px)" fetchpriority="high"/>
-    <link rel="preload" as="image" href="/assets/vigilante-world-desktop.webp" media="(min-width: 701px)" fetchpriority="high"/>` : '';
+  const heroPreload = page.path === '/' ? `<link rel="preload" as="image" type="image/avif" href="/assets/kitchen/kitchen-mobile.avif" media="(max-width: 700px)" fetchpriority="high"/>
+    <link rel="preload" as="image" type="image/avif" imagesrcset="/assets/kitchen/kitchen-base.avif 1x, /assets/kitchen/kitchen-base@2x.avif 2x" media="(min-width: 701px)" fetchpriority="high"/>` : '';
   const head = `${heroPreload}<title>${escape(page.title)}</title>
     <meta name="description" content="${escape(page.description)}"/>
     <meta name="author" content="Vishal Pandey"/>
@@ -54,7 +54,7 @@ for (const page of routes) {
     <meta name="twitter:description" content="${escape(page.description)}"/>
     <meta name="twitter:image" content="https://ocix.in/assets/ocix-og.png"/>
     <script type="application/ld+json">${JSON.stringify(graph).replace(/</g, '\\u003c')}</script>`;
-  const html = template.replace('<!--page-head-->', head).replace('<div id="root"></div>', () => `<div id="root">${render(page.path)}</div>`);
+  const html = template.replace('<!--page-head-->', head).replace('<div id="root"></div>', () => `<div id="root">${render(page.path)}</div>${page.path === '/' ? '<script>const s=document.querySelector(".scene-scroll");if(s&&innerWidth<=700)s.scrollLeft=260</script>' : ''}`);
   const output = page.path === '/' ? 'dist/index.html' : `dist${page.path}.html`;
   await mkdir(path.dirname(output), { recursive: true });
   await writeFile(output, html);

@@ -45,7 +45,7 @@ function OriginalPageContent({ path }: { path: string }) {
 
 export function PageContent({path}:{path:string}) {
   const content=OriginalPageContent({path});
-  if(path.startsWith('/products/')) return <ProductPage slug={path.split('/').pop()!} notes={content}/>;
+  if(path.startsWith('/products/') && pages.some(p=>p.path===path)) return <ProductPage slug={path.split('/').pop()!} notes={content}/>;
   const missing=!pages.some(p=>p.path===path);
   const object=path==='/about'?'chef':path==='/blog'?'fridge':path==='/tools'?'shelf':!pages.some(p=>p.path===path)?'chef':null;
   return <div className={object?'illustrated-page':'reading-page'}>{object&&<div className={`page-art page-art-${object}`}>{missing?<Art name="chef-shrug" priority alt="Chef OCIX shrugs with an open hand: this dish is not on the menu" style={{viewTransitionName:'chef'}}/>:object==='chef'?<DishArt object="chef" served/>:<Art name={object} priority alt={object==='fridge'?'A frosted navy fridge with colourful recipes on its shelves':'A frosted shelf holding jars of teal, violet, magenta and amber spices'} style={{viewTransitionName:object}}/>}</div>}{content}{path==='/tools'&&<Tastings/>}</div>;

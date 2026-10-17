@@ -1,7 +1,0 @@
-@import 'tailwindcss' source(none);
-/* Scan only rendered pages; unused component-library examples added 70 KB of CSS. */
-@source '../app/App.tsx';
-@source '../app/pages.tsx';
-@source '../app/components/{ArticleBody,SiteHeader,Hero,Products,Tools,HowItWorks,TrustClarity,LeadCapture,Footer}.tsx';
-
-@import 'tw-animate-css';

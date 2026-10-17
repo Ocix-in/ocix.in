@@ -1,4 +1,4 @@
-@font-face{font-family:Fraunces;font-style:normal;font-weight:400 600;font-display:optional;src:url('/assets/fonts/fraunces-latin.woff2') format('woff2')}
+@font-face{font-family:Fraunces;font-style:normal;font-weight:400 500;font-display:optional;src:url('/assets/fonts/fraunces-latin.woff2') format('woff2')}
 @font-face{font-family:Fraunces;font-style:italic;font-weight:400 500;font-display:optional;src:url('/assets/fonts/fraunces-italic-latin.woff2') format('woff2')}
 @font-face{font-family:Geist;font-style:normal;font-weight:400 600;font-display:optional;src:url('/assets/fonts/geist-latin.woff2') format('woff2')}
 @font-face{font-family:'Geist Mono';font-style:normal;font-weight:400 500;font-display:optional;src:url('/assets/fonts/geist-mono-latin.woff2') format('woff2')}

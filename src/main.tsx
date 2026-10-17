@@ -1,6 +1,6 @@
 import { inject } from '@vercel/analytics';
 import './styles/index.css';
-import './styles/studio.css';
+import './styles/kitchen.css';
 
 // Production pages are complete HTML. Links and <details> need no hydration.
 // Keep the Vite development experience without shipping React or article text.
@@ -10,6 +10,10 @@ if (import.meta.env.DEV) {
   ]);
   const path = window.location.pathname.replace(/\/+$/, '') || '/';
   createRoot(document.getElementById('root')!).render(createElement(App, { path }));
+  requestAnimationFrame(() => {
+    const scene = document.querySelector('.scene-scroll');
+    if (scene && innerWidth <= 700) scene.scrollLeft = 260;
+  });
 }
 
 function loadAnalytics() {

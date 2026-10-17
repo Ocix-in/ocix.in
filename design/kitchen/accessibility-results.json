@@ -1,0 +1,156 @@
+[
+  {
+    "width": 1440,
+    "route": "/",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/products/vigilante",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/products/draftshield",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/products/gymx",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/products/do-it",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/about",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/tools",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/blog",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/blog/daily-commit-target",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/contact",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/privacy",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/terms",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/404",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "reducedMotionAnimations": 0
+  },
+  {
+    "width": 1440,
+    "notesOpen": true
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/products/vigilante",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/products/draftshield",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/products/gymx",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/products/do-it",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/about",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/tools",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/blog",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/blog/daily-commit-target",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/contact",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/privacy",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/terms",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/404",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "reducedMotionAnimations": 0
+  },
+  {
+    "width": 390,
+    "menuOpen": true
+  },
+  {
+    "width": 390,
+    "firstMenuFocus": "The menu"
+  },
+  {
+    "width": 390,
+    "notesOpen": true
+  }
+]

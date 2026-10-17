@@ -1,0 +1,116 @@
+[
+  {
+    "width": 1440,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "object": "chef",
+    "method": "click",
+    "target": "/about",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "object": "pot",
+    "method": "click",
+    "target": "/products/draftshield",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "object": "dough",
+    "method": "click",
+    "target": "/products/gymx",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "object": "popcorn",
+    "method": "click",
+    "target": "/products/do-it",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "object": "cloche",
+    "method": "click",
+    "target": "/products/vigilante",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "object": "fridge",
+    "method": "click",
+    "target": "/blog",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "object": "shelf",
+    "method": "click",
+    "target": "/tools",
+    "passed": true
+  },
+  {
+    "width": 1440,
+    "reducedMotionAnimations": 0
+  },
+  {
+    "width": 390,
+    "violations": []
+  },
+  {
+    "width": 390,
+    "object": "chef",
+    "method": "keyboard",
+    "target": "/about",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "object": "pot",
+    "method": "keyboard",
+    "target": "/products/draftshield",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "object": "dough",
+    "method": "keyboard",
+    "target": "/products/gymx",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "object": "popcorn",
+    "method": "keyboard",
+    "target": "/products/do-it",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "object": "cloche",
+    "method": "keyboard",
+    "target": "/products/vigilante",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "object": "fridge",
+    "method": "keyboard",
+    "target": "/blog",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "object": "shelf",
+    "method": "keyboard",
+    "target": "/tools",
+    "passed": true
+  },
+  {
+    "width": 390,
+    "reducedMotionAnimations": 0
+  }
+]

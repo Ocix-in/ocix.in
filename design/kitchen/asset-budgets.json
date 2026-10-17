@@ -1,0 +1,20 @@
+{
+  "avif": {
+    "homeDesktop1x": 46165,
+    "homeMobile1x": 44654,
+    "homeMobile2x": 82917,
+    "vigilante": 16262,
+    "draftshield": 18286,
+    "gymx": 11981,
+    "doit": 11871
+  },
+  "webp": {
+    "homeDesktop1x": 61848,
+    "homeMobile1x": 58090,
+    "homeMobile2x": 132940,
+    "vigilante": 48772,
+    "draftshield": 34456,
+    "gymx": 13932,
+    "doit": 15270
+  }
+}

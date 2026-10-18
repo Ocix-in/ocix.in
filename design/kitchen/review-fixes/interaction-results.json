@@ -1,0 +1,134 @@
+[
+  {
+    "width": 1440,
+    "route": "/",
+    "violations": [],
+    "runningAnimations": 0
+  },
+  {
+    "width": 1440,
+    "route": "/products/draftshield",
+    "violations": [],
+    "runningAnimations": 0
+  },
+  {
+    "width": 1440,
+    "menuOpenWithKeyboard": true,
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "menuClosedWithKeyboard": true
+  },
+  {
+    "width": 1440,
+    "object": "chef",
+    "target": "/about",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 1440,
+    "object": "pot",
+    "target": "/products/draftshield",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 1440,
+    "object": "dough",
+    "target": "/products/gymx",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 1440,
+    "object": "popcorn",
+    "target": "/products/do-it",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 1440,
+    "object": "cloche",
+    "target": "/products/vigilante",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 1440,
+    "object": "fridge",
+    "target": "/blog",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 1440,
+    "object": "shelf",
+    "target": "/tools",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "violations": [],
+    "runningAnimations": 0
+  },
+  {
+    "width": 390,
+    "route": "/products/draftshield",
+    "violations": [],
+    "runningAnimations": 0
+  },
+  {
+    "width": 390,
+    "menuOpenWithKeyboard": true,
+    "violations": [],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "menuClosedWithKeyboard": true
+  },
+  {
+    "width": 390,
+    "keyboardScrollWorks": true
+  },
+  {
+    "width": 390,
+    "object": "chef",
+    "target": "/about",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 390,
+    "object": "pot",
+    "target": "/products/draftshield",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 390,
+    "object": "dough",
+    "target": "/products/gymx",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 390,
+    "object": "popcorn",
+    "target": "/products/do-it",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 390,
+    "object": "cloche",
+    "target": "/products/vigilante",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 390,
+    "object": "fridge",
+    "target": "/blog",
+    "keyboardNavigation": true
+  },
+  {
+    "width": 390,
+    "object": "shelf",
+    "target": "/tools",
+    "keyboardNavigation": true
+  }
+]

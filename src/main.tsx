@@ -10,10 +10,6 @@ if (import.meta.env.DEV) {
   ]);
   const path = window.location.pathname.replace(/\/+$/, '') || '/';
   createRoot(document.getElementById('root')!).render(createElement(App, { path }));
-  requestAnimationFrame(() => {
-    const scene = document.querySelector('.scene-scroll');
-    if (scene && innerWidth <= 700) scene.scrollLeft = 260;
-  });
 }
 
 function loadAnalytics() {

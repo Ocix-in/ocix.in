@@ -1,0 +1,62 @@
+[
+  {
+    "width": 1440,
+    "route": "/",
+    "violations": [],
+    "runningAnimations": 0
+  },
+  {
+    "width": 1440,
+    "route": "/products/draftshield",
+    "violations": [],
+    "runningAnimations": 0
+  },
+  {
+    "width": 1440,
+    "menuOpens": true,
+    "violations": [],
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1440,
+    "menuCloses": true
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "violations": [],
+    "runningAnimations": 0
+  },
+  {
+    "width": 390,
+    "route": "/products/draftshield",
+    "violations": [],
+    "runningAnimations": 0
+  },
+  {
+    "width": 390,
+    "menuOpens": true,
+    "violations": [],
+    "horizontalOverflow": false
+  },
+  {
+    "width": 390,
+    "menuCloses": true
+  },
+  {
+    "port": 4173,
+    "initialScene": {
+      "scrollLeft": 199,
+      "potCenter": 194.734375,
+      "viewport": 390
+    }
+  },
+  {
+    "port": 5173,
+    "initialScene": {
+      "scrollLeft": 199,
+      "potCenter": 194.734375,
+      "viewport": 390
+    }
+  }
+]

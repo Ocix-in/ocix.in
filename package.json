@@ -9,7 +9,8 @@
     "test:unit": "node --test tests/*.test.mjs",
     "preview": "node scripts/preview.mjs",
     "assets:kitchen": "node scripts/optimize-kitchen.mjs",
-    "assets:brand": "node scripts/optimize-brand.mjs"
+    "assets:brand": "node scripts/optimize-brand.mjs",
+    "test:layout": "node scripts/check-layout.mjs"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
@@ -73,6 +74,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "4.1.12",
     "@vitejs/plugin-react": "4.7.0",
+    "playwright": "^1.62.1",
     "sharp": "^0.35.5",
     "tailwindcss": "4.1.12",
     "vite": "6.3.5"

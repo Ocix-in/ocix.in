@@ -1,0 +1,20 @@
+import { chromium } from 'playwright';
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import { spawn } from 'node:child_process';
+const preview = spawn(process.execPath, ['scripts/preview.mjs'], {env:{...process.env,PORT:'4179'},stdio:['ignore','pipe','pipe']});
+let browser;
+try {
+ await new Promise((resolve,reject)=>{preview.stdout.on('data',data=>{if(data.toString().includes('production preview'))resolve()});preview.on('error',reject);preview.on('exit',code=>reject(new Error(`Preview exited: ${code}`)))});
+ browser=await chromium.launch({headless:true,executablePath:process.env.OCIX_CHROME_PATH || undefined});const results=[];fs.mkdirSync('design/kitchen/review-fixes',{recursive:true});
+const homes=[[1440,900],[1400,783],[1280,720],[1920,1080],[2560,1440],[1024,768],[1001,768],[1100,768],[1000,900],[1000,800],[768,1024],[390,844],[414,780],[375,667],[320,568]];
+const tasks=homes.map(([w,h])=>['/',w,h]);for(const route of ['/products/vigilante','/products/draftshield','/products/gymx','/products/do-it'])for(const [w,h]of [[1440,900],[1024,768],[768,1024],[390,844]])tasks.push([route,w,h]);for(const route of ['/about','/tools','/blog'])for(const [w,h]of [[1024,768],[390,844]])tasks.push([route,w,h]);
+for(const [route,width,height]of tasks){const ctx=await browser.newContext({viewport:{width,height},deviceScaleFactor:1});const page=await ctx.newPage();await page.route('https://**/*',r=>r.abort());await page.goto('http://127.0.0.1:4179'+route);await page.emulateMedia({reducedMotion:'reduce'});await page.waitForTimeout(200);
+ const metrics=await page.evaluate(()=>{const box=s=>{const e=document.querySelector(s);if(!e||!e.getClientRects().length)return null;const r=e.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height}};const intersect=(a,b)=>a&&b?Math.max(0,Math.min(a.right,b.right)-Math.max(a.x,b.x))*Math.max(0,Math.min(a.bottom,b.bottom)-Math.max(a.y,b.y)):0;const heading=box('.home-heading h1'),intro=box('.home-heading .intro');const labels=[...document.querySelectorAll('.hotspot')].map(e=>({name:e.className,box:(()=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom}})()}));const overlaps=[];for(let i=0;i<labels.length;i++){if(intersect(heading,labels[i].box)>0||intersect(intro,labels[i].box)>0)overlaps.push(['heading',labels[i].name]);for(let j=i+1;j<labels.length;j++)if(intersect(labels[i].box,labels[j].box)>1)overlaps.push([labels[i].name,labels[j].name]);}const scene=box('.scene-scroll'),dock=box('.served-dock'),footer=box('.site-footer'),words=box('.product-words'),hob=box('.hob'),card=box('.recipe-card');return {scrollWidth:document.documentElement.scrollWidth,scrollHeight:document.documentElement.scrollHeight,overlaps,scene,dock,footer,sceneDockOverlap:intersect(scene,dock),sceneFooterOverlap:intersect(scene,footer),productOverlap:intersect(words,hob)+intersect(hob,card)+intersect(words,card),images:[...document.images].filter(i=>!i.complete||!i.naturalWidth).map(i=>i.currentSrc),h1s:document.querySelectorAll('h1').length};});
+results.push({route,width,height,...metrics});
+if(route==='/'||(['/products/vigilante','/products/draftshield'].includes(route)&&[1440,1024,390].includes(width)))await page.screenshot({path:`design/kitchen/review-fixes/${route==='/'?'home':route.split('/').pop()}-${width}x${height}.png`});await ctx.close();}
+fs.writeFileSync('design/kitchen/review-fixes/layout-results.json',JSON.stringify(results,null,2));
+const failures=results.filter(r=>r.overlaps.length||r.sceneDockOverlap||r.sceneFooterOverlap||r.productOverlap||r.scrollWidth>r.width||r.images.length||r.h1s!==1);
+assert.deepEqual(failures, [], 'Layout collisions, page overflow, or broken images; inspect layout-results.json');
+console.log(`Passed ${results.length} page/viewport checks: no label, heading, artwork/card or dock collisions.`);
+} finally {await browser?.close();preview.kill('SIGTERM')}

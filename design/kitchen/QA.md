@@ -2,15 +2,20 @@
 
 Verified 18 October 2026 against the production static build. No existing tests were edited or removed.
 
-## Results
+## Current responsive review
 
-- `npm run build && npm run test:unit`: all 7 tests pass. Nineteen published pages plus the 404 are prerendered, including all eight approved articles.
-- Mobile Lighthouse 12.8.2, default simulated mobile throttling: **Performance 93, Accessibility 100, CLS 0**. LCP 3.0 s; FCP 1.8 s. See [HTML report](lighthouse-mobile.report.html) and [JSON report](lighthouse-mobile.report.json). The local production preview uses gzip for text, matching normal production delivery; no throttling parameters were relaxed.
-- 27 viewport checks: nine routes at 1440×900, 1280×800 and 390×844. No broken images, runtime errors or horizontal page overflow. Home has no vertical scrollbar at all three sizes. Every desktop product hero ends exactly at the viewport bottom. See [viewport results](qa-results.json).
-- Every main contains more than 100 real visible words, including the home and closed-by-default product pages. The static tests separately verify unique metadata, one h1, internal links, structured data, development boundaries and crawl files.
-- Axe WCAG A/AA scans passed on home, all products, about, tools, blog, an article, contact, privacy, terms and 404 at desktop and phone widths. The final direct-object home links also have zero violations. See [accessibility scans](accessibility-results.json).
-- All seven rendered objects pass mouse navigation on desktop and keyboard activation on phone. Native menu and recipe disclosures open with Enter; menu links are reachable with Tab. Reduced motion leaves zero running animations. See [interaction results](interaction-results.json).
-- Production browser bundle: 3.08 KB, plus a tiny inline phone-position initializer and the preserved consent script. No React hydration or animation library ships to the browser.
+The screenshot issues are fixed: heading and artwork occupy separate rows; dish labels show only name, status and action; descriptions are available in the native **Today’s menu** disclosure. The kitchen scales to the available desktop height. On phones, the horizontal scene, swipe hint, Vigilante dock and footer occupy separate rows. Short phones scroll vertically instead of squeezing content behind the dock. Tablet and phone product pages stack; desktop recipe cards sit beside the artwork.
+
+- `npm run build && npm run test:unit`: all **7 unchanged tests pass**.
+- `npm run test:layout`: **37 page/viewport checks pass**, from 320×568 to 2560×1440, including 1000/1001-pixel breakpoint boundaries and the supplied desktop screenshot proportions. No heading/label collisions, label collisions, product artwork/card collisions, scene/dock/footer collisions, horizontal page overflow or broken images. See [layout results](review-fixes/layout-results.json).
+- Fresh default mobile Lighthouse: **Performance 94, Accessibility 100, CLS 0**. See [HTML report](review-fixes/lighthouse-mobile.report.html) and [JSON report](review-fixes/lighthouse-mobile.report.json).
+- Axe WCAG A/AA scans passed on home and DraftShield at desktop and phone widths, including the expanded menu. Enter opens and closes the disclosure; reduced motion leaves zero running animations. Production and development both center DraftShield on initial phone load. See [UI results](review-fixes/ui-results.json).
+- All seven kitchen objects remain keyboard navigable, and native horizontal keyboard scrolling works. See [interaction results](review-fixes/interaction-results.json).
+- Static rendering, metadata, article publication, consent and the 3.08 KB production browser bundle remain intact. No React hydration ships to the browser.
+
+Current screenshots: [desktop 1400×783](review-fixes/home-1400x783.png), [phone 390×844](review-fixes/home-390x844.png), [short phone 320×568](review-fixes/home-320x568.png), [DraftShield desktop](review-fixes/draftshield-1440x900.png), [expanded phone menu](review-fixes/menu-open-390.png).
+
+The original reports and comparison screenshots below record the initial redesign. Use `review-fixes/` for the current responsive review.
 
 ## Artwork budgets
 
@@ -40,9 +45,9 @@ The comparison baselines preserve the supplied mockup markup and use the final p
 
 Intentional differences:
 
-1. Product hotspot descriptions wrap over several lines, and the intro includes Today’s menu. This implements the brief’s visible-content requirement; label positions and stems were adjusted to keep the dishes visible and prevent overlapping labels.
+1. Product hotspot descriptions are now in the Today’s menu disclosure. Compact labels preserve artwork visibility; the headline and intro occupy their own row.
 2. Product pages retain the shared desktop navigation alongside the back link. The approved product mockups showed only the back link. Keeping the navigation makes Recipes, Free tastings and The cook directly reachable on every route.
-3. Phone product pages stack the text, dish, recipe card and switcher. The desktop three-column composition cannot fit a 390-pixel screen with readable text and 44-pixel touch targets. Home remains a single screen with native horizontal scrolling and its served dock.
+3. Phone product pages stack the text, dish, recipe card and switcher. The desktop three-column composition cannot fit a 390-pixel screen with readable text and 44-pixel touch targets. Home uses native horizontal scene scrolling with a separate served dock; short phones can scroll vertically.
 4. Vigilante’s next section starts after the full-viewport hero, instead of at y=840 in the 900-pixel mockup, to satisfy the hero-height requirement. Recipe notes continue below; existing substantive copy is preserved.
 5. Metadata and teal status text are darker than the draft mockups where needed for AA contrast. Full optical-size and SOFT font axes are retained; separate English and accented Latin ranges reduce first-visit font downloads.
 

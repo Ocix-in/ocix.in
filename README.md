@@ -18,7 +18,7 @@ React + Vite render every route to static HTML in `scripts/build.mjs`. There is 
 
 Approved mockups and the brief are in `design/kitchen/`. `src/styles/theme.css` defines the lilac wall, navy ink, violet italic and four logo colours. Materials have distinct roles: raised/inset clay for surfaces, frosted glass for floating information, and navy/amber pop buttons for actions. Display text uses self-hosted variable Fraunces with `SOFT=100`; Geist and Geist Mono handle body and metadata. Fraunces keeps its full optical-size and SOFT axes; English and accented Latin have separate unicode ranges to reduce first-visit downloads. Fonts use `font-display: optional`; their SIL OFL notices are in `public/assets/fonts/OFL.txt`. Metadata labels are slightly darker than the mockups to meet AA contrast.
 
-Every kitchen object links to its own page. Responsive percentage coordinates keep labels attached to the scene. Phone visits start at the stove and use native horizontal scrolling with a fixed served dock. Cross-document View Transitions match each dish to its product hero. All animation and transitions stop under reduced motion. Product notes retain the original substantive copy in closed native disclosure panels; articles keep a readable glass column.
+Every kitchen object links to its own page. Responsive percentage coordinates keep compact name/status labels attached to the scene. Product descriptions are in the native Today’s menu disclosure. The headline, artwork, swipe hint, served dock and footer have separate layout rows. Phone visits start at the stove; native horizontal scrolling has no visible scrollbar. Short phones can scroll vertically so controls never cover the artwork. Product recipe cards sit beside their dishes on desktop, with a stacked layout on tablets and phones. Cross-document View Transitions match each dish to its product hero. All animation and transitions stop under reduced motion. Product notes retain the original substantive copy in closed native disclosure panels; articles keep a readable glass column.
 
 ## Re-render the artwork
 
@@ -40,3 +40,11 @@ Budgets: desktop home artwork ≤260 KB at 1×, mobile ≤140 KB, each product h
 Articles live in `src/content/blog/<slug>.md`, with JSON front matter (`title`, `description`, `publishedAt`, `author`, `status: "published"`). Draft filenames ending in `.draft.md` are excluded. Publishing fails if editorial comments or unresolved `[FOUNDER]`, `[CHECK]`, `[SHOT]`, `[ASK]` or similar markers remain. Sitemap, robots, ads.txt and JSON-LD are generated or retained by the existing build pipeline.
 
 See `design/kitchen/QA.md` for viewport checks, screenshots and visual deviations.
+
+## Responsive layout regression checks
+
+After building, run `npm run test:layout`. This starts an isolated preview on port 4179 and checks 37 page/viewport combinations for heading/label collisions, label collisions, product card/artwork overlap, scene/dock/footer intersections, horizontal overflow and broken images. It saves screenshots and measured bounds in `design/kitchen/review-fixes/`. Install the test browser once with `npx playwright install chromium`, or use an installed Chrome on macOS:
+
+```sh
+OCIX_CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" npm run test:layout
+```

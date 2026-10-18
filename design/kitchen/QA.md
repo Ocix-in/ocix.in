@@ -2,6 +2,12 @@
 
 Verified 18 October 2026 against the production static build. No existing tests were edited or removed.
 
+## Pop-out chef and automatic welcome · 19 October 2026
+
+The chef now emerges from a purple circular backdrop with the full hat and face visible, a torso with the OCIX mark and a waving hand. The welcome opens automatically once per browsing session after 1.4 seconds, without moving focus or interrupting an open menu/article. Dismissal is remembered for the session, and the popped-out hat can reopen it. Extra footer space keeps the mascot clear of the mobile Taste dock.
+
+All 7 unchanged unit tests pass, along with dedicated automatic-welcome checks at 5 viewports and the existing 11 first-viewport/greeting checks. Six automatic/dismissed-state accessibility scans pass. See [screenshots and results](chef-popout-review/README.md). All 37 broader layout checks pass. Fresh mobile Lighthouse with the automatic welcome enabled: **Performance 93, Accessibility 100, CLS 0**, LCP 3.2 s; see the [report](chef-popout-review/lighthouse-mobile.report.html). The avatar reuses the kitchen’s AVIF/WebP head resources. Production browser JavaScript is 6.59 KB, with no React hydration.
+
 ## Clearer Today’s menu button
 
 On phones and tablets (up to 1000 px), the menu invitation has a raised clay surface, subtle border, menu-sheet icon, stronger label and an action arrow. Desktop retains the earlier plain full-width label and plus sign. Both retain inset keyboard focus without underlines. The mobile button remains compact enough for the first viewport. Current screenshots are in the [welcome review](welcome-review/README.md).

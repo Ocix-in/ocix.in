@@ -1,0 +1,38 @@
+[
+  {
+    "w": 1440,
+    "h": 900,
+    "state": "automatic welcome",
+    "violations": []
+  },
+  {
+    "w": 1440,
+    "h": 900,
+    "state": "dismissed",
+    "violations": []
+  },
+  {
+    "w": 390,
+    "h": 724,
+    "state": "automatic welcome",
+    "violations": []
+  },
+  {
+    "w": 390,
+    "h": 724,
+    "state": "dismissed",
+    "violations": []
+  },
+  {
+    "w": 320,
+    "h": 568,
+    "state": "automatic welcome",
+    "violations": []
+  },
+  {
+    "w": 320,
+    "h": 568,
+    "state": "dismissed",
+    "violations": []
+  }
+]

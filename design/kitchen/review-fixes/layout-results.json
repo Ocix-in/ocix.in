@@ -250,25 +250,25 @@
       "x": 0,
       "y": 256.21875,
       "right": 1000,
-      "bottom": 730,
+      "bottom": 714,
       "width": 1000,
-      "height": 473.78125
+      "height": 457.78125
     },
     "dock": {
       "x": 16,
-      "y": 762,
+      "y": 746,
       "right": 984,
-      "bottom": 836,
+      "bottom": 820,
       "width": 968,
       "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 836,
+      "y": 820,
       "right": 1000,
       "bottom": 900,
       "width": 1000,
-      "height": 64
+      "height": 80
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -287,25 +287,25 @@
       "x": 0,
       "y": 256.21875,
       "right": 1000,
-      "bottom": 630,
+      "bottom": 614,
       "width": 1000,
-      "height": 373.78125
+      "height": 357.78125
     },
     "dock": {
       "x": 16,
-      "y": 662,
+      "y": 646,
       "right": 984,
-      "bottom": 736,
+      "bottom": 720,
       "width": 968,
       "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 736,
+      "y": 720,
       "right": 1000,
       "bottom": 800,
       "width": 1000,
-      "height": 64
+      "height": 80
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -324,25 +324,25 @@
       "x": 0,
       "y": 256.21875,
       "right": 768,
-      "bottom": 854,
+      "bottom": 838,
       "width": 768,
-      "height": 597.78125
+      "height": 581.78125
     },
     "dock": {
       "x": 16,
-      "y": 886,
+      "y": 870,
       "right": 752,
-      "bottom": 960,
+      "bottom": 944,
       "width": 736,
       "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 960,
+      "y": 944,
       "right": 768,
       "bottom": 1024,
       "width": 768,
-      "height": 64
+      "height": 80
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -361,25 +361,25 @@
       "x": 0,
       "y": 248.875,
       "right": 390,
-      "bottom": 674,
+      "bottom": 658,
       "width": 390,
-      "height": 425.125
+      "height": 409.125
     },
     "dock": {
       "x": 16,
-      "y": 706,
+      "y": 690,
       "right": 374,
-      "bottom": 780,
+      "bottom": 764,
       "width": 358,
       "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 780,
+      "y": 764,
       "right": 390,
       "bottom": 844,
       "width": 390,
-      "height": 64
+      "height": 80
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -398,25 +398,25 @@
       "x": 0,
       "y": 253.78125,
       "right": 414,
-      "bottom": 610,
+      "bottom": 594,
       "width": 414,
-      "height": 356.21875
+      "height": 340.21875
     },
     "dock": {
       "x": 16,
-      "y": 642,
+      "y": 626,
       "right": 398,
-      "bottom": 716,
+      "bottom": 700,
       "width": 382,
       "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 716,
+      "y": 700,
       "right": 414,
       "bottom": 780,
       "width": 414,
-      "height": 64
+      "height": 80
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -435,25 +435,25 @@
       "x": 0,
       "y": 245.78125,
       "right": 375,
-      "bottom": 497,
+      "bottom": 481,
       "width": 375,
-      "height": 251.21875
+      "height": 235.21875
     },
     "dock": {
       "x": 16,
-      "y": 529,
+      "y": 513,
       "right": 359,
-      "bottom": 603,
+      "bottom": 587,
       "width": 343,
       "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 603,
+      "y": 587,
       "right": 375,
       "bottom": 667,
       "width": 375,
-      "height": 64
+      "height": 80
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -472,25 +472,25 @@
       "x": 0,
       "y": 213.984375,
       "right": 320,
-      "bottom": 406,
+      "bottom": 390,
       "width": 320,
-      "height": 192.015625
+      "height": 176.015625
     },
     "dock": {
       "x": 16,
-      "y": 434,
+      "y": 418,
       "right": 304,
-      "bottom": 508,
+      "bottom": 492,
       "width": 288,
       "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 508,
+      "y": 492,
       "right": 320,
       "bottom": 568,
       "width": 320,
-      "height": 60
+      "height": 76
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,

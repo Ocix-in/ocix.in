@@ -123,7 +123,20 @@ document.addEventListener('keydown', event => {
 document.addEventListener('beforetoggle', event => {
   const panel=event.target as HTMLElement;
   if(panel.id!=='chef-welcome')return;
+  if((event as ToggleEvent).newState==='open'){try{sessionStorage.setItem('ocix-chef-welcomed','1')}catch{}}
   const hour=new Date().getHours();
   const greeting=hour>=5&&hour<12?'Good morning!':hour>=12&&hour<17?'Good afternoon!':hour>=17&&hour<22?'Good evening!':'Hello, night owl!';
   panel.querySelector('[data-chef-greeting]')!.textContent=greeting;
 },true);
+
+// Welcome once per browsing session, without interrupting an open menu or article.
+function scheduleChefWelcome(){
+  setTimeout(()=>{
+    try{if(sessionStorage.getItem('ocix-chef-welcomed'))return}catch{}
+    const panel=document.querySelector<HTMLElement>('#chef-welcome');
+    if(!panel || typeof panel.showPopover!=='function' || document.querySelector('dialog[open], .mobile-menu[open], [popover]:popover-open'))return;
+    panel.showPopover();
+  },1400);
+}
+if(document.readyState==='complete')scheduleChefWelcome();
+else window.addEventListener('load',scheduleChefWelcome,{once:true});

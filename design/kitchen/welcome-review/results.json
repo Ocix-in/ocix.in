@@ -7,8 +7,8 @@
     "dock": {
       "left": 16,
       "right": 374,
-      "top": 586,
-      "bottom": 660
+      "top": 570,
+      "bottom": 644
     },
     "launcher": {
       "left": 328,
@@ -17,20 +17,20 @@
       "bottom": 714
     },
     "fridge": {
-      "left": 12.125,
-      "right": 112.046875,
-      "top": 302.28125,
-      "bottom": 513.046875
+      "left": 12.390625,
+      "right": 107.0625,
+      "top": 299.484375,
+      "bottom": 499.203125
     },
     "head": {
-      "left": 124.46875,
-      "right": 281.375,
-      "top": 258.125,
-      "bottom": 441.1875
+      "left": 118.84375,
+      "right": 267.515625,
+      "top": 257.640625,
+      "bottom": 431.09375
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 40
+    "scrollLeft": 37
   },
   {
     "width": 390,
@@ -40,8 +40,8 @@
     "dock": {
       "left": 16,
       "right": 374,
-      "top": 706,
-      "bottom": 780
+      "top": 690,
+      "bottom": 764
     },
     "launcher": {
       "left": 328,
@@ -50,20 +50,20 @@
       "bottom": 834
     },
     "fridge": {
-      "left": 11.625,
-      "right": 150.84375,
-      "top": 323.28125,
-      "bottom": 616.953125
+      "left": 11.890625,
+      "right": 145.875,
+      "top": 320.484375,
+      "bottom": 603.109375
     },
     "head": {
-      "left": 168.15625,
-      "right": 386.765625,
-      "top": 261.78125,
-      "bottom": 516.828125
+      "left": 162.53125,
+      "right": 372.90625,
+      "top": 261.28125,
+      "bottom": 506.734375
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 61
+    "scrollLeft": 58
   },
   {
     "width": 375,
@@ -73,8 +73,8 @@
     "dock": {
       "left": 16,
       "right": 359,
-      "top": 529,
-      "bottom": 603
+      "top": 513,
+      "bottom": 587
     },
     "launcher": {
       "left": 313,
@@ -83,20 +83,20 @@
       "bottom": 657
     },
     "fridge": {
-      "left": 11.734375,
-      "right": 93.671875,
-      "top": 290.578125,
-      "bottom": 463.421875
+      "left": 12,
+      "right": 88.703125,
+      "top": 287.765625,
+      "bottom": 449.5625
     },
     "head": {
-      "left": 103.875,
-      "right": 232.53125,
-      "top": 254.375,
-      "bottom": 404.484375
+      "left": 98.234375,
+      "right": 218.6875,
+      "top": 253.875,
+      "bottom": 394.375
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 31
+    "scrollLeft": 28
   },
   {
     "width": 320,
@@ -106,8 +106,8 @@
     "dock": {
       "left": 16,
       "right": 304,
-      "top": 434,
-      "bottom": 508
+      "top": 418,
+      "bottom": 492
     },
     "launcher": {
       "left": 258,
@@ -116,20 +116,20 @@
       "bottom": 558
     },
     "fridge": {
-      "left": 14.796875,
-      "right": 77.671875,
-      "top": 247.59375,
-      "bottom": 380.21875
+      "left": 12.09375,
+      "right": 64.03125,
+      "top": 259.140625,
+      "bottom": 368.703125
     },
     "head": {
-      "left": 85.5,
-      "right": 184.234375,
-      "top": 219.8125,
-      "bottom": 335
+      "left": 70.5,
+      "right": 152.046875,
+      "top": 236.203125,
+      "bottom": 331.359375
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 18
+    "scrollLeft": 15
   },
   {
     "width": 414,
@@ -139,8 +139,8 @@
     "dock": {
       "left": 16,
       "right": 398,
-      "top": 598,
-      "bottom": 672
+      "top": 582,
+      "bottom": 656
     },
     "launcher": {
       "left": 352,
@@ -149,20 +149,20 @@
       "bottom": 726
     },
     "fridge": {
-      "left": 12.15625,
-      "right": 114.078125,
-      "top": 309.25,
-      "bottom": 524.234375
+      "left": 12.421875,
+      "right": 109.09375,
+      "top": 306.453125,
+      "bottom": 510.375
     },
     "head": {
-      "left": 126.75,
-      "right": 286.78125,
-      "top": 264.234375,
-      "bottom": 450.9375
+      "left": 121.125,
+      "right": 272.9375,
+      "top": 263.734375,
+      "bottom": 440.828125
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 41
+    "scrollLeft": 38
   },
   {
     "width": 360,
@@ -172,8 +172,8 @@
     "dock": {
       "left": 16,
       "right": 344,
-      "top": 502,
-      "bottom": 576
+      "top": 486,
+      "bottom": 560
     },
     "launcher": {
       "left": 298,
@@ -182,20 +182,20 @@
       "bottom": 630
     },
     "fridge": {
-      "left": 11.65625,
-      "right": 85.765625,
-      "top": 283.296875,
-      "bottom": 439.625
+      "left": 11.921875,
+      "right": 80.796875,
+      "top": 280.484375,
+      "bottom": 425.765625
     },
     "head": {
-      "left": 94.984375,
-      "right": 211.359375,
-      "top": 250.5625,
-      "bottom": 386.328125
+      "left": 89.359375,
+      "right": 197.5,
+      "top": 250.046875,
+      "bottom": 376.21875
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 27
+    "scrollLeft": 24
   },
   {
     "width": 430,
@@ -205,8 +205,8 @@
     "dock": {
       "left": 16,
       "right": 414,
-      "top": 794,
-      "bottom": 868
+      "top": 778,
+      "bottom": 852
     },
     "launcher": {
       "left": 368,
@@ -215,20 +215,20 @@
       "bottom": 922
     },
     "fridge": {
-      "left": 12.21875,
-      "right": 177.53125,
-      "top": 345.5625,
-      "bottom": 694.265625
+      "left": 11.484375,
+      "right": 171.546875,
+      "top": 342.765625,
+      "bottom": 680.40625
     },
     "head": {
-      "left": 198.078125,
-      "right": 457.65625,
-      "top": 272.515625,
-      "bottom": 575.359375
+      "left": 191.46875,
+      "right": 442.8125,
+      "top": 272.046875,
+      "bottom": 565.28125
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 74
+    "scrollLeft": 72
   },
   {
     "width": 768,
@@ -238,8 +238,8 @@
     "dock": {
       "left": 16,
       "right": 752,
-      "top": 886,
-      "bottom": 960
+      "top": 870,
+      "bottom": 944
     },
     "launcher": {
       "left": 706,
@@ -248,20 +248,20 @@
       "bottom": 1014
     },
     "fridge": {
-      "left": 11.9375,
-      "right": 207.375,
-      "top": 361.65625,
-      "bottom": 773.90625
+      "left": 12.203125,
+      "right": 202.40625,
+      "top": 358.84375,
+      "bottom": 760.0625
     },
     "head": {
-      "left": 231.671875,
-      "right": 538.578125,
-      "top": 275.296875,
-      "bottom": 633.328125
+      "left": 226.0625,
+      "right": 524.734375,
+      "top": 274.8125,
+      "bottom": 623.265625
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 90
+    "scrollLeft": 87
   },
   {
     "width": 844,
@@ -271,8 +271,8 @@
     "dock": {
       "left": 268,
       "right": 828,
-      "top": 256,
-      "bottom": 330
+      "top": 240,
+      "bottom": 314
     },
     "launcher": {
       "left": 782,
@@ -281,16 +281,16 @@
       "bottom": 380
     },
     "fridge": {
-      "left": 296.6875,
-      "right": 351.703125,
-      "top": 89.40625,
-      "bottom": 205.453125
+      "left": 293.953125,
+      "right": 343.71875,
+      "top": 86.609375,
+      "bottom": 191.59375
     },
     "head": {
-      "left": 358.546875,
-      "right": 444.9375,
-      "top": 65.109375,
-      "bottom": 165.890625
+      "left": 349.921875,
+      "right": 428.078125,
+      "top": 64.609375,
+      "bottom": 155.78125
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,

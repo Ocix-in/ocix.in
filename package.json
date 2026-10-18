@@ -13,7 +13,8 @@
     "test:layout": "node scripts/check-layout.mjs",
     "test:studio": "node scripts/check-studio.mjs",
     "test:fridge": "node scripts/check-fridge.mjs",
-    "test:welcome": "node scripts/check-welcome.mjs"
+    "test:welcome": "node scripts/check-welcome.mjs",
+    "test:chef": "node scripts/check-chef.mjs"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",

@@ -10,6 +10,7 @@ try {
  browser=await chromium.launch({headless:true,executablePath:process.env.OCIX_CHROME_PATH||undefined});fs.mkdirSync(output,{recursive:true});const results=[];
  for(const width of [1440,768,390,320]) {
   const context=await browser.newContext({viewport:{width,height:900},reducedMotion:'reduce'}),page=await context.newPage();
+  await page.addInitScript(()=>sessionStorage.setItem('ocix-chef-welcomed','1'));
   await page.route('https://**/*',route=>route.abort());
   await page.goto('http://127.0.0.1:4180/');
   const mini=page.locator('.object-fridge');

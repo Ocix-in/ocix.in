@@ -17,6 +17,7 @@ try {
   const results=[];
   for(const width of [1440,768,390,320]) {
     const context=await browser.newContext({viewport:{width,height:width===1440?900:844},reducedMotion:'reduce'});
+    await context.addInitScript(()=>sessionStorage.setItem('ocix-chef-welcomed','1'));
     const page=await context.newPage();
     await page.route('https://**/*',route=>route.abort());
     for(const route of ['/','/about','/blog','/tools','/contact']) {

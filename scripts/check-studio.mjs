@@ -17,8 +17,8 @@ try {
   const results=[];
   for(const width of [1440,768,390,320]) {
     const context=await browser.newContext({viewport:{width,height:width===1440?900:844},reducedMotion:'reduce'});
-    await context.addInitScript(()=>sessionStorage.setItem('ocix-chef-welcomed','1'));
-    const page=await context.newPage();
+
+    const page=await context.newPage();await page.clock.install({time:new Date('2026-10-19T00:00:00Z')});await page.clock.pauseAt(new Date('2026-10-19T00:00:01Z'));
     await page.route('https://**/*',route=>route.abort());
     for(const route of ['/','/about','/blog','/tools','/contact']) {
       await page.goto(`http://127.0.0.1:4178${route}`);
@@ -79,6 +79,7 @@ try {
       results.push({route,width,passed:true});
     }
     await page.goto('http://127.0.0.1:4178/#ocix-menu');
+    await page.clock.runFor(32);
     await page.waitForFunction(()=>document.querySelector('#ocix-menu').open);
     await context.close();
   }

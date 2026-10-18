@@ -36,7 +36,7 @@
     "shy": true,
     "automatic": true,
     "fiveSecondRetreat": true,
-    "dismissalPersists": true,
+    "replaysOnReload": true,
     "reopens": true,
     "hoverAndFocusSafe": true,
     "reducedMotion": true
@@ -78,7 +78,7 @@
     "shy": true,
     "automatic": true,
     "fiveSecondRetreat": true,
-    "dismissalPersists": true,
+    "replaysOnReload": true,
     "reopens": true,
     "hoverAndFocusSafe": true,
     "reducedMotion": true
@@ -120,7 +120,7 @@
     "shy": true,
     "automatic": true,
     "fiveSecondRetreat": true,
-    "dismissalPersists": true,
+    "replaysOnReload": true,
     "reopens": true,
     "hoverAndFocusSafe": true,
     "reducedMotion": true
@@ -143,7 +143,7 @@
     "cta": {
       "x": 54,
       "y": 454,
-      "right": 207.9375,
+      "right": 209.953125,
       "bottom": 500
     },
     "panel": {
@@ -162,7 +162,7 @@
     "shy": true,
     "automatic": true,
     "fiveSecondRetreat": true,
-    "dismissalPersists": true,
+    "replaysOnReload": true,
     "reopens": true,
     "hoverAndFocusSafe": true,
     "reducedMotion": true
@@ -204,7 +204,7 @@
     "shy": true,
     "automatic": true,
     "fiveSecondRetreat": true,
-    "dismissalPersists": true,
+    "replaysOnReload": true,
     "reopens": true,
     "hoverAndFocusSafe": true,
     "reducedMotion": true

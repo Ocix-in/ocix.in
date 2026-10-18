@@ -121,8 +121,9 @@ document.addEventListener('keydown', event => {
 
 // The chef retreats after a five-second hello; reading or using the card keeps it open.
 let chefRetreat: ReturnType<typeof setTimeout> | undefined;
+let chefWelcomed = false;
 function keepChefWelcome() {clearTimeout(chefRetreat)}
-for (const type of ['pointerover', 'focusin', 'pointerdown']) document.addEventListener(type, event => {
+for (const type of ['pointermove', 'focusin', 'pointerdown']) document.addEventListener(type, event => {
   if ((event.target as Element).closest?.('#chef-welcome')) keepChefWelcome();
 });
 // Date uses the visitor's device time zone; no location or account data is needed.
@@ -133,9 +134,9 @@ document.addEventListener('beforetoggle', event => {
   const opening=(event as ToggleEvent).newState==='open';
   panel.closest('.chef-guide')?.classList.toggle('chef-emerged',opening);
   if (!opening) return;
-  try{sessionStorage.setItem('ocix-chef-welcomed','1')}catch{}
+  chefWelcomed = true;
   chefRetreat=setTimeout(()=>{
-    if (panel.matches(':hover') || panel.contains(document.activeElement)) return;
+    if (panel.contains(document.activeElement)) return;
     panel.hidePopover();
   },5000);
   const hour=new Date().getHours();
@@ -143,14 +144,14 @@ document.addEventListener('beforetoggle', event => {
   panel.querySelector('[data-chef-greeting]')!.textContent=greeting;
 },true);
 
-// Welcome once per browsing session, without interrupting an open menu or article.
+// Replay on every page load, without waiting for images or interrupting a menu/article.
 function scheduleChefWelcome(){
   setTimeout(()=>{
-    try{if(sessionStorage.getItem('ocix-chef-welcomed'))return}catch{}
+    if (chefWelcomed) return;
     const panel=document.querySelector<HTMLElement>('#chef-welcome');
     if(!panel || typeof panel.showPopover!=='function' || document.querySelector('dialog[open], .mobile-menu[open], [popover]:popover-open'))return;
     panel.showPopover();
   },1400);
 }
-if(document.readyState==='complete')scheduleChefWelcome();
-else window.addEventListener('load',scheduleChefWelcome,{once:true});
+if(document.readyState!=='loading')scheduleChefWelcome();
+else document.addEventListener('DOMContentLoaded',scheduleChefWelcome,{once:true});

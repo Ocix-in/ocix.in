@@ -2,6 +2,12 @@
 
 Verified 18 October 2026 against the production static build. No existing tests were edited or removed.
 
+## Automatic welcome replay fix · 19 October 2026
+
+Removed the session-storage suppression that prevented the chef from appearing again after reload. Each page load now starts the welcome after 1.4 seconds from content readiness, without waiting for image downloads; it retreats five seconds later. A stationary pointer under the newly opened card no longer cancels the retreat. Deliberate pointer movement, tapping or focusing the card keeps it available. Opening the guide manually before the automatic timer suppresses duplicate greetings only for that page load.
+
+Regression checks cover old session flags, first visits with image downloads deliberately stalled, automatic retreat after reload, five desktop/mobile viewports, normal and reduced motion, and open-menu protection. General geometry tests freeze their browser clock while inspecting layouts, rather than using production session flags. Build and all 7 unit tests pass, along with 5 chef lifecycle viewports, 11 welcome viewports, 4 local-time greetings, 37 layout checks, 20 studio page/viewport checks and 32 article previews. Production browser JavaScript is 6.87 KB.
+
 ## Shy chef, wave and five-second retreat · 19 October 2026
 
 The guide begins as the earlier circular portrait with a purple outline, then transitions to the popped-out waving chef and a local-time greeting on the first visit of a session. After five seconds it retreats automatically. Hovering, tapping or focusing the card keeps it open; manual reopening, close, Escape and outside dismissal remain available. Reduced motion removes the transitions and wave. The automatic greeting still avoids open menus/articles and leaves focus alone.

@@ -1,13 +1,13 @@
 # Shy chef welcome · 19 October 2026
 
-The resting badge uses the earlier circular chef portrait with the site's purple outline. On the first visit of a browsing session, the chef emerges from the disc, waves and reveals a local-time greeting. After five seconds the card closes and the chef returns to the portrait. Hovering, tapping or focusing the card keeps it open for reading and following its links. Clicking the badge replays the welcome; the close button, Escape and outside dismissal also tuck the chef away.
+The resting badge uses the earlier circular chef portrait with the site's purple outline. On every fresh visit and reload, the chef emerges from the disc, waves and reveals a local-time greeting. After five seconds the card closes and the chef returns to the portrait. Moving the pointer over, tapping or focusing the card keeps it open for reading and following its links. Clicking the badge replays the welcome; the close button, Escape and outside dismissal also tuck the chef away.
 
-The automatic welcome does not steal focus or interrupt an open menu/article, and does not repeat during the session. Reduced motion switches directly between states without waving or sliding. The head artwork shares AVIF/WebP resources with the kitchen scene. No animation library or React hydration is shipped.
+The automatic welcome does not steal focus or interrupt an open menu/article, and runs once per page load. A manual opening before the automatic timer prevents a duplicate welcome on that load. Reduced motion switches directly between states without waving or sliding. The head artwork shares AVIF/WebP resources with the kitchen scene. No animation library or React hydration is shipped.
 
 ## Verification
 
 - Build and all 7 original unit tests pass.
-- `test:chef`: five viewport sizes verify the initial shy state, purple outline, automatic emergence, five-second dismissal, return to the portrait, session persistence, manual replay, hover/focus protection, accessible CTA position and reduced motion. A separate normal-motion check verifies emergence and retreat, and a menu-interruption check verifies the automatic welcome stays quiet behind a menu.
+- `test:chef`: five viewport sizes verify the initial shy state, purple outline, automatic emergence, five-second dismissal, return to the portrait, replay after reload even with the obsolete session flag set, manual replay, hover/focus protection, accessible CTA position and reduced motion. A fresh-visitor check holds image requests open and verifies that the welcome appears and retreats before the page finishes loading. A separate normal-motion check verifies emergence and retreat, and a menu-interruption check verifies the automatic welcome stays quiet behind a menu.
 - Existing `test:welcome` checks the first mobile viewport and local-time greetings; `test:layout` checks broader page geometry.
 
 [Resting phone badge](shy-390x724.png) · [Waving chef](waving-390x724.png) · [Automatic welcome](automatic-390x724.png) · [Short phone](automatic-320x568.png) · [Retreated chef](avatar-390x724.png) · [Results](results.json)

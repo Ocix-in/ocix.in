@@ -24,6 +24,7 @@ async function freezeClock(page){
       const context=await browser.newContext({viewport:{width:w,height:h},reducedMotion:'reduce',timezoneId:'Asia/Kolkata'});
       const page=await context.newPage();
       await page.route('https://**/*',route=>route.abort());
+      await page.addInitScript(()=>sessionStorage.setItem('ocix-chef-welcomed','1'));
       await freezeClock(page);
       await page.goto('http://127.0.0.1:4182/');
       await page.clock.runFor(1200);
@@ -51,7 +52,9 @@ async function freezeClock(page){
       assert.equal(await page.locator('.chef-avatar').evaluate(el=>getComputedStyle(el).opacity),'0');
       await page.screenshot({path:`${out}/avatar-${w}x${h}.png`});
       await page.reload();await page.clock.runFor(1700);
-      assert.equal(await isOpen(page),false,'Greeting must not repeat this session');
+      assert(await isOpen(page),'Greeting must replay on reload even with the old session flag');
+      await page.clock.runFor(5100);
+      assert.equal(await isOpen(page),false,'Reloaded greeting must also retreat after five seconds');
       await page.locator('.chef-launcher').click();
       assert(await isOpen(page),'Resting icon must reopen greeting');
       await page.emulateMedia({reducedMotion:'no-preference'});
@@ -71,7 +74,7 @@ async function freezeClock(page){
       await page.keyboard.press('Escape');
       assert.equal(await isOpen(page),false);
       assert.equal(await page.locator('.chef-wave').evaluate(el=>getComputedStyle(el).animationName),'none','Resting chef must stop waving');
-      results.push({w,h,...measurements,shy:true,automatic:true,fiveSecondRetreat:true,dismissalPersists:true,reopens:true,hoverAndFocusSafe:true,reducedMotion:true});
+      results.push({w,h,...measurements,shy:true,automatic:true,fiveSecondRetreat:true,replaysOnReload:true,reopens:true,hoverAndFocusSafe:true,reducedMotion:true});
       await context.close();
     }
     const motionContext=await browser.newContext({viewport:{width:390,height:724},reducedMotion:'no-preference'});
@@ -88,12 +91,28 @@ async function freezeClock(page){
     assert.equal(await motionPage.locator('.chef-avatar').evaluate(el=>getComputedStyle(el).opacity),'0');
     assert.equal(await motionPage.locator('.chef-rest').evaluate(el=>getComputedStyle(el).opacity),'1');
     await motionContext.close();
+    const freshContext=await browser.newContext({reducedMotion:'reduce'}),freshPage=await freshContext.newPage();
+    await freezeClock(freshPage);
+    const pendingImages=[];
+    await freshPage.route('**/*',route=>{
+      if(route.request().resourceType()==='image')pendingImages.push(route);
+      else if(route.request().url().startsWith('https://'))return route.abort();
+      else return route.continue();
+    });
+    await freshPage.goto('http://127.0.0.1:4182/',{waitUntil:'domcontentloaded'});
+    assert.notEqual(await freshPage.evaluate(()=>document.readyState),'complete','Images must still be pending');
+    await freshPage.clock.runFor(1500);
+    assert(await isOpen(freshPage),'Fresh visits must open even before images finish loading');
+    await freshPage.clock.runFor(5100);
+    assert.equal(await isOpen(freshPage),false,'Fresh visit must automatically retreat');
+    await Promise.all(pendingImages.map(route=>route.abort()));
+    await freshContext.close();
     const context=await browser.newContext(),page=await context.newPage();
     await freezeClock(page);await page.goto('http://127.0.0.1:4182/');
     await page.locator('.menu-open').click();await page.clock.runFor(1700);
     assert.equal(await isOpen(page),false,'Greeting must not interrupt menu');
     await context.close();
     fs.writeFileSync(`${out}/results.json`,JSON.stringify(results,null,2));
-    console.log('Shy portrait, emergence, five-second retreat, interaction safety, session dismissal and reduced motion pass at 5 viewports.');
+    console.log('Fresh visits with pending images, reload replay despite old storage, five-second retreat, interaction safety and reduced motion pass at 5 viewports.');
   }finally{await browser.close();server.kill('SIGTERM')}
 })().catch(error=>{server.kill('SIGTERM');console.error(error);process.exit(1)});

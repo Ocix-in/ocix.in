@@ -6,7 +6,7 @@ The home fridge and Recipes close-up now share one component, the same navy frid
 
 Home notes are decorative children of the single fridge link. They cannot independently open articles. In the close-up, each title-only note is a real link that opens the full article in a focused native dialog, with a blurred backdrop and a short zoom entrance. Escape, the close button and backdrop dismissal restore focus to the selected note. The header stays visible while long articles scroll. Normal article URLs remain available for direct visits, modified clicks, sharing and failed-preview fallbacks.
 
-The purple outlines on Today’s menu and the close button are replaced by underline/inset keyboard states. Pointer interactions have no focus outline; keyboard focus remains visible. Reduced motion disables zoom animations.
+The purple outlines on Today’s menu and the close button are replaced by inset keyboard states. Pointer interactions have no focus outline; keyboard focus remains visible. Reduced motion disables zoom animations.
 
 ## Verification
 

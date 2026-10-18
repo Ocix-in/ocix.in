@@ -201,8 +201,8 @@ button{font:inherit;color:inherit;cursor:pointer}button:focus-visible{outline:3p
 
 /* Raised controls use an inset keyboard state, without the purple focus outline. */
 .menu-open:focus,.menu-close:focus,.reader-close:focus{outline:none}
-.menu-open:focus-visible{text-decoration:underline;text-underline-offset:5px}
-.menu-close:focus-visible,.reader-close:focus-visible{box-shadow:var(--inset);text-decoration:underline;text-underline-offset:4px}
+.menu-open:focus-visible{box-shadow:var(--inset);border-radius:12px;text-decoration:none}
+.menu-close:focus-visible,.reader-close:focus-visible{box-shadow:var(--inset);text-decoration:none}
 .article-dialog{border:0;padding:0;background:transparent;color:var(--ink);width:min(840px,calc(100vw - 32px));max-width:none;max-height:calc(100svh - 48px);overflow:visible}
 .article-dialog::backdrop{background:#27245a55;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .reader-paper{background:linear-gradient(145deg,#F7F5FB,#ECE8F3);border:1px solid #fff;border-radius:28px;box-shadow:0 24px 80px #15133a55;max-height:calc(100svh - 48px);display:flex;flex-direction:column;overflow:hidden}

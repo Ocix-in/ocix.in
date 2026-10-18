@@ -10,7 +10,7 @@ The production build, all 7 existing unit tests and all 32 article-preview check
 
 ## Shared fridge and article reader
 
-Recipes now zooms into the **same navy fridge** used in the kitchen, with matching sticky-note positions. Home notes are decorative; clicking any part opens the fridge. Close-up notes open articles in a native modal with a blurred backdrop. Article HTML loads on demand, and direct article links remain available. The purple close-button circle and menu-button rectangle are replaced by subtle keyboard-only inset/underline states.
+Recipes now zooms into the **same navy fridge** used in the kitchen, with matching sticky-note positions. Home notes are decorative; clicking any part opens the fridge. Close-up notes open articles in a native modal with a blurred backdrop. Article HTML loads on demand, and direct article links remain available. The purple close-button circle and menu-button rectangle are replaced by subtle keyboard-only inset states.
 
 The build and all **7 unchanged unit tests** pass, alongside **37 layout checks**, **20 studio checks**, **32 article previews at four widths**, failed-load fallback checks and **16 Axe WCAG A/AA scans**. Screenshots and detailed results are in the [fridge review](fridge-review/README.md). Production browser JavaScript is **5.85 KB**, with no React hydration or bundled article bodies.
 

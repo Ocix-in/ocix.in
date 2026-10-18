@@ -317,3 +317,21 @@ button{font:inherit;color:inherit;cursor:pointer}button:focus-visible{outline:3p
 
 .chef-portrait{display:block;width:100%;height:100%}
 .chef-mascot .chef-portrait img{position:static;width:100%;height:100%;max-width:none;transform:none}
+
+/* A shy circular portrait becomes the waving chef for each short welcome. */
+.chef-launcher{border:3px solid var(--italic);background:var(--wall)}
+.chef-rest{position:absolute;inset:2px;display:block;overflow:hidden;border-radius:50%;background:#ded9e9;opacity:1;transform:scale(1);transition:opacity .25s ease .12s,transform .45s ease}
+.chef-rest picture{display:block;width:100%;height:100%}
+.chef-rest img{position:absolute;width:174%;max-width:none;height:auto;left:50%;top:-5px;transform:translateX(-50%)}
+.chef-avatar{opacity:0;transform:translate(-50%,18px) scale(.72);transform-origin:50% 100%;pointer-events:none;transition:transform .55s cubic-bezier(.22,1,.36,1),opacity .25s ease}
+.chef-wave{animation:none}
+.chef-emerged .chef-launcher{background:linear-gradient(145deg,#7669d8,#5144ae)}
+.chef-emerged .chef-rest{opacity:0;transform:translateY(8px) scale(.88);transition-delay:0s}
+.chef-emerged .chef-avatar{opacity:1;transform:translate(-50%,0) scale(1);pointer-events:auto}
+.chef-emerged .chef-wave{animation:chef-wave 4.8s ease-in-out 1}
+#chef-welcome:popover-open{animation:chef-card-in .35s .25s both ease-out}
+@keyframes chef-card-in{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){
+ .chef-rest,.chef-avatar{transition:none}
+ .chef-emerged .chef-wave,#chef-welcome:popover-open{animation:none}
+}

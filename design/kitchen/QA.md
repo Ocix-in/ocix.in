@@ -2,6 +2,12 @@
 
 Verified 18 October 2026 against the production static build. No existing tests were edited or removed.
 
+## Shy chef, wave and five-second retreat · 19 October 2026
+
+The guide begins as the earlier circular portrait with a purple outline, then transitions to the popped-out waving chef and a local-time greeting on the first visit of a session. After five seconds it retreats automatically. Hovering, tapping or focusing the card keeps it open; manual reopening, close, Escape and outside dismissal remain available. Reduced motion removes the transitions and wave. The automatic greeting still avoids open menus/articles and leaves focus alone.
+
+Build and all 7 original unit tests pass. The expanded chef suite verifies the lifecycle at 5 viewports and normal-motion emergence/retreat, plus interaction protection, session persistence and menu interruption. The existing first-viewport and layout suites cover mobile fit and surrounding page geometry. Browser JavaScript is 6.98 KB. See [current screenshots and checks](chef-popout-review/README.md).
+
 ## Pop-out chef and automatic welcome · 19 October 2026
 
 The chef now emerges from a purple circular backdrop with the full hat and face visible, a torso with the OCIX mark and a waving hand. The welcome opens automatically once per browsing session after 1.4 seconds, without moving focus or interrupting an open menu/article. Dismissal is remembered for the session, and the popped-out hat can reopen it. Extra footer space keeps the mascot clear of the mobile Taste dock.

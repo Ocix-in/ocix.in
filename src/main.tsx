@@ -119,11 +119,25 @@ document.addEventListener('keydown', event => {
   else if (!event.shiftKey && document.activeElement === last) {event.preventDefault();first.focus()}
 });
 
+// The chef retreats after a five-second hello; reading or using the card keeps it open.
+let chefRetreat: ReturnType<typeof setTimeout> | undefined;
+function keepChefWelcome() {clearTimeout(chefRetreat)}
+for (const type of ['pointerover', 'focusin', 'pointerdown']) document.addEventListener(type, event => {
+  if ((event.target as Element).closest?.('#chef-welcome')) keepChefWelcome();
+});
 // Date uses the visitor's device time zone; no location or account data is needed.
 document.addEventListener('beforetoggle', event => {
   const panel=event.target as HTMLElement;
   if(panel.id!=='chef-welcome')return;
-  if((event as ToggleEvent).newState==='open'){try{sessionStorage.setItem('ocix-chef-welcomed','1')}catch{}}
+  keepChefWelcome();
+  const opening=(event as ToggleEvent).newState==='open';
+  panel.closest('.chef-guide')?.classList.toggle('chef-emerged',opening);
+  if (!opening) return;
+  try{sessionStorage.setItem('ocix-chef-welcomed','1')}catch{}
+  chefRetreat=setTimeout(()=>{
+    if (panel.matches(':hover') || panel.contains(document.activeElement)) return;
+    panel.hidePopover();
+  },5000);
   const hour=new Date().getHours();
   const greeting=hour>=5&&hour<12?'Good morning!':hour>=12&&hour<17?'Good afternoon!':hour>=17&&hour<22?'Good evening!':'Hello, night owl!';
   panel.querySelector('[data-chef-greeting]')!.textContent=greeting;

@@ -10,9 +10,9 @@
     },
     "avatar": {
       "x": 1355,
-      "y": 802,
+      "y": 800,
       "right": 1423,
-      "bottom": 879
+      "bottom": 877
     },
     "cta": {
       "x": 1111,
@@ -26,17 +26,19 @@
       "right": 1418,
       "bottom": 788
     },
-    "height": 900,
     "button": {
       "x": 1360,
       "y": 822,
       "right": 1418,
       "bottom": 880
     },
-    "overflow": "visible",
+    "height": 900,
+    "shy": true,
     "automatic": true,
+    "fiveSecondRetreat": true,
     "dismissalPersists": true,
     "reopens": true,
+    "hoverAndFocusSafe": true,
     "reducedMotion": true
   },
   {
@@ -50,9 +52,9 @@
     },
     "avatar": {
       "x": 324,
-      "y": 650,
+      "y": 648,
       "right": 380,
-      "bottom": 713
+      "bottom": 711
     },
     "cta": {
       "x": 69,
@@ -66,17 +68,19 @@
       "right": 376,
       "bottom": 632
     },
-    "height": 724,
     "button": {
       "x": 328,
       "y": 666,
       "right": 376,
       "bottom": 714
     },
-    "overflow": "visible",
+    "height": 724,
+    "shy": true,
     "automatic": true,
+    "fiveSecondRetreat": true,
     "dismissalPersists": true,
     "reopens": true,
+    "hoverAndFocusSafe": true,
     "reducedMotion": true
   },
   {
@@ -90,14 +94,14 @@
     },
     "avatar": {
       "x": 254,
-      "y": 494,
+      "y": 492,
       "right": 310,
-      "bottom": 557
+      "bottom": 555
     },
     "cta": {
       "x": 35,
       "y": 377,
-      "right": 190.953125,
+      "right": 188.9375,
       "bottom": 421
     },
     "panel": {
@@ -106,17 +110,19 @@
       "right": 306,
       "bottom": 476
     },
-    "height": 568,
     "button": {
       "x": 258,
       "y": 510,
       "right": 306,
       "bottom": 558
     },
-    "overflow": "visible",
+    "height": 568,
+    "shy": true,
     "automatic": true,
+    "fiveSecondRetreat": true,
     "dismissalPersists": true,
     "reopens": true,
+    "hoverAndFocusSafe": true,
     "reducedMotion": true
   },
   {
@@ -130,14 +136,14 @@
     },
     "avatar": {
       "x": 309,
-      "y": 593,
+      "y": 591,
       "right": 365,
-      "bottom": 656
+      "bottom": 654
     },
     "cta": {
       "x": 54,
       "y": 454,
-      "right": 209.953125,
+      "right": 207.9375,
       "bottom": 500
     },
     "panel": {
@@ -146,17 +152,19 @@
       "right": 361,
       "bottom": 575
     },
-    "height": 667,
     "button": {
       "x": 313,
       "y": 609,
       "right": 361,
       "bottom": 657
     },
-    "overflow": "visible",
+    "height": 667,
+    "shy": true,
     "automatic": true,
+    "fiveSecondRetreat": true,
     "dismissalPersists": true,
     "reopens": true,
+    "hoverAndFocusSafe": true,
     "reducedMotion": true
   },
   {
@@ -170,9 +178,9 @@
     },
     "avatar": {
       "x": 778,
-      "y": 316,
+      "y": 314,
       "right": 834,
-      "bottom": 379
+      "bottom": 377
     },
     "cta": {
       "x": 517,
@@ -186,17 +194,19 @@
       "right": 830,
       "bottom": 298
     },
-    "height": 390,
     "button": {
       "x": 782,
       "y": 332,
       "right": 830,
       "bottom": 380
     },
-    "overflow": "visible",
+    "height": 390,
+    "shy": true,
     "automatic": true,
+    "fiveSecondRetreat": true,
     "dismissalPersists": true,
     "reopens": true,
+    "hoverAndFocusSafe": true,
     "reducedMotion": true
   }
 ]

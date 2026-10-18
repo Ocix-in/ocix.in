@@ -151,3 +151,45 @@
 .hotspot-cloche{max-width:190px;gap:8px;padding-left:12px}.hotspot-cloche .taste{padding:0 12px}
 @media(min-width:1001px){.scene{--scene-width:min(100cqw,240cqh,1800px);width:var(--scene-width)}}
 @media(min-width:1001px) and (min-height:761px){.hotspot-cloche{left:min(max(90%,calc(74% + 180px)),calc((100cqw + var(--scene-width))/2 - 100px))}}
+
+/* The full menu grows independently of the curated kitchen scene. */
+button{font:inherit;color:inherit;cursor:pointer}button:focus-visible{outline:3px solid var(--italic);outline-offset:6px}
+.menu-open{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;min-height:44px;border:0;border-top:1px solid #27245a18;margin-top:10px;background:none;font-size:13px;text-align:left}
+.menu-is-open{overflow:hidden}
+.menu-dialog{padding:38px 20px 20px;border:0;background:none;color:var(--ink);width:min(700px,calc(100vw - 24px));max-width:none;max-height:92svh;overflow:auto}
+.menu-dialog::backdrop{background:#27245a55;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.menu-paper{position:relative;padding:34px;border-radius:28px;background:linear-gradient(145deg,#F7F5FB,#E2DDEB)}
+.menu-close{position:absolute;right:2px;top:-24px;border:1px solid #ffffff99;border-radius:50%;width:48px;height:48px;font-size:30px;line-height:1;display:grid;place-items:center;z-index:1}
+.menu-paper h2{font-size:42px;line-height:1.1;margin:10px 0 24px}
+.menu-products{display:grid;gap:0}
+.menu-product{display:grid;grid-template-columns:74px minmax(0,1fr) 20px;align-items:center;gap:18px;padding:18px 0;border-top:1px solid #27245a20;border-radius:8px}
+.menu-product picture{width:74px}.menu-product strong{font:500 26px Fraunces,Georgia,serif}.menu-product small{display:block;font:10px/1.4 'Geist Mono',monospace;text-transform:uppercase;margin:6px 0;color:var(--meta)}.menu-product p{font-size:13px;line-height:1.5}.menu-product:hover strong{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:1000px){.menu-open{justify-content:flex-start;gap:12px;border:0;margin-top:6px}.menu-paper{padding:24px 20px}.menu-paper h2{font-size:32px}.menu-product{grid-template-columns:50px minmax(0,1fr) 14px;gap:12px}.menu-product picture{width:50px}.menu-product strong{font-size:23px}}
+/* Mark-only badge is printed over the chef's embroidered apron patch. */
+.scene-art-canvas>.chef-badge,.dish-chef>.chef-badge{position:absolute;left:43.1%;top:75%;width:13.8%;height:11.8%;object-fit:contain;background:#393e75;border-radius:50%;padding:1.1%;z-index:2;pointer-events:none}
+.about-studio section{margin-top:32px}.about-studio section h2{font-size:34px;line-height:1.1}.about-studio .document-lead{font-size:22px}
+.contact-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:28px 0}
+.contact-buttons a{display:flex;align-items:center;gap:12px;min-height:64px;padding:14px 18px;border-radius:18px;font-size:15px;font-weight:500;transition:transform .2s,box-shadow .2s}
+.contact-buttons a>span{display:grid;place-items:center;width:32px;font-size:24px}.contact-buttons a:hover{transform:translateY(-3px)}.contact-buttons a:active{transform:translateY(2px);box-shadow:var(--inset)}
+.tools-actions{margin-bottom:40px;flex-wrap:wrap}.tools-actions .button{font-size:14px}.tasting-primary{border:1px solid #f2a93b66}
+/* An extendable fridge door: title-only notes, with room for more recipes. */
+.recipes-page{max-width:1100px;padding:44px 0 64px}.recipes-page>header{text-align:center;margin-bottom:40px}.recipes-page h1{font-size:clamp(44px,6vw,76px);margin:14px 0 18px}.recipes-page>header>p:last-child{font-size:17px}
+.recipe-fridge{position:relative;padding:32px 70px 56px 38px;border:8px solid #383b6a;border-radius:32px;background:linear-gradient(135deg,#dad7e5,#bebdce);box-shadow:inset 2px 2px 6px #ffffffcc,8px 12px 0 #27245a,20px 26px 35px #27245a33}
+.fridge-top{display:flex;align-items:center;gap:14px;padding-bottom:24px;border-bottom:3px solid #66688b;margin-bottom:32px}.fridge-top img{width:42px;height:42px}.fridge-top .eyebrow{color:var(--ink)}
+.fridge-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 26px;align-items:stretch}
+.sticky-note{position:relative;display:flex;align-items:center;min-height:200px;padding:26px 22px;background:linear-gradient(150deg,#fff1b9,#f3d783);box-shadow:3px 8px 9px #27245a30,inset 0 22px 0 #ffffff28;transform:rotate(-2deg);transition:transform .25s,box-shadow .25s;transform-origin:50% 15%;z-index:1}
+.sticky-note:nth-child(3n+2){background:linear-gradient(150deg,#c7eee8,#92d4cb);transform:rotate(2deg)}.sticky-note:nth-child(3n){background:linear-gradient(150deg,#efcee1,#ddb2ce);transform:rotate(-1deg)}
+.sticky-note::before{content:'';position:absolute;width:56px;height:22px;top:-10px;left:calc(50% - 28px);background:#fffdf880;box-shadow:0 1px 2px #27245a15;transform:rotate(-5deg)}
+.sticky-note h2{font-size:23px;line-height:1.2;letter-spacing:-.025em}.sticky-note:hover,.sticky-note:focus-visible{transform:rotate(0) scale(1.06);box-shadow:4px 16px 20px #27245a40;z-index:3}
+.fridge-handle{position:absolute;right:22px;top:180px;width:16px;height:210px;border-radius:8px;background:linear-gradient(90deg,#bc731e,#f7c578,#dda147);box-shadow:3px 4px 4px #27245a55}
+@media(max-width:1000px){.recipes-page{padding-top:24px}.recipes-page>header{margin-bottom:28px}.recipe-fridge{padding:26px 44px 36px 22px;border-width:6px;border-radius:24px}.fridge-notes{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px}.sticky-note{min-height:190px;padding:24px 18px}.sticky-note h2{font-size:21px}.fridge-handle{right:13px;width:12px}.contact-buttons{gap:14px}.contact-buttons a{padding-inline:12px}}
+@media(max-width:480px){.fridge-notes{grid-template-columns:1fr;gap:28px}.sticky-note{min-height:160px}.sticky-note h2{font-size:24px}.fridge-top .eyebrow{font-size:9px}.fridge-top{gap:10px}.about-studio section h2{font-size:30px}.about-studio .document-lead{font-size:19px}.contact-buttons{grid-template-columns:1fr}.tools-actions{align-items:stretch;flex-direction:column}.tools-actions a{text-align:center}}
+@media(prefers-reduced-motion:reduce){.sticky-note,.contact-buttons a{transition:none}.sticky-note:hover,.sticky-note:focus-visible,.contact-buttons a:hover{transform:none}}
+/* Keep the menu heading and close control visible as the catalogue grows. */
+.menu-dialog{overflow:visible;max-height:calc(100svh - 32px);padding-bottom:0}
+.menu-paper{display:flex;flex-direction:column;max-height:calc(100svh - 88px)}
+.menu-paper>.eyebrow,.menu-paper>h2{flex:none}
+.menu-products{min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:0 6px 2px}
+.document .contact-buttons a{color:var(--ink);text-decoration:none}
+.page-art .dish-chef{inset:auto;left:12%;top:50%;width:76%;height:auto;aspect-ratio:6/7;transform:translateY(-50%);animation:none}
+.document .tools-actions .pop-amber{color:var(--ink);text-decoration:none}

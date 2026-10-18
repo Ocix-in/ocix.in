@@ -2,9 +2,16 @@ import sharp from 'sharp';
 import { readFile, writeFile } from 'node:fs/promises';
 const source='public/assets/ocix-logo-transparent.png',dir='public/assets/ocix_favicon_io';
 await sharp(source).resize(188,96).webp({quality:82,alphaQuality:90}).toFile('public/assets/ocix-logo.webp');
-const mark=await sharp(source).extract({left:20,top:30,width:410,height:405}).resize(400,400,{fit:'contain',background:'#00000000'}).png().toBuffer();
+// Remove the neighbouring wordmark and the source's almost-transparent white matte.
+const {data,info}=await sharp(source).extract({left:20,top:30,width:410,height:405}).raw().toBuffer({resolveWithObject:true});
+for(let y=0;y<info.height;y++)for(let x=0;x<info.width;x++){
+ const i=(y*info.width+x)*4;
+ if(data[i+3]<=10 || (x>=355 && y>=150))data[i+3]=0;
+}
+const mark=await sharp(data,{raw:info}).resize(400,400,{fit:'contain',background:'#00000000'}).png().toBuffer();
 const canvas=await sharp({create:{width:448,height:448,channels:4,background:'#00000000'}}).composite([{input:mark}]).png().toBuffer();
 await sharp(canvas).webp({quality:94}).toFile('public/assets/ocix-mark.webp');
+await sharp(canvas).resize(128,128).webp({quality:85}).toFile('public/assets/ocix-badge.webp');
 for(const [name,size] of [['favicon-16x16',16],['favicon-32x32',32],['apple-touch-icon',180],['android-chrome-192x192',192],['android-chrome-512x512',512]]){
  let image=sharp(canvas).resize(size,size);
  if(size>=180) image=image.flatten({background:'#ECE8F3'});

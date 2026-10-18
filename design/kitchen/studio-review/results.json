@@ -1,0 +1,138 @@
+[
+  {
+    "width": 1440,
+    "route": "/",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "modal": "open, Escape, close button and focus return passed"
+  },
+  {
+    "width": 1440,
+    "route": "/about",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/blog",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/tools",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/contact",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 390,
+    "modal": "open, Escape, close button and focus return passed"
+  },
+  {
+    "width": 390,
+    "route": "/about",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/blog",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/tools",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/contact",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 320,
+    "modal": "open, Escape, close button and focus return passed"
+  },
+  {
+    "width": 320,
+    "route": "/about",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/blog",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/tools",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/contact",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 768,
+    "modal": "open, Escape, close button and focus return passed"
+  },
+  {
+    "width": 768,
+    "route": "/about",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/blog",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/tools",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/contact",
+    "overflow": false,
+    "violations": []
+  }
+]

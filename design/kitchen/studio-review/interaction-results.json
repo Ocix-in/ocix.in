@@ -1,0 +1,102 @@
+[
+  {
+    "route": "/",
+    "width": 1440,
+    "passed": true
+  },
+  {
+    "route": "/about",
+    "width": 1440,
+    "passed": true
+  },
+  {
+    "route": "/blog",
+    "width": 1440,
+    "passed": true
+  },
+  {
+    "route": "/tools",
+    "width": 1440,
+    "passed": true
+  },
+  {
+    "route": "/contact",
+    "width": 1440,
+    "passed": true
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "passed": true
+  },
+  {
+    "route": "/about",
+    "width": 768,
+    "passed": true
+  },
+  {
+    "route": "/blog",
+    "width": 768,
+    "passed": true
+  },
+  {
+    "route": "/tools",
+    "width": 768,
+    "passed": true
+  },
+  {
+    "route": "/contact",
+    "width": 768,
+    "passed": true
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "passed": true
+  },
+  {
+    "route": "/about",
+    "width": 390,
+    "passed": true
+  },
+  {
+    "route": "/blog",
+    "width": 390,
+    "passed": true
+  },
+  {
+    "route": "/tools",
+    "width": 390,
+    "passed": true
+  },
+  {
+    "route": "/contact",
+    "width": 390,
+    "passed": true
+  },
+  {
+    "route": "/",
+    "width": 320,
+    "passed": true
+  },
+  {
+    "route": "/about",
+    "width": 320,
+    "passed": true
+  },
+  {
+    "route": "/blog",
+    "width": 320,
+    "passed": true
+  },
+  {
+    "route": "/tools",
+    "width": 320,
+    "passed": true
+  },
+  {
+    "route": "/contact",
+    "width": 320,
+    "passed": true
+  }
+]

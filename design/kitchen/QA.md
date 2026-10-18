@@ -2,16 +2,26 @@
 
 Verified 18 October 2026 against the production static build. No existing tests were edited or removed.
 
-## Current responsive review
+## Latest OCIX studio refinements
 
-The screenshot issues are fixed: heading and artwork occupy separate rows; dish labels show only name, status and action; descriptions are available in the native **Today’s menu** disclosure. The kitchen scales to the available desktop height. On phones, the horizontal scene, swipe hint, Vigilante dock and footer occupy separate rows. Short phones scroll vertically instead of squeezing content behind the dock. Tablet and phone product pages stack; desktop recipe cards sit beside the artwork.
+Roast is the primary CTA, with the audit secondary. Meet the cook now focuses on OCIX’s motive and contact in two sections, with raised email, X, Instagram and Reddit buttons. Recipes uses a fridge door of title-only sticky notes that zoom on hover/focus. Today’s menu is a centered dialog with a blurred backdrop, a raised close button, Escape dismissal, focus cycling and focus return. Product rows scroll while the heading and close button stay visible. The chef’s apron carries the mark-only OCIX logo.
+
+The full catalogue comes from the shared product list; the kitchen shows four curated products. A simulated 16-product catalogue passes the menu scroll and keyboard checks. See [studio review and screenshots](studio-review/README.md).
+
+Build and all **7 unchanged unit tests** pass. **37 layout checks** pass, plus **20 studio page/viewport interaction checks**. Axe scans found no WCAG A/AA violations across home, about, recipes, tools and contact at four widths, including the open menu. The production browser bundle is **4.10 KB**, without React hydration. Small apron badges are served separately from the full-resolution brand mark. Hidden menu artwork is lazy-loaded; the interaction runner decodes it after opening the dialog.
+
+Fresh mobile Lighthouse for this refinement: **Performance 93, Accessibility 100, CLS 0**, LCP 3.2 s. See the [HTML report](studio-review/lighthouse-mobile.report.html) and [JSON report](studio-review/lighthouse-mobile.report.json). The audit ran after the browser regression checks finished, using default mobile throttling.
+
+## Earlier responsive review
+
+The screenshot issues are fixed: heading and artwork occupy separate rows; dish labels show only name, status and action; descriptions are available in the **Today’s menu** dialog. The kitchen scales to the available desktop height. On phones, the horizontal scene, swipe hint, Vigilante dock and footer occupy separate rows. Short phones scroll vertically instead of squeezing content behind the dock. Tablet and phone product pages stack; desktop recipe cards sit beside the artwork.
 
 - `npm run build && npm run test:unit`: all **7 unchanged tests pass**.
 - `npm run test:layout`: **37 page/viewport checks pass**, from 320×568 to 2560×1440, including 1000/1001-pixel breakpoint boundaries and the supplied desktop screenshot proportions. No heading/label collisions, label collisions, product artwork/card collisions, scene/dock/footer collisions, horizontal page overflow or broken images. See [layout results](review-fixes/layout-results.json).
 - Fresh default mobile Lighthouse: **Performance 94, Accessibility 100, CLS 0**. See [HTML report](review-fixes/lighthouse-mobile.report.html) and [JSON report](review-fixes/lighthouse-mobile.report.json).
-- Axe WCAG A/AA scans passed on home and DraftShield at desktop and phone widths, including the expanded menu. Enter opens and closes the disclosure; reduced motion leaves zero running animations. Production and development both center DraftShield on initial phone load. See [UI results](review-fixes/ui-results.json).
+- Axe WCAG A/AA scans passed on home and DraftShield at desktop and phone widths, including the earlier expanded disclosure. Those results precede the current modal; current menu tests are in `studio-review/`. Enter opens the menu; reduced motion leaves zero running animations. Production and development both center DraftShield on initial phone load. See [UI results](review-fixes/ui-results.json).
 - All seven kitchen objects remain keyboard navigable, and native horizontal keyboard scrolling works. See [interaction results](review-fixes/interaction-results.json).
-- Static rendering, metadata, article publication, consent and the 3.08 KB production browser bundle remain intact. No React hydration ships to the browser.
+- Static rendering, metadata, article publication, consent and the small production browser bundle remain intact. No React hydration ships to the browser.
 
 Current screenshots: [desktop 1400×783](review-fixes/home-1400x783.png), [phone 390×844](review-fixes/home-390x844.png), [short phone 320×568](review-fixes/home-320x568.png), [DraftShield desktop](review-fixes/draftshield-1440x900.png), [expanded phone menu](review-fixes/menu-open-390.png).
 

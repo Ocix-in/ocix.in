@@ -3,7 +3,7 @@ import { mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 import path from 'node:path';
 
-// React renders complete static pages at build time; the browser only loads analytics.
+// React renders complete static pages at build time; the browser loads a small menu controller and analytics.
 await build();
 await build({ build: { ssr: 'src/entry-server.tsx', outDir: '.ssg', emptyOutDir: true }, ssr: { noExternal: ['lucide-react'] } });
 const { pages, articles, render } = await import(pathToFileURL(path.resolve('.ssg/entry-server.js')).href);
@@ -13,7 +13,7 @@ const escape = text => String(text).replace(/[&<>"']/g, char => ({'&':'&amp;','<
 const routes = [...pages, { path: '/404', title: 'Page not found | OCIX', description: 'That page is not available. Explore OCIX products, tools and contact options.' }];
 const organization = {
   '@type': 'Organization', '@id': 'https://ocix.in/#organization', name: 'OCIX',
-  url: 'https://ocix.in/', description: 'An independent software studio run by Vishal Pandey in India.',
+  url: 'https://ocix.in/', description: 'Software that brings fun to everyday life, made by OCIX in India.',
   email: 'support@ocix.in', founder: { '@id': 'https://ocix.in/#founder' },
   sameAs: ['https://x.com/Ocixdotin', 'https://www.instagram.com/ocix.in', 'https://www.reddit.com/user/ocix_dot_in/'],
   logo: { '@type': 'ImageObject', url: 'https://ocix.in/assets/ocix-logo.webp', width: 188, height: 96 },
@@ -40,7 +40,7 @@ for (const page of routes) {
     <link rel="preload" as="image" type="image/avif" imagesrcset="/assets/kitchen/kitchen-base.avif 1x, /assets/kitchen/kitchen-base@2x.avif 2x" media="(min-width: 701px)" fetchpriority="high"/>` : '';
   const head = `${heroPreload}<title>${escape(page.title)}</title>
     <meta name="description" content="${escape(page.description)}"/>
-    <meta name="author" content="Vishal Pandey"/>
+    <meta name="author" content="${article ? escape(article.author) : 'OCIX'}"/>
     <meta name="robots" content="${page.path === '/404' ? 'noindex, follow' : 'index, follow, max-image-preview:large'}"/>
     <link rel="canonical" href="${url}"/>
     <meta property="og:site_name" content="OCIX"/>

@@ -1,5 +1,7 @@
 # Shared fridge and focused recipe reader
 
+The notes are now small, square and scattered across 28 reserved spaces, with varied angles and sizes. The existing eight notes leave most of the glass visible. Short display titles enlarge on hover or keyboard focus; full article titles remain in accessible labels and the reader. A seeded arrangement keeps both views consistent.
+
 The home fridge and Recipes close-up now share one component, the same navy fridge artwork, the same note placement and the same note order. This retains the recognizable frame, frosted glass door, brass handle and lower freezer drawer. The existing cross-document `fridge` view transition zooms between them, including when Recipes is opened through navigation.
 
 Home notes are decorative children of the single fridge link. They cannot independently open articles. In the close-up, each title-only note is a real link that opens the full article in a focused native dialog, with a blurred backdrop and a short zoom entrance. Escape, the close button and backdrop dismissal restore focus to the selected note. The header stays visible while long articles scroll. Normal article URLs remain available for direct visits, modified clicks, sharing and failed-preview fallbacks.

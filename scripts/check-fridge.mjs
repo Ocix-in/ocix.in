@@ -29,6 +29,11 @@ try {
   assert.equal(await page.locator('.fridge-art img').getAttribute('src'),homeImage,'The close-up must use the same fridge image');
   assert.equal(await page.locator('.fridge-closeup').evaluate(el=>getComputedStyle(el).viewTransitionName),'fridge');
   assert.equal(await page.locator('.sticky-note').count(),8);
+  const coverage=await page.locator('.fridge-notes').evaluate(el=>{
+   const area=el.clientWidth*el.clientHeight;
+   return [...el.querySelectorAll('.sticky-note')].reduce((sum,note)=>sum+note.clientWidth*note.clientHeight,0)/area;
+  });
+  assert(coverage<.35,'Eight notes should leave ample space for more recipes');
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   const clipping=await page.locator('.sticky-note h2').evaluateAll(headings=>headings.filter(el=>el.scrollHeight>el.parentElement.clientHeight-parseFloat(getComputedStyle(el.parentElement).paddingTop)*2+1).map(el=>el.textContent));
   assert.deepEqual(clipping,[],`Clipped note titles at ${width}`);

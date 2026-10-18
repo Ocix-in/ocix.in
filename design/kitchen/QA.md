@@ -2,6 +2,12 @@
 
 Verified 18 October 2026 against the production static build. No existing tests were edited or removed.
 
+## Smaller, scattered sticky notes
+
+Notes now occupy small square spaces, with varied positions, angles and slight size differences. A seeded 28-space arrangement keeps the home and close-up consistent. The eight published recipes cover less than 35% of the note area at all tested widths. Short titles enlarge on hover/focus, and full titles remain available to assistive technology and in the article reader.
+
+The production build, all 7 existing unit tests and all 32 article-preview checks pass. Current [desktop](fridge-review/fridge-1440.png) and [phone](fridge-review/fridge-390.png) screenshots show the additional space.
+
 ## Shared fridge and article reader
 
 Recipes now zooms into the **same navy fridge** used in the kitchen, with matching sticky-note positions. Home notes are decorative; clicking any part opens the fridge. Close-up notes open articles in a native modal with a blurred backdrop. Article HTML loads on demand, and direct article links remain available. The purple close-button circle and menu-button rectangle are replaced by subtle keyboard-only inset/underline states.

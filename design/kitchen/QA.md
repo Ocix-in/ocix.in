@@ -2,6 +2,12 @@
 
 Verified 18 October 2026 against the production static build. No existing tests were edited or removed.
 
+## Kitchen welcome and first-viewport mobile fit · 19 October 2026
+
+Removed the white outer glow from raised materials, corrected fridge/chef label pointers and added gentle chef-head motion with reduced-motion support. A circular chef profile opens device-local greetings and a served Vigilante suggestion. Phone home now fits its first viewport with the Taste CTA visible; the initial scene frames the fridge and chef. Short landscape screens use two columns.
+
+The build and all 7 unchanged unit tests pass. Eleven dedicated viewport checks cover 320×568 phones, the supplied screenshot proportions, tall phones, tablets, landscape and desktop. Four local-time greetings and nine WCAG A/AA scans pass. See [current screenshots and reports](welcome-review/README.md). The broader 37-layout regression matrix passes too. Fresh mobile Lighthouse: **Performance 92, Accessibility 100, CLS 0**, LCP 3.2 s; see the [report](welcome-review/lighthouse-mobile.report.html). The production browser bundle is 6.14 KB.
+
 ## Smaller, scattered sticky notes
 
 Notes now occupy small square spaces, with varied positions, angles and slight size differences. A seeded 28-space arrangement keeps the home and close-up consistent. The eight published recipes cover less than 35% of the note area at all tested widths. Short titles enlarge on hover/focus, and full titles remain available to assistive technology and in the article reader.

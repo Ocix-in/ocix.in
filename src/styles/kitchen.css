@@ -216,3 +216,63 @@ button{font:inherit;color:inherit;cursor:pointer}button:focus-visible{outline:3p
 @keyframes reader-in{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
 @media(max-width:600px){.article-dialog{width:calc(100vw - 20px);max-height:calc(100svh - 24px)}.reader-paper{max-height:calc(100svh - 24px);border-radius:22px}.reader-toolbar{padding:12px 16px}.reader-toolbar .eyebrow{font-size:9px}.reader-content{padding:20px 22px 30px;font-size:16px}.reader-content #reader-title{font-size:34px}.reader-content .document-lead{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.article-dialog[open] .reader-paper,.menu-dialog[open] .menu-paper{animation:none}}
+
+/* Clear leaders point toward the objects instead of away from them. */
+.hotspot-fridge{top:89%}
+.hotspot-fridge::after{top:auto;bottom:100%;left:50%;width:10px;height:24px;transform:translateX(-50%);background:#27245a66;clip-path:polygon(50% 0,100% 25%,60% 25%,60% 100%,40% 100%,40% 25%,0 25%)}
+.hotspot-chef::after{left:100%;top:55%;width:max(18px,calc(var(--scene-width)*.09 - 67px));height:12px;transform:rotate(20deg);transform-origin:left center;background:#27245a66;clip-path:polygon(0 42%,82% 42%,82% 10%,100% 50%,82% 90%,82% 58%,0 58%)}
+.scene .layer-chef-head{transform-origin:50% 45%;animation:chef-look 7s ease-in-out infinite}
+.scene:has(:is(.hotspot,.scene-object):is(:hover,:focus-visible)) .layer-chef-head{animation:none}
+@keyframes chef-look{0%,55%,100%{transform:translateY(0) rotate(0)}12%{transform:translateY(-2px) rotate(-4deg)}28%{transform:translateY(-1px) rotate(3deg)}40%{transform:translateY(0) rotate(-1deg)}}
+/* A local kitchen guide: no chat service, input collection or location lookup. */
+.chef-guide{position:fixed;right:22px;bottom:20px;z-index:25}
+.chef-launcher{position:relative;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;border:1px solid #27245a12;padding:0;transition:transform .2s}
+.chef-launcher:hover{transform:translateY(-3px)}.chef-launcher:active{box-shadow:var(--inset)}
+.chef-avatar{position:relative;display:block;width:48px;height:48px;border-radius:50%;overflow:hidden;background:#ded9e9}
+.chef-avatar img{position:absolute;width:90px;max-width:none;height:auto;left:50%;top:-8px;transform:translateX(-50%)}
+.guide-dot{position:absolute;right:1px;bottom:3px;width:11px;height:11px;border-radius:50%;background:#147d73;border:2px solid var(--wall)}
+#chef-welcome{position:fixed;inset:auto 22px 92px auto;margin:0;width:min(330px,calc(100vw - 32px));max-height:calc(100svh - 120px);overflow:auto;border:1px solid #27245a18;border-radius:24px;padding:22px;background:var(--clay);color:var(--ink);box-shadow:0 14px 36px #27245a33}
+#chef-welcome:popover-open{animation:reader-in .2s ease-out}
+#chef-welcome header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.guide-close{width:36px;height:36px;border:0;border-radius:50%;font-size:24px;line-height:1}
+#chef-welcome h2{font-size:32px;line-height:1.1;margin-bottom:16px}#chef-welcome p{font-size:14px;line-height:1.5;margin:12px 0}#chef-welcome .pop{margin-top:10px;min-height:46px;font-size:14px;padding:0 20px}.guide-recipes{display:flex;align-items:center;min-height:44px;font-size:12px;margin-top:8px}
+.menu-close{border-color:#27245a12}
+@media(min-width:1001px){.site-footer{padding-right:64px}}
+/* Fit the CTA and guide into the first phone viewport, including short screens. */
+@media(max-width:1000px){
+ .home-page{height:100svh;min-height:0;grid-template-rows:64px minmax(0,1fr) 64px}
+ .home-page .site-header{height:64px;padding:8px 16px}
+ .kitchen-home{gap:8px;grid-template-rows:auto minmax(0,1fr) 16px 74px}
+ .home-heading{margin:12px 16px 0}
+ .home-heading h1{font-size:clamp(36px,10.8vw,46px)}
+ .home-heading .intro{margin-top:12px;font-size:13px;line-height:1.45}
+ .menu-open{margin-top:2px;min-height:40px}
+ .scene-scroll{scroll-snap-type:none}
+ .scene-scroll{display:flex;align-items:flex-end;justify-content:flex-start}
+ .scene{margin:0;min-width:0;width:min(240cqh,285cqw);height:auto;aspect-ratio:12/5}
+ .scene-hint{font-size:9px;line-height:16px}
+ .served-dock{min-height:74px;padding:10px 14px 10px 18px}
+ .served-dock strong{font-size:25px}
+ .home-page .site-footer{height:64px;min-height:64px;padding:0 76px 0 12px;align-items:center}
+ .home-page .site-footer nav{gap:18px}
+ .chef-guide{right:14px;bottom:10px}
+ .chef-launcher{width:48px;height:48px}.chef-avatar{width:40px;height:40px}.chef-avatar img{width:76px;top:-7px}
+ #chef-welcome{right:14px;bottom:72px;max-height:calc(100svh - 96px)}
+ .kitchen-site:not(.home-page) .site-footer{padding-right:70px}
+}
+@media(max-width:1000px) and (max-height:620px){
+ .home-heading{margin-top:4px}.home-heading h1{font-size:34px}.home-heading .intro{margin-top:8px;font-size:12px}.kitchen-home{gap:6px}.home-page{grid-template-rows:60px minmax(0,1fr) 60px}.home-page .site-header{height:60px}.home-page .site-footer{height:60px;min-height:60px}
+}
+@media(prefers-reduced-motion:reduce){.scene .layer-chef-head{animation:none!important;transform:none!important}.chef-launcher{transition:none}.chef-launcher:hover{transform:none}#chef-welcome:popover-open{animation:none}}
+.chef-launcher:focus,.guide-close:focus{outline:none}.chef-launcher:focus-visible,.guide-close:focus-visible{box-shadow:var(--inset)}
+.guide-close{width:44px;height:44px}
+@media(max-width:1000px) and (max-height:620px){.scene .hotspot:not(.compact){display:none}}
+@media(max-width:1000px) and (max-height:500px) and (orientation:landscape){
+ .kitchen-home{grid-template-columns:260px minmax(0,1fr);grid-template-rows:minmax(0,1fr) 16px 74px;column-gap:8px}
+ .home-heading{grid-column:1;grid-row:1/-1;margin:12px 16px 0}
+ .home-heading h1{font-size:34px}
+ .scene-scroll{grid-column:2;grid-row:1}
+ .scene-hint{grid-column:2;grid-row:2}
+ .served-dock{grid-column:2;grid-row:3;margin:0 16px 0 0}
+}
+@media(max-width:1000px) and (max-height:700px){.hotspot-popcorn{top:3%}}

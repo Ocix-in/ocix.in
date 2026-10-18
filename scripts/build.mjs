@@ -54,7 +54,7 @@ for (const page of routes) {
     <meta name="twitter:description" content="${escape(page.description)}"/>
     <meta name="twitter:image" content="https://ocix.in/assets/ocix-og.png"/>
     <script type="application/ld+json">${JSON.stringify(graph).replace(/</g, '\\u003c')}</script>`;
-  const html = template.replace('<!--page-head-->', head).replace('<div id="root"></div>', () => `<div id="root">${render(page.path)}</div>${page.path === '/' ? '<script>const s=document.querySelector(".scene-scroll");if(s&&innerWidth<=1000)s.scrollLeft=Math.max(0,s.querySelector(".hotspot-pot").offsetLeft-s.clientWidth/2)</script>' : ''}`);
+  const html = template.replace('<!--page-head-->', head).replace('<div id="root"></div>', () => `<div id="root">${render(page.path)}</div>${page.path === '/' ? '<script>const s=document.querySelector(".scene-scroll");if(s&&innerWidth<=1000)s.scrollLeft=Math.max(0,s.querySelector(".object-fridge").offsetLeft-12)</script>' : ''}`);
   const output = page.path === '/' ? 'dist/index.html' : `dist${page.path}.html`;
   await mkdir(path.dirname(output), { recursive: true });
   await writeFile(output, html);

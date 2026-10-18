@@ -1,0 +1,56 @@
+[
+  {
+    "w": 1440,
+    "h": 900,
+    "state": "closed",
+    "violations": []
+  },
+  {
+    "w": 1440,
+    "h": 900,
+    "state": "greeting",
+    "violations": []
+  },
+  {
+    "w": 1440,
+    "h": 900,
+    "state": "menu",
+    "violations": []
+  },
+  {
+    "w": 390,
+    "h": 724,
+    "state": "closed",
+    "violations": []
+  },
+  {
+    "w": 390,
+    "h": 724,
+    "state": "greeting",
+    "violations": []
+  },
+  {
+    "w": 390,
+    "h": 724,
+    "state": "menu",
+    "violations": []
+  },
+  {
+    "w": 320,
+    "h": 568,
+    "state": "closed",
+    "violations": []
+  },
+  {
+    "w": 320,
+    "h": 568,
+    "state": "greeting",
+    "violations": []
+  },
+  {
+    "w": 320,
+    "h": 568,
+    "state": "menu",
+    "violations": []
+  }
+]

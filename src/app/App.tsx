@@ -1,4 +1,5 @@
 import { SiteHeader } from './components/SiteHeader';
+import { ChefGuide } from './components/ChefGuide';
 import { Footer } from './components/Footer';
 import { PageContent } from './pages';
 import { KitchenHome } from './components/Kitchen';
@@ -10,5 +11,6 @@ export default function App({ path = '/' }: { path?: string }) {
     <SiteHeader home={path === '/'} />
     <main id="main">{path === '/' ? <KitchenHome/> : <PageContent path={path}/>}</main>
     <Footer/>
+    <ChefGuide/>
   </div>;
 }

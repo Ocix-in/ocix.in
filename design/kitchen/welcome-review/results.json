@@ -1,0 +1,381 @@
+[
+  {
+    "width": 390,
+    "height": 724,
+    "pageHeight": 724,
+    "pageWidth": 390,
+    "dock": {
+      "left": 16,
+      "right": 374,
+      "top": 586,
+      "bottom": 660
+    },
+    "launcher": {
+      "left": 328,
+      "right": 376,
+      "top": 666,
+      "bottom": 714
+    },
+    "fridge": {
+      "left": 12.171875,
+      "right": 116.015625,
+      "top": 292.375,
+      "bottom": 511.4375
+    },
+    "head": {
+      "left": 128.921875,
+      "right": 292,
+      "top": 246.5,
+      "bottom": 436.75
+    },
+    "dockGuideOverlap": 0,
+    "guideFooterOverlap": 0,
+    "scrollLeft": 42
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "pageHeight": 844,
+    "pageWidth": 390,
+    "dock": {
+      "left": 16,
+      "right": 374,
+      "top": 706,
+      "bottom": 780
+    },
+    "launcher": {
+      "left": 328,
+      "right": 376,
+      "top": 786,
+      "bottom": 834
+    },
+    "fridge": {
+      "left": 11.671875,
+      "right": 154.828125,
+      "top": 313.375,
+      "bottom": 615.34375
+    },
+    "head": {
+      "left": 172.609375,
+      "right": 397.390625,
+      "top": 250.140625,
+      "bottom": 512.390625
+    },
+    "dockGuideOverlap": 0,
+    "guideFooterOverlap": 0,
+    "scrollLeft": 63
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "pageHeight": 667,
+    "pageWidth": 375,
+    "dock": {
+      "left": 16,
+      "right": 359,
+      "top": 529,
+      "bottom": 603
+    },
+    "launcher": {
+      "left": 313,
+      "right": 361,
+      "top": 609,
+      "bottom": 657
+    },
+    "fridge": {
+      "left": 11.78125,
+      "right": 97.640625,
+      "top": 280.671875,
+      "bottom": 461.796875
+    },
+    "head": {
+      "left": 108.328125,
+      "right": 243.15625,
+      "top": 242.734375,
+      "bottom": 400.046875
+    },
+    "dockGuideOverlap": 0,
+    "guideFooterOverlap": 0,
+    "scrollLeft": 33
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "pageHeight": 568,
+    "pageWidth": 320,
+    "dock": {
+      "left": 16,
+      "right": 304,
+      "top": 434,
+      "bottom": 508
+    },
+    "launcher": {
+      "left": 258,
+      "right": 306,
+      "top": 510,
+      "bottom": 558
+    },
+    "fridge": {
+      "left": 14.84375,
+      "right": 81.65625,
+      "top": 237.6875,
+      "bottom": 378.609375
+    },
+    "head": {
+      "left": 89.96875,
+      "right": 194.875,
+      "top": 208.1875,
+      "bottom": 330.5625
+    },
+    "dockGuideOverlap": 0,
+    "guideFooterOverlap": 0,
+    "scrollLeft": 20
+  },
+  {
+    "width": 414,
+    "height": 736,
+    "pageHeight": 736,
+    "pageWidth": 414,
+    "dock": {
+      "left": 16,
+      "right": 398,
+      "top": 598,
+      "bottom": 672
+    },
+    "launcher": {
+      "left": 352,
+      "right": 400,
+      "top": 678,
+      "bottom": 726
+    },
+    "fridge": {
+      "left": 12.203125,
+      "right": 118.046875,
+      "top": 299.34375,
+      "bottom": 522.609375
+    },
+    "head": {
+      "left": 131.21875,
+      "right": 297.421875,
+      "top": 252.59375,
+      "bottom": 446.484375
+    },
+    "dockGuideOverlap": 0,
+    "guideFooterOverlap": 0,
+    "scrollLeft": 43
+  },
+  {
+    "width": 360,
+    "height": 640,
+    "pageHeight": 640,
+    "pageWidth": 360,
+    "dock": {
+      "left": 16,
+      "right": 344,
+      "top": 502,
+      "bottom": 576
+    },
+    "launcher": {
+      "left": 298,
+      "right": 346,
+      "top": 582,
+      "bottom": 630
+    },
+    "fridge": {
+      "left": 11.703125,
+      "right": 89.734375,
+      "top": 273.390625,
+      "bottom": 438
+    },
+    "head": {
+      "left": 99.453125,
+      "right": 222,
+      "top": 238.921875,
+      "bottom": 381.875
+    },
+    "dockGuideOverlap": 0,
+    "guideFooterOverlap": 0,
+    "scrollLeft": 29
+  },
+  {
+    "width": 430,
+    "height": 932,
+    "pageHeight": 932,
+    "pageWidth": 430,
+    "dock": {
+      "left": 16,
+      "right": 414,
+      "top": 794,
+      "bottom": 868
+    },
+    "launcher": {
+      "left": 368,
+      "right": 416,
+      "top": 874,
+      "bottom": 922
+    },
+    "fridge": {
+      "left": 12.21875,
+      "right": 179.4375,
+      "top": 340.734375,
+      "bottom": 693.484375
+    },
+    "head": {
+      "left": 200.234375,
+      "right": 462.8125,
+      "top": 266.828125,
+      "bottom": 573.1875
+    },
+    "dockGuideOverlap": 0,
+    "guideFooterOverlap": 0,
+    "scrollLeft": 75
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "pageHeight": 1024,
+    "pageWidth": 768,
+    "dock": {
+      "left": 16,
+      "right": 752,
+      "top": 886,
+      "bottom": 960
+    },
+    "launcher": {
+      "left": 706,
+      "right": 754,
+      "top": 966,
+      "bottom": 1014
+    },
+    "fridge": {
+      "left": 11.984375,
+      "right": 211.34375,
+      "top": 351.765625,
+      "bottom": 772.3125
+    },
+    "head": {
+      "left": 236.140625,
+      "right": 549.21875,
+      "top": 263.671875,
+      "bottom": 628.921875
+    },
+    "dockGuideOverlap": 0,
+    "guideFooterOverlap": 0,
+    "scrollLeft": 92
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "pageHeight": 390,
+    "pageWidth": 844,
+    "dock": {
+      "left": 268,
+      "right": 828,
+      "top": 256,
+      "bottom": 330
+    },
+    "launcher": {
+      "left": 782,
+      "right": 830,
+      "top": 332,
+      "bottom": 380
+    },
+    "fridge": {
+      "left": 296.6875,
+      "right": 351.703125,
+      "top": 89.40625,
+      "bottom": 205.453125
+    },
+    "head": {
+      "left": 358.546875,
+      "right": 444.9375,
+      "top": 65.109375,
+      "bottom": 165.890625
+    },
+    "dockGuideOverlap": 0,
+    "guideFooterOverlap": 0,
+    "scrollLeft": 0
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "pageHeight": 900,
+    "pageWidth": 1440,
+    "dock": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0
+    },
+    "launcher": {
+      "left": 1360,
+      "right": 1418,
+      "top": 822,
+      "bottom": 880
+    },
+    "fridge": {
+      "left": 175.3125,
+      "right": 348.625,
+      "top": 401.375,
+      "bottom": 766.984375
+    },
+    "head": {
+      "left": 370.171875,
+      "right": 642.34375,
+      "top": 324.796875,
+      "bottom": 642.328125
+    },
+    "dockGuideOverlap": 0,
+    "guideFooterOverlap": 0,
+    "scrollLeft": 0
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "pageHeight": 768,
+    "pageWidth": 1024,
+    "dock": {
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "bottom": 0
+    },
+    "launcher": {
+      "left": 944,
+      "right": 1002,
+      "top": 690,
+      "bottom": 748
+    },
+    "fridge": {
+      "left": 86.953125,
+      "right": 222.203125,
+      "top": 365.28125,
+      "bottom": 650.578125
+    },
+    "head": {
+      "left": 239.015625,
+      "right": 451.40625,
+      "top": 305.515625,
+      "bottom": 553.296875
+    },
+    "dockGuideOverlap": 0,
+    "guideFooterOverlap": 0,
+    "scrollLeft": 0
+  },
+  {
+    "timezoneId": "Asia/Kolkata",
+    "greeting": "Good morning!"
+  },
+  {
+    "timezoneId": "Pacific/Auckland",
+    "greeting": "Good afternoon!"
+  },
+  {
+    "timezoneId": "America/Los_Angeles",
+    "greeting": "Good evening!"
+  },
+  {
+    "timezoneId": "Europe/London",
+    "greeting": "Hello, night owl!"
+  }
+]

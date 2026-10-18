@@ -248,27 +248,27 @@
     "overlaps": [],
     "scene": {
       "x": 0,
-      "y": 305.78125,
+      "y": 244.21875,
       "right": 1000,
-      "bottom": 732,
+      "bottom": 730,
       "width": 1000,
-      "height": 426.21875
+      "height": 485.78125
     },
     "dock": {
       "x": 16,
-      "y": 774,
+      "y": 762,
       "right": 984,
-      "bottom": 856,
+      "bottom": 836,
       "width": 968,
-      "height": 82
+      "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 856,
+      "y": 836,
       "right": 1000,
       "bottom": 900,
       "width": 1000,
-      "height": 44
+      "height": 64
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -285,27 +285,27 @@
     "overlaps": [],
     "scene": {
       "x": 0,
-      "y": 305.78125,
+      "y": 244.21875,
       "right": 1000,
-      "bottom": 632,
+      "bottom": 630,
       "width": 1000,
-      "height": 326.21875
+      "height": 385.78125
     },
     "dock": {
       "x": 16,
-      "y": 674,
+      "y": 662,
       "right": 984,
-      "bottom": 756,
+      "bottom": 736,
       "width": 968,
-      "height": 82
+      "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 756,
+      "y": 736,
       "right": 1000,
       "bottom": 800,
       "width": 1000,
-      "height": 44
+      "height": 64
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -322,27 +322,27 @@
     "overlaps": [],
     "scene": {
       "x": 0,
-      "y": 305.78125,
+      "y": 244.21875,
       "right": 768,
-      "bottom": 856,
+      "bottom": 854,
       "width": 768,
-      "height": 550.21875
+      "height": 609.78125
     },
     "dock": {
       "x": 16,
-      "y": 898,
+      "y": 886,
       "right": 752,
-      "bottom": 980,
+      "bottom": 960,
       "width": 736,
-      "height": 82
+      "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 980,
+      "y": 960,
       "right": 768,
       "bottom": 1024,
       "width": 768,
-      "height": 44
+      "height": 64
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -359,27 +359,27 @@
     "overlaps": [],
     "scene": {
       "x": 0,
-      "y": 298.125,
+      "y": 236.875,
       "right": 390,
-      "bottom": 676,
+      "bottom": 674,
       "width": 390,
-      "height": 377.875
+      "height": 437.125
     },
     "dock": {
       "x": 16,
-      "y": 718,
+      "y": 706,
       "right": 374,
-      "bottom": 800,
+      "bottom": 780,
       "width": 358,
-      "height": 82
+      "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 800,
+      "y": 780,
       "right": 390,
       "bottom": 844,
       "width": 390,
-      "height": 44
+      "height": 64
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -392,31 +392,31 @@
     "width": 414,
     "height": 780,
     "scrollWidth": 414,
-    "scrollHeight": 800,
+    "scrollHeight": 780,
     "overlaps": [],
     "scene": {
       "x": 0,
-      "y": 303.75,
+      "y": 241.78125,
       "right": 414,
-      "bottom": 632,
+      "bottom": 610,
       "width": 414,
-      "height": 328.25
+      "height": 368.21875
     },
     "dock": {
       "x": 16,
-      "y": 674,
+      "y": 642,
       "right": 398,
-      "bottom": 756,
+      "bottom": 716,
       "width": 382,
-      "height": 82
+      "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 756,
+      "y": 716,
       "right": 414,
-      "bottom": 800,
+      "bottom": 780,
       "width": 414,
-      "height": 44
+      "height": 64
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -429,31 +429,31 @@
     "width": 375,
     "height": 667,
     "scrollWidth": 375,
-    "scrollHeight": 800,
+    "scrollHeight": 667,
     "overlaps": [],
     "scene": {
       "x": 0,
-      "y": 294.625,
+      "y": 233.78125,
       "right": 375,
-      "bottom": 632,
+      "bottom": 497,
       "width": 375,
-      "height": 337.375
+      "height": 263.21875
     },
     "dock": {
       "x": 16,
-      "y": 674,
+      "y": 529,
       "right": 359,
-      "bottom": 756,
+      "bottom": 603,
       "width": 343,
-      "height": 82
+      "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 756,
+      "y": 603,
       "right": 375,
-      "bottom": 800,
+      "bottom": 667,
       "width": 375,
-      "height": 44
+      "height": 64
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -466,31 +466,31 @@
     "width": 320,
     "height": 568,
     "scrollWidth": 320,
-    "scrollHeight": 800,
+    "scrollHeight": 568,
     "overlaps": [],
     "scene": {
       "x": 0,
-      "y": 304,
+      "y": 201.984375,
       "right": 320,
-      "bottom": 632,
+      "bottom": 406,
       "width": 320,
-      "height": 328
+      "height": 204.015625
     },
     "dock": {
       "x": 16,
-      "y": 674,
+      "y": 434,
       "right": 304,
-      "bottom": 756,
+      "bottom": 508,
       "width": 288,
-      "height": 82
+      "height": 74
     },
     "footer": {
       "x": 0,
-      "y": 756,
+      "y": 508,
       "right": 320,
-      "bottom": 800,
+      "bottom": 568,
       "width": 320,
-      "height": 44
+      "height": 60
     },
     "sceneDockOverlap": 0,
     "sceneFooterOverlap": 0,
@@ -963,15 +963,15 @@
     "width": 1024,
     "height": 768,
     "scrollWidth": 1024,
-    "scrollHeight": 1763,
+    "scrollHeight": 1787,
     "overlaps": [],
     "scene": null,
     "dock": null,
     "footer": {
       "x": 40,
-      "y": 1693.4375,
+      "y": 1717.4375,
       "right": 984,
-      "bottom": 1763.4375,
+      "bottom": 1787.4375,
       "width": 944,
       "height": 70
     },
@@ -986,15 +986,15 @@
     "width": 390,
     "height": 844,
     "scrollWidth": 390,
-    "scrollHeight": 1401,
+    "scrollHeight": 1449,
     "overlaps": [],
     "scene": null,
     "dock": null,
     "footer": {
       "x": 16,
-      "y": 1300.03125,
+      "y": 1348.03125,
       "right": 374,
-      "bottom": 1401.03125,
+      "bottom": 1449.03125,
       "width": 358,
       "height": 101
     },

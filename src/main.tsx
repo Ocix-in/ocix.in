@@ -118,3 +118,12 @@ document.addEventListener('keydown', event => {
   if (event.shiftKey && document.activeElement === first) {event.preventDefault();last.focus()}
   else if (!event.shiftKey && document.activeElement === last) {event.preventDefault();first.focus()}
 });
+
+// Date uses the visitor's device time zone; no location or account data is needed.
+document.addEventListener('beforetoggle', event => {
+  const panel=event.target as HTMLElement;
+  if(panel.id!=='chef-welcome')return;
+  const hour=new Date().getHours();
+  const greeting=hour>=5&&hour<12?'Good morning!':hour>=12&&hour<17?'Good afternoon!':hour>=17&&hour<22?'Good evening!':'Hello, night owl!';
+  panel.querySelector('[data-chef-greeting]')!.textContent=greeting;
+},true);

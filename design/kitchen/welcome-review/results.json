@@ -17,20 +17,20 @@
       "bottom": 714
     },
     "fridge": {
-      "left": 12.171875,
-      "right": 116.015625,
-      "top": 292.375,
-      "bottom": 511.4375
+      "left": 12.125,
+      "right": 112.046875,
+      "top": 302.28125,
+      "bottom": 513.046875
     },
     "head": {
-      "left": 128.921875,
-      "right": 292,
-      "top": 246.5,
-      "bottom": 436.75
+      "left": 124.46875,
+      "right": 281.375,
+      "top": 258.125,
+      "bottom": 441.1875
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 42
+    "scrollLeft": 40
   },
   {
     "width": 390,
@@ -50,20 +50,20 @@
       "bottom": 834
     },
     "fridge": {
-      "left": 11.671875,
-      "right": 154.828125,
-      "top": 313.375,
-      "bottom": 615.34375
+      "left": 11.625,
+      "right": 150.84375,
+      "top": 323.28125,
+      "bottom": 616.953125
     },
     "head": {
-      "left": 172.609375,
-      "right": 397.390625,
-      "top": 250.140625,
-      "bottom": 512.390625
+      "left": 168.15625,
+      "right": 386.765625,
+      "top": 261.78125,
+      "bottom": 516.828125
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 63
+    "scrollLeft": 61
   },
   {
     "width": 375,
@@ -83,20 +83,20 @@
       "bottom": 657
     },
     "fridge": {
-      "left": 11.78125,
-      "right": 97.640625,
-      "top": 280.671875,
-      "bottom": 461.796875
+      "left": 11.734375,
+      "right": 93.671875,
+      "top": 290.578125,
+      "bottom": 463.421875
     },
     "head": {
-      "left": 108.328125,
-      "right": 243.15625,
-      "top": 242.734375,
-      "bottom": 400.046875
+      "left": 103.875,
+      "right": 232.53125,
+      "top": 254.375,
+      "bottom": 404.484375
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 33
+    "scrollLeft": 31
   },
   {
     "width": 320,
@@ -116,20 +116,20 @@
       "bottom": 558
     },
     "fridge": {
-      "left": 14.84375,
-      "right": 81.65625,
-      "top": 237.6875,
-      "bottom": 378.609375
+      "left": 14.796875,
+      "right": 77.671875,
+      "top": 247.59375,
+      "bottom": 380.21875
     },
     "head": {
-      "left": 89.96875,
-      "right": 194.875,
-      "top": 208.1875,
-      "bottom": 330.5625
+      "left": 85.5,
+      "right": 184.234375,
+      "top": 219.8125,
+      "bottom": 335
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 20
+    "scrollLeft": 18
   },
   {
     "width": 414,
@@ -149,20 +149,20 @@
       "bottom": 726
     },
     "fridge": {
-      "left": 12.203125,
-      "right": 118.046875,
-      "top": 299.34375,
-      "bottom": 522.609375
+      "left": 12.15625,
+      "right": 114.078125,
+      "top": 309.25,
+      "bottom": 524.234375
     },
     "head": {
-      "left": 131.21875,
-      "right": 297.421875,
-      "top": 252.59375,
-      "bottom": 446.484375
+      "left": 126.75,
+      "right": 286.78125,
+      "top": 264.234375,
+      "bottom": 450.9375
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 43
+    "scrollLeft": 41
   },
   {
     "width": 360,
@@ -182,20 +182,20 @@
       "bottom": 630
     },
     "fridge": {
-      "left": 11.703125,
-      "right": 89.734375,
-      "top": 273.390625,
-      "bottom": 438
+      "left": 11.65625,
+      "right": 85.765625,
+      "top": 283.296875,
+      "bottom": 439.625
     },
     "head": {
-      "left": 99.453125,
-      "right": 222,
-      "top": 238.921875,
-      "bottom": 381.875
+      "left": 94.984375,
+      "right": 211.359375,
+      "top": 250.5625,
+      "bottom": 386.328125
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 29
+    "scrollLeft": 27
   },
   {
     "width": 430,
@@ -216,19 +216,19 @@
     },
     "fridge": {
       "left": 12.21875,
-      "right": 179.4375,
-      "top": 340.734375,
-      "bottom": 693.484375
+      "right": 177.53125,
+      "top": 345.5625,
+      "bottom": 694.265625
     },
     "head": {
-      "left": 200.234375,
-      "right": 462.8125,
-      "top": 266.828125,
-      "bottom": 573.1875
+      "left": 198.078125,
+      "right": 457.65625,
+      "top": 272.515625,
+      "bottom": 575.359375
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 75
+    "scrollLeft": 74
   },
   {
     "width": 768,
@@ -248,20 +248,20 @@
       "bottom": 1014
     },
     "fridge": {
-      "left": 11.984375,
-      "right": 211.34375,
-      "top": 351.765625,
-      "bottom": 772.3125
+      "left": 11.9375,
+      "right": 207.375,
+      "top": 361.65625,
+      "bottom": 773.90625
     },
     "head": {
-      "left": 236.140625,
-      "right": 549.21875,
-      "top": 263.671875,
-      "bottom": 628.921875
+      "left": 231.671875,
+      "right": 538.578125,
+      "top": 275.296875,
+      "bottom": 633.328125
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,
-    "scrollLeft": 92
+    "scrollLeft": 90
   },
   {
     "width": 844,
@@ -314,16 +314,16 @@
       "bottom": 880
     },
     "fridge": {
-      "left": 175.3125,
-      "right": 348.625,
-      "top": 401.375,
-      "bottom": 766.984375
+      "left": 174.28125,
+      "right": 347.921875,
+      "top": 400.546875,
+      "bottom": 766.84375
     },
     "head": {
-      "left": 370.171875,
-      "right": 642.34375,
-      "top": 324.796875,
-      "bottom": 642.328125
+      "left": 369.515625,
+      "right": 642.1875,
+      "top": 323.8125,
+      "bottom": 641.9375
     },
     "dockGuideOverlap": 0,
     "guideFooterOverlap": 0,

@@ -1,5 +1,7 @@
 # Kitchen welcome and mobile first viewport · 19 October 2026
 
+Today’s menu is now a distinct raised button with a menu-sheet icon, stronger label and an action arrow, including on phones. It retains the existing dialog behavior and inset keyboard focus.
+
 The white outer glow is removed from the shared raised material. Menu surfaces, close controls and the chef profile button retain a soft navy shadow. Recipes points up toward the fridge; Meet the cook points diagonally toward the chef. The chef’s head gently looks around, with all movement disabled under reduced motion.
 
 A circular chef profile button sits at the bottom right. It opens a welcome based on the visitor’s device-local time, suggests the served Vigilante product and links to Recipes. The panel supports its close button, Escape and native light dismissal. No location lookup is needed.

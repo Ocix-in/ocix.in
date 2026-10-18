@@ -1,0 +1,98 @@
+[
+  {
+    "width": 1440,
+    "route": "/",
+    "state": "closed",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/",
+    "state": "menu open",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/blog",
+    "state": "closed",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "route": "/blog",
+    "state": "article open",
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/",
+    "state": "closed",
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/",
+    "state": "menu open",
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/blog",
+    "state": "closed",
+    "violations": []
+  },
+  {
+    "width": 768,
+    "route": "/blog",
+    "state": "article open",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "state": "closed",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/",
+    "state": "menu open",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/blog",
+    "state": "closed",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "route": "/blog",
+    "state": "article open",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/",
+    "state": "closed",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/",
+    "state": "menu open",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/blog",
+    "state": "closed",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "route": "/blog",
+    "state": "article open",
+    "violations": []
+  }
+]

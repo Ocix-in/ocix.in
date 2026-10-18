@@ -67,7 +67,9 @@ try {
       if(route==='/blog') {
         assert.equal(await page.locator('.sticky-note').count(),8);
         await page.locator('.sticky-note').first().click();
-        assert(page.url().includes('/blog/'));
+        await page.waitForFunction(()=>document.querySelector('.reader-article .article-body'));
+        assert(page.url().endsWith('/blog'));
+        await page.keyboard.press('Escape');
       }
       if(route==='/tools') {
         assert((await page.locator('.tools-actions a').first().getAttribute('href')).includes('view=roast'));

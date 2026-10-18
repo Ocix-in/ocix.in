@@ -1,0 +1,38 @@
+[
+  {
+    "width": 1440,
+    "decorativeHomeNotes": 8,
+    "articlePreviews": 8,
+    "sameFridge": true,
+    "titlesFit": true,
+    "focusAndEscape": true,
+    "fallback": true
+  },
+  {
+    "width": 768,
+    "decorativeHomeNotes": 8,
+    "articlePreviews": 8,
+    "sameFridge": true,
+    "titlesFit": true,
+    "focusAndEscape": true,
+    "fallback": true
+  },
+  {
+    "width": 390,
+    "decorativeHomeNotes": 8,
+    "articlePreviews": 8,
+    "sameFridge": true,
+    "titlesFit": true,
+    "focusAndEscape": true,
+    "fallback": true
+  },
+  {
+    "width": 320,
+    "decorativeHomeNotes": 8,
+    "articlePreviews": 8,
+    "sameFridge": true,
+    "titlesFit": true,
+    "focusAndEscape": true,
+    "fallback": true
+  }
+]

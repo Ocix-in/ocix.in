@@ -2,6 +2,14 @@
 
 Verified 18 October 2026 against the production static build. No existing tests were edited or removed.
 
+## Shared fridge and article reader
+
+Recipes now zooms into the **same navy fridge** used in the kitchen, with matching sticky-note positions. Home notes are decorative; clicking any part opens the fridge. Close-up notes open articles in a native modal with a blurred backdrop. Article HTML loads on demand, and direct article links remain available. The purple close-button circle and menu-button rectangle are replaced by subtle keyboard-only inset/underline states.
+
+The build and all **7 unchanged unit tests** pass, alongside **37 layout checks**, **20 studio checks**, **32 article previews at four widths**, failed-load fallback checks and **16 Axe WCAG A/AA scans**. Screenshots and detailed results are in the [fridge review](fridge-review/README.md). Production browser JavaScript is **5.85 KB**, with no React hydration or bundled article bodies.
+
+Fresh mobile Lighthouse: **Performance 92, Accessibility 100, CLS 0**, LCP 3.2 s. See the [report](fridge-review/lighthouse-mobile.report.html). Default mobile throttling was retained.
+
 ## Latest OCIX studio refinements
 
 Roast is the primary CTA, with the audit secondary. Meet the cook now focuses on OCIX’s motive and contact in two sections, with raised email, X, Instagram and Reddit buttons. Recipes uses a fridge door of title-only sticky notes that zoom on hover/focus. Today’s menu is a centered dialog with a blurred backdrop, a raised close button, Escape dismissal, focus cycling and focus return. Product rows scroll while the heading and close button stay visible. The chef’s apron carries the mark-only OCIX logo.

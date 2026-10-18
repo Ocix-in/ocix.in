@@ -172,19 +172,22 @@ button{font:inherit;color:inherit;cursor:pointer}button:focus-visible{outline:3p
 .contact-buttons a{display:flex;align-items:center;gap:12px;min-height:64px;padding:14px 18px;border-radius:18px;font-size:15px;font-weight:500;transition:transform .2s,box-shadow .2s}
 .contact-buttons a>span{display:grid;place-items:center;width:32px;font-size:24px}.contact-buttons a:hover{transform:translateY(-3px)}.contact-buttons a:active{transform:translateY(2px);box-shadow:var(--inset)}
 .tools-actions{margin-bottom:40px;flex-wrap:wrap}.tools-actions .button{font-size:14px}.tasting-primary{border:1px solid #f2a93b66}
-/* An extendable fridge door: title-only notes, with room for more recipes. */
-.recipes-page{max-width:1100px;padding:44px 0 64px}.recipes-page>header{text-align:center;margin-bottom:40px}.recipes-page h1{font-size:clamp(44px,6vw,76px);margin:14px 0 18px}.recipes-page>header>p:last-child{font-size:17px}
-.recipe-fridge{position:relative;padding:32px 70px 56px 38px;border:8px solid #383b6a;border-radius:32px;background:linear-gradient(135deg,#dad7e5,#bebdce);box-shadow:inset 2px 2px 6px #ffffffcc,8px 12px 0 #27245a,20px 26px 35px #27245a33}
-.fridge-top{display:flex;align-items:center;gap:14px;padding-bottom:24px;border-bottom:3px solid #66688b;margin-bottom:32px}.fridge-top img{width:42px;height:42px}.fridge-top .eyebrow{color:var(--ink)}
-.fridge-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 26px;align-items:stretch}
-.sticky-note{position:relative;display:flex;align-items:center;min-height:200px;padding:26px 22px;background:linear-gradient(150deg,#fff1b9,#f3d783);box-shadow:3px 8px 9px #27245a30,inset 0 22px 0 #ffffff28;transform:rotate(-2deg);transition:transform .25s,box-shadow .25s;transform-origin:50% 15%;z-index:1}
-.sticky-note:nth-child(3n+2){background:linear-gradient(150deg,#c7eee8,#92d4cb);transform:rotate(2deg)}.sticky-note:nth-child(3n){background:linear-gradient(150deg,#efcee1,#ddb2ce);transform:rotate(-1deg)}
-.sticky-note::before{content:'';position:absolute;width:56px;height:22px;top:-10px;left:calc(50% - 28px);background:#fffdf880;box-shadow:0 1px 2px #27245a15;transform:rotate(-5deg)}
-.sticky-note h2{font-size:23px;line-height:1.2;letter-spacing:-.025em}.sticky-note:hover,.sticky-note:focus-visible{transform:rotate(0) scale(1.06);box-shadow:4px 16px 20px #27245a40;z-index:3}
-.fridge-handle{position:absolute;right:22px;top:180px;width:16px;height:210px;border-radius:8px;background:linear-gradient(90deg,#bc731e,#f7c578,#dda147);box-shadow:3px 4px 4px #27245a55}
-@media(max-width:1000px){.recipes-page{padding-top:24px}.recipes-page>header{margin-bottom:28px}.recipe-fridge{padding:26px 44px 36px 22px;border-width:6px;border-radius:24px}.fridge-notes{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px}.sticky-note{min-height:190px;padding:24px 18px}.sticky-note h2{font-size:21px}.fridge-handle{right:13px;width:12px}.contact-buttons{gap:14px}.contact-buttons a{padding-inline:12px}}
-@media(max-width:480px){.fridge-notes{grid-template-columns:1fr;gap:28px}.sticky-note{min-height:160px}.sticky-note h2{font-size:24px}.fridge-top .eyebrow{font-size:9px}.fridge-top{gap:10px}.about-studio section h2{font-size:30px}.about-studio .document-lead{font-size:19px}.contact-buttons{grid-template-columns:1fr}.tools-actions{align-items:stretch;flex-direction:column}.tools-actions a{text-align:center}}
-@media(prefers-reduced-motion:reduce){.sticky-note,.contact-buttons a{transition:none}.sticky-note:hover,.sticky-note:focus-visible,.contact-buttons a:hover{transform:none}}
+/* The close-up uses the exact fridge silhouette and notes from the kitchen. */
+.recipes-page{max-width:900px;padding:36px 0 64px}.recipes-page>header{text-align:center;margin-bottom:32px}.recipes-page h1{font-size:clamp(44px,6vw,76px);margin:14px 0 18px}.recipes-page>header>p:last-child{font-size:17px}
+.recipe-fridge{position:relative;width:min(560px,100%);aspect-ratio:197/415;margin:0 auto;container-type:inline-size}
+.fridge-art{position:absolute;inset:0}.fridge-art img{width:100%;height:100%}
+.fridge-notes{position:absolute;left:14%;right:21.5%;top:20.5%;bottom:24.5%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));gap:2.6cqw 2cqw}
+.sticky-note{position:relative;display:flex;align-items:center;justify-content:center;min-width:0;min-height:0;padding:1.7cqw;background:linear-gradient(150deg,#fff1b9,#f3d783);box-shadow:.6cqw 1.3cqw 1.5cqw #0005,inset 0 3cqw 0 #ffffff28;transform:rotate(-3deg);transition:transform .25s,box-shadow .25s;transform-origin:50% 15%;z-index:1;color:var(--ink)}
+.sticky-note:nth-child(3n+2){background:linear-gradient(150deg,#c7eee8,#92d4cb);transform:rotate(3deg)}.sticky-note:nth-child(3n){background:linear-gradient(150deg,#efcee1,#ddb2ce);transform:rotate(-2deg)}
+.sticky-note::before{content:'';position:absolute;width:36%;height:10%;top:-5%;left:32%;background:#fffdf899;transform:rotate(-5deg)}
+.sticky-note h2,.fridge-miniature .sticky-note{font:500 3.6cqw/1.18 Fraunces,Georgia,serif;letter-spacing:-.025em;overflow-wrap:anywhere}
+.fridge-closeup .sticky-note:hover,.fridge-closeup .sticky-note:focus-visible{transform:rotate(0) scale(1.08);box-shadow:1cqw 2cqw 3cqw #0006;z-index:3}
+.fridge-miniature{width:100%;height:100%;margin:0;pointer-events:none}.fridge-miniature .fridge-notes{pointer-events:none}
+.fridge-caption{max-width:580px;margin:36px auto 0;font-size:15px;line-height:1.6;text-align:center}
+.hotspot-fridge{top:78%}
+@media(max-width:1000px){.recipes-page{padding-top:24px}.recipes-page>header{margin-bottom:28px}.contact-buttons{gap:14px}.contact-buttons a{padding-inline:12px}}
+@media(max-width:480px){.about-studio section h2{font-size:30px}.about-studio .document-lead{font-size:19px}.contact-buttons{grid-template-columns:1fr}.tools-actions{align-items:stretch;flex-direction:column}.tools-actions a{text-align:center}}
+@media(prefers-reduced-motion:reduce){.sticky-note,.contact-buttons a{transition:none}.fridge-closeup .sticky-note:hover,.fridge-closeup .sticky-note:focus-visible,.contact-buttons a:hover{transform:none}}
 /* Keep the menu heading and close control visible as the catalogue grows. */
 .menu-dialog{overflow:visible;max-height:calc(100svh - 32px);padding-bottom:0}
 .menu-paper{display:flex;flex-direction:column;max-height:calc(100svh - 88px)}
@@ -193,3 +196,21 @@ button{font:inherit;color:inherit;cursor:pointer}button:focus-visible{outline:3p
 .document .contact-buttons a{color:var(--ink);text-decoration:none}
 .page-art .dish-chef{inset:auto;left:12%;top:50%;width:76%;height:auto;aspect-ratio:6/7;transform:translateY(-50%);animation:none}
 .document .tools-actions .pop-amber{color:var(--ink);text-decoration:none}
+
+/* Raised controls use an inset keyboard state, without the purple focus outline. */
+.menu-open:focus,.menu-close:focus,.reader-close:focus{outline:none}
+.menu-open:focus-visible{text-decoration:underline;text-underline-offset:5px}
+.menu-close:focus-visible,.reader-close:focus-visible{box-shadow:var(--inset);text-decoration:underline;text-underline-offset:4px}
+.article-dialog{border:0;padding:0;background:transparent;color:var(--ink);width:min(840px,calc(100vw - 32px));max-width:none;max-height:calc(100svh - 48px);overflow:visible}
+.article-dialog::backdrop{background:#27245a55;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.reader-paper{background:linear-gradient(145deg,#F7F5FB,#ECE8F3);border:1px solid #fff;border-radius:28px;box-shadow:0 24px 80px #15133a55;max-height:calc(100svh - 48px);display:flex;flex-direction:column;overflow:hidden}
+.reader-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 24px;flex:none;border-bottom:1px solid #27245a15}
+.reader-close{width:44px;height:44px;flex:none;display:grid;place-items:center;border:0;border-radius:50%;font-size:28px;line-height:1}
+.reader-content{padding:32px 44px 44px;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;font-size:18px;line-height:1.65}
+.reader-content #reader-title{font:500 44px/1.05 Fraunces,Georgia,serif;letter-spacing:-.035em;margin:14px 0 24px}
+.reader-content p,.reader-content ul,.reader-content ol,.reader-content pre{margin:20px 0}.reader-content h2:not(#reader-title){font-size:29px;line-height:1.15;margin:36px 0 18px}.reader-content h3{font-size:23px;line-height:1.2;margin:28px 0 16px}
+.reader-content a{color:var(--italic);text-decoration:underline;text-underline-offset:3px}.reader-content pre{max-width:100%;overflow:auto;padding:18px;background:#e2ddeb;border-radius:12px;font-size:13px}.reader-content code{overflow-wrap:anywhere}.reader-content .document-lead{font-size:20px}
+.article-dialog[open] .reader-paper,.menu-dialog[open] .menu-paper{animation:reader-in .25s cubic-bezier(.2,.8,.2,1) both}
+@keyframes reader-in{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
+@media(max-width:600px){.article-dialog{width:calc(100vw - 20px);max-height:calc(100svh - 24px)}.reader-paper{max-height:calc(100svh - 24px);border-radius:22px}.reader-toolbar{padding:12px 16px}.reader-toolbar .eyebrow{font-size:9px}.reader-content{padding:20px 22px 30px;font-size:16px}.reader-content #reader-title{font-size:34px}.reader-content .document-lead{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.article-dialog[open] .reader-paper,.menu-dialog[open] .menu-paper{animation:none}}

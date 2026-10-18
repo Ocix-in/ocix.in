@@ -4,7 +4,7 @@ Verified 18 October 2026 against the production static build. No existing tests 
 
 ## Clearer Today’s menu button
 
-The menu invitation now has a raised clay surface, subtle border, menu-sheet icon, stronger label and an action arrow. It remains compact enough for the first phone viewport and retains its inset keyboard focus without underlines. Current screenshots are in the [welcome review](welcome-review/README.md).
+On phones and tablets (up to 1000 px), the menu invitation has a raised clay surface, subtle border, menu-sheet icon, stronger label and an action arrow. Desktop retains the earlier plain full-width label and plus sign. Both retain inset keyboard focus without underlines. The mobile button remains compact enough for the first viewport. Current screenshots are in the [welcome review](welcome-review/README.md).
 
 ## Kitchen welcome and first-viewport mobile fit · 19 October 2026
 

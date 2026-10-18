@@ -284,3 +284,11 @@ button{font:inherit;color:inherit;cursor:pointer}button:focus-visible{outline:3p
 .menu-open-arrow{font-size:20px;line-height:1;margin-left:6px}
 .menu-open:hover{transform:translateY(-1px)}.menu-open:active{transform:translateY(1px);box-shadow:var(--inset)}.menu-open:focus-visible{border-radius:16px;box-shadow:var(--inset);text-decoration:none}
 @media(prefers-reduced-motion:reduce){.menu-open{transition:none}.menu-open:hover,.menu-open:active{transform:none}}
+
+.menu-open-plus{display:none}
+@media(min-width:1001px){
+ .menu-open{display:flex;justify-content:space-between;width:100%;gap:20px;padding:0;border:0;border-top:1px solid #27245a18;border-radius:0;background:none;box-shadow:none;font-size:13px;font-weight:500}
+ .menu-open-icon,.menu-open-arrow{display:none}.menu-open-plus{display:inline}
+ .menu-open:hover,.menu-open:active{transform:none;box-shadow:none}
+ .menu-open:focus-visible{border-radius:12px;box-shadow:var(--inset)}
+}

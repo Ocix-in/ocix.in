@@ -1,6 +1,6 @@
 # Kitchen welcome and mobile first viewport · 19 October 2026
 
-Today’s menu is now a distinct raised button with a menu-sheet icon, stronger label and an action arrow, including on phones. It retains the existing dialog behavior and inset keyboard focus.
+Today’s menu uses a distinct raised button with a menu-sheet icon, stronger label and action arrow on phones and tablets up to 1000 px. Desktop keeps the earlier plain label and plus sign. It retains the existing dialog behavior and inset keyboard focus.
 
 The white outer glow is removed from the shared raised material. Menu surfaces, close controls and the chef profile button retain a soft navy shadow. Recipes points up toward the fridge; Meet the cook points diagonally toward the chef. The chef’s head gently looks around, with all movement disabled under reduced motion.
 

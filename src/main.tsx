@@ -119,7 +119,7 @@ document.addEventListener('keydown', event => {
   else if (!event.shiftKey && document.activeElement === last) {event.preventDefault();first.focus()}
 });
 
-// The chef retreats after a five-second hello; reading or using the card keeps it open.
+// The chef retreats after a 2.5-second hello; reading or using the card keeps it open.
 let chefRetreat: ReturnType<typeof setTimeout> | undefined;
 let chefWelcomed = false;
 function keepChefWelcome() {clearTimeout(chefRetreat)}
@@ -138,15 +138,20 @@ document.addEventListener('beforetoggle', event => {
   chefRetreat=setTimeout(()=>{
     if (panel.contains(document.activeElement)) return;
     panel.hidePopover();
-  },5000);
+  },2500);
   const hour=new Date().getHours();
   const greeting=hour>=5&&hour<12?'Good morning!':hour>=12&&hour<17?'Good afternoon!':hour>=17&&hour<22?'Good evening!':'Hello, night owl!';
   panel.querySelector('[data-chef-greeting]')!.textContent=greeting;
 },true);
 
-// Replay on every page load, without waiting for images or interrupting a menu/article.
+// Greet on home arrivals/reloads, keeping internal browsing and product pages quiet.
 function scheduleChefWelcome(){
+  if (location.pathname.replace(/\/+$/, '') !== '') return;
   setTimeout(()=>{
+    const navigation=performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+    const reloading=navigation?.type === 'reload';
+    if (navigation?.type === 'back_forward') return;
+    if (!reloading && document.referrer && new URL(document.referrer).origin === location.origin) return;
     if (chefWelcomed) return;
     const panel=document.querySelector<HTMLElement>('#chef-welcome');
     if(!panel || typeof panel.showPopover!=='function' || document.querySelector('dialog[open], .mobile-menu[open], [popover]:popover-open'))return;

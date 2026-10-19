@@ -2,6 +2,14 @@
 
 Verified 18 October 2026 against the production static build. No existing tests were edited or removed.
 
+## Quieter chef and transparent favicon · 20 October 2026
+
+The automatic greeting now runs on home arrivals and explicit home reloads only. Product/information pages, browser back/forward and internal links back home stay quiet. Manual opening remains available throughout the site. The greeting lasts 2.5 seconds, with a shorter wave to match; interaction can still keep the card open.
+
+Removed solid backgrounds from the large favicon, touch and app icons. All PNG and ICO sizes have transparent corners, contain the OCIX symbol alone, and use versioned URLs to replace cached icons. A transparent root favicon.ico provides the browser fallback. Brand generation preserves transparency for future rebuilds.
+
+Build and all 7 unit tests pass. Dedicated browser checks cover quiet product navigation and return-home links, explicit home reload, fresh arrivals with pending images, the 2.5-second timeout at five viewports, manual opening on other pages, reduced motion and mobile first-viewport fit. Every generated icon's transparency was checked at pixel level, including all ICO payloads. Browser JavaScript is 7.12 KB.
+
 ## Automatic welcome replay fix · 19 October 2026
 
 Removed the session-storage suppression that prevented the chef from appearing again after reload. Each page load now starts the welcome after 1.4 seconds from content readiness, without waiting for image downloads; it retreats five seconds later. A stationary pointer under the newly opened card no longer cancels the retreat. Deliberate pointer movement, tapping or focusing the card keeps it available. Opening the guide manually before the automatic timer suppresses duplicate greetings only for that page load.

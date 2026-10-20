@@ -23,9 +23,13 @@ try{
   const geometry=await page.evaluate(()=>({width:document.documentElement.scrollWidth,height:document.documentElement.scrollHeight}));
   assert(geometry.width<=width&&geometry.height<=height,`Overview must fit ${width}x${height}: ${JSON.stringify(geometry)}`);
   const stage=await visibleBox(page.locator('.service-stage'));
-  for(const selector of ['.service-recipe','.service-serving-tray','.service-order-bell']){
+  for(const selector of ['.service-recipe','.service-scene>.pastry-case']){
    const box=await visibleBox(page.locator(selector));
    assert(box.x>=-1&&box.right<=width+1&&box.y>=stage.y-1&&box.bottom<=stage.bottom+1,`${selector} must be visible at ${width}x${height}: ${JSON.stringify({box,stage})}`);
+  }
+  for(const item of await page.locator('.service-scene :is(.case-item,.case-next)').all()){
+   const box=await item.boundingBox();assert(box.width>=44&&box.height>=44,'Case plates must have usable touch targets');
+   const label=await item.locator(':scope>span:last-child').boundingBox();assert(label.y>=box.y-1&&label.y+label.height<=box.y+box.height+1,'Plate invitation must fit inside its shelf');
   }
   assert.equal(await page.locator('.site-header a[href="/#ocix-menu"]').count(),0);
   if(width>1000){const nav=await page.locator('.desktop-nav').boundingBox();assert(Math.abs(nav.x+nav.width/2-width/2)<1)}
@@ -40,13 +44,31 @@ try{
   assert(await page.locator('#enquiry').evaluate(el=>el.open));assert.equal(await page.locator('.service-dialog[open]').count(),1,'Panels must replace one another');
   await page.keyboard.press('Escape');assert(await page.locator('.service-recipe').evaluate(el=>el===document.activeElement),'Focus must return to main recipe');
 
-  await page.locator('.service-serving-tray').click();assert(await page.locator('#our-work').evaluate(el=>el.open));
-  await page.locator('.service-work-preview img').evaluate(image=>image.decode());
-  assert.equal(await page.locator('.service-work-actions a[target=_blank]').getAttribute('href'),'https://www.vishaldevlift.in/');
-  assert.equal(await page.locator('#our-work iframe').count(),0,'Preview must stay local');
+  const workOpener=page.locator('.service-actions [data-service-open=our-work]');
+  await workOpener.click();assert(await page.locator('#our-work').evaluate(el=>el.open));
+  assert.equal(await page.locator('#our-work .case-item').count(),2);
+  assert.equal(await page.locator('#our-work .case-next').count(),1);
+  await page.locator('#our-work img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
+  assert.equal(await page.locator('.service-work-dialog iframe').count(),0,'Previews must stay local');
   if([320,390,1440].includes(width))await page.screenshot({path:`${output}/work-${width}x${height}.png`});
-  await page.keyboard.press('Escape');assert(await page.locator('.service-serving-tray').evaluate(el=>el===document.activeElement));
-
+  await page.locator('#our-work [data-service-open=work-portfolio]').click();
+  assert(await page.locator('#work-portfolio').evaluate(el=>el.open));
+  assert.equal(await page.locator('#work-portfolio .service-work-actions a[target=_blank]').getAttribute('href'),'https://www.vishaldevlift.in/');
+  await page.keyboard.press('Escape');assert(await workOpener.evaluate(el=>el===document.activeElement));
+  const vigilante=page.locator('.service-scene [data-service-open=work-vigilante]');
+  await vigilante.click();assert(await page.locator('#work-vigilante').evaluate(el=>el.open));
+  await page.locator('#work-vigilante img').evaluate(image=>image.decode());
+  assert.equal(await page.locator('#work-vigilante .service-work-actions a[target=_blank]').getAttribute('href'),'https://vigilante.ocix.in/');
+  if([320,390,1440].includes(width))await page.screenshot({path:`${output}/vigilante-${width}x${height}.png`});
+  await page.keyboard.press('Escape');assert(await vigilante.evaluate(el=>el===document.activeElement));
+  const nextPlate=page.locator('.service-scene .case-next');await nextPlate.click();assert(await page.locator('#enquiry').evaluate(el=>el.open));
+  await page.keyboard.press('Escape');assert(await nextPlate.evaluate(el=>el===document.activeElement));
+  await page.locator('.order-status').click();assert(await page.locator('#enquiry').evaluate(el=>el.open));
+  await page.keyboard.press('Escape');assert(await page.locator('.order-status').evaluate(el=>el===document.activeElement));
+  const headerControls=await page.locator('.site-header :is(.brand,.kitchen-back,.order-status,.mobile-menu>summary,.desktop-nav)').evaluateAll(els=>els.filter(el=>el.checkVisibility()).map(el=>{const r=el.getBoundingClientRect();return {left:r.left,right:r.right}}));
+  for(const box of headerControls)assert(box.left>=0&&box.right<=width,'Header controls must fit');
+  headerControls.sort((a,b)=>a.left-b.left);for(let i=1;i<headerControls.length;i++)assert(headerControls[i-1].right<=headerControls[i].left,'Header controls must not collide');
+  assert(await page.locator('.kitchen-back').isVisible());
   await page.locator('.service-actions [data-service-open=enquiry]').click();
   const panel=page.locator('#enquiry');assert(await panel.evaluate(el=>el.open));
   assert.equal(await panel.locator('.enquiry-option').getAttribute('open'),null);
@@ -79,9 +101,12 @@ try{
   await page.screenshot({path:`${output}/enquiry-${width}x${height}.png`});
   await page.keyboard.press('Escape');assert(await page.locator('.service-actions [data-service-open=enquiry]').evaluate(el=>el===document.activeElement));
   await page.goto('http://127.0.0.1:4183/services/websites#how-it-works');await page.clock.runFor(32);assert(await page.locator('#why-ocix').evaluate(el=>el.open),'Old process links must still work');
-  await context.close();results.push({width,height,geometry,compactOverview:true,why:true,realWorkPreview:true,socialFirst:true,optionalForm:true,focusAndClose:true,emailAndCopy:true,noPriceFigures:true,legacyLinks:true});
+  await page.keyboard.press('Escape');
+  const nav=page.locator(width>1000?'.desktop-nav':'.mobile-menu');if(width<=1000)await page.locator('.mobile-menu>summary').click();
+  assert.equal(await nav.locator('[data-current-page]').getAttribute('href'),'/');await nav.locator('[data-current-page]').click();assert.equal(new URL(page.url()).pathname,'/');
+  await context.close();results.push({width,height,geometry,compactOverview:true,why:true,realWorkPreview:true,pastryCase:true,vigilante:true,emptyPlate:true,ordersControl:true,socialFirst:true,optionalForm:true,focusAndClose:true,emailAndCopy:true,noPriceFigures:true,legacyLinks:true});
  }
  assert(fs.readFileSync('dist/sitemap.xml','utf8').includes('https://ocix.in/services/websites'));
  fs.writeFileSync(`${output}/results.json`,JSON.stringify(results,null,2));
- console.log('Compact kitchen passes at 9 viewports: panels, real portfolio preview, social-first contact, optional email brief, focus, no price figures and legacy links.');
+ console.log('Compact kitchen passes at 9 viewports: panels, pastry case, both live previews, empty-plate contact, active-nav return, social-first contact, optional email brief, focus, no price figures and legacy links.');
 }finally{await browser?.close();server.kill('SIGTERM')}

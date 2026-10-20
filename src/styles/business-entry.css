@@ -1,6 +1,13 @@
 /* Custom orders share the kitchen's materials, with room for the business story. */
-@media(min-width:1001px){.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.site-header>.brand{justify-self:start}.desktop-nav{justify-self:center}.site-header>:is(.kitchen-open,.back){justify-self:end}}
-.desktop-nav a[aria-current=page]{color:var(--italic);box-shadow:var(--inset);border-radius:999px}
+.header-brand{display:flex;align-items:center;gap:12px;min-width:0}
+.kitchen-back{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:50%;font-size:22px}
+.kitchen-back:hover{box-shadow:var(--inset)}
+.nav-return{margin-left:8px;font-size:14px;line-height:1}
+.desktop-nav a[data-current-page],.mobile-menu a[data-current-page]{color:var(--italic);box-shadow:var(--inset);border-radius:999px}
+.order-status{white-space:nowrap;color:var(--ink)}
+.order-status:hover{background:#e3deed}
+.order-arrow{font-size:15px}
+@media(min-width:1001px){.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.header-brand{justify-self:start}.desktop-nav{justify-self:center}.site-header>.kitchen-open{justify-self:end}}
 .home-business{display:none}
 .service-bell{position:absolute;left:22%;top:48%;width:7%;min-width:44px;z-index:3;display:grid;justify-items:center;transition:transform .2s}
 .service-bell svg{width:100%;filter:drop-shadow(1px 3px 2px #27245a18)}
@@ -9,6 +16,10 @@
 .service-bell:focus-visible{outline-offset:3px;border-radius:12px}
 @media(min-width:1001px) and (max-width:1200px){.desktop-nav a{font-size:13px;padding-inline:10px}}
 @media(max-width:1000px){
+ .header-brand{gap:8px}
+ .site-header .order-status{display:flex;min-height:38px;padding:0 9px;gap:6px;font-size:9px;letter-spacing:.02em;margin-left:auto}
+ .order-status .dot{width:6px;height:6px}
+ .order-long,.order-arrow{display:none}
  .home-actions{display:flex;align-items:center;gap:10px;margin-top:10px}
  .home-business{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 12px;border:1px solid #27245a24;border-radius:16px;font-size:12px;font-weight:600;min-height:44px}
  .home-business svg{width:25px;height:22px;flex:none}

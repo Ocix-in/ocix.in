@@ -14,7 +14,19 @@
   {
     "width": 1440,
     "height": 900,
-    "state": "work preview",
+    "state": "pastry catalogue",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "state": "portfolio preview",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "state": "Vigilante preview",
     "violations": []
   },
   {
@@ -44,7 +56,19 @@
   {
     "width": 390,
     "height": 844,
-    "state": "work preview",
+    "state": "pastry catalogue",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "state": "portfolio preview",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "state": "Vigilante preview",
     "violations": []
   },
   {
@@ -74,7 +98,19 @@
   {
     "width": 320,
     "height": 568,
-    "state": "work preview",
+    "state": "pastry catalogue",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "state": "portfolio preview",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "state": "Vigilante preview",
     "violations": []
   },
   {

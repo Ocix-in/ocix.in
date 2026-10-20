@@ -2,6 +2,14 @@
 
 Verification notes for the production static build. The original unit tests remain unchanged.
 
+## Return navigation and the pastry case · 20 October 2026
+
+Every interior page has a round back-to-kitchen button beside the logo, visible at all screen widths. The active navbar link includes a return arrow and leads home on its next click; other tabs still open their pages. This behavior is shared with the mobile menu, including contact and policy links. Desktop navigation stays centered. The service header now has a teal-dot Taking orders control, shortened to Orders on phones, which opens contact.
+
+The website showcase is a native HTML/CSS curved glass pastry case, with reflective glass, a continuous shelf, layered pastries and individual plates. Vishaldevlift and Vigilante use real local screenshots of their live homepages. Each opens a dedicated preview with a live-site link. The empty plate opens contact and invites the visitor’s next product. On small hero scenes the label shortens to Yours next; the enlarged catalogue and accessible name retain the full invitation. All price figures remain omitted.
+
+Build and all seven unchanged unit tests pass. Nine service viewports verify shelf controls and label fit, 44 px plate touch targets, header spacing, order controls, both website previews, empty-plate contact, active-tab return and the existing enquiry workflow. Twenty shared page/viewport checks verify return navigation, normal tab navigation, back controls and menu/contact behavior. Eleven home first-viewport checks and four local-time greetings pass. Twenty-one Axe WCAG A/AA scans pass. Mobile Lighthouse: service **Performance 94, Accessibility 100, CLS 0**, home **Performance 93, Accessibility 100, CLS 0**. The browser script remains 9.34 KB without hydration. Current screenshots and reports are in the [service review](services-review/README.md).
+
 ## Compact made-to-order kitchen · 20 October 2026
 
 Replaced the long service landing page with a first-viewport kitchen using the existing counter, chef and OCIX mark. A recipe card opens Why OCIX, the serving tray opens a real vishaldevlift.in screenshot, and the bell opens social-first contact. Desktop panels have blurred backdrops; phone panels rise as bottom sheets. The contact panel places Email, X, Instagram and Reddit on the left on desktop and first on phones, with the email brief closed until requested. No price figures or percentage-saving claims appear.

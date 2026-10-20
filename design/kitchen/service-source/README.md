@@ -1,8 +1,8 @@
 # Made-to-order service artwork
 
-`portfolio-original.png` is a real 1280 × 720 browser capture of https://www.vishaldevlift.in/, made on 20 October 2026. It shows the live personal portfolio homepage, including its weightlifting scene. The service page labels it as a personal portfolio. It is not a generated client example. Run `npm run assets:services` to export 640/1280-pixel AVIF and WebP versions for the small serving-tray preview and work panel.
+`portfolio-original.png` is a real 1280 × 720 browser capture of https://www.vishaldevlift.in/, made on 20 October 2026. It shows the live personal portfolio homepage, including its weightlifting scene. The service page labels it as a personal portfolio. `vigilante-original.png` is a real 1280 × 720 browser capture of https://vigilante.ocix.in/, made on 20 October 2026, showing its headline and Lantern District artwork. Vigilante is labelled as OCIX’s own product. It is not a generated client example. Run `npm run assets:services` to export 640/1280-pixel AVIF and WebP versions for the small plated previews in the glass pastry case and their individual work panels.
 
-The compact service kitchen reuses OCIX’s original counter, chef and mark assets. Its recipe card, screen frame and serving tray are native HTML/CSS. The kitchen and navigation bells are native SVG in `src/app/components/ServiceBell.tsx`, using gradients and the same indigo/amber materials.
+The compact service kitchen reuses OCIX’s original counter, chef and mark assets. Its recipe card, curved glass case, layered pastries and plates are native HTML/CSS. The kitchen and navigation bells are native SVG in `src/app/components/ServiceBell.tsx`, using gradients and the same indigo/amber materials.
 
 ## Earlier shop illustration
 

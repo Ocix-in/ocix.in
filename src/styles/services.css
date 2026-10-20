@@ -18,7 +18,7 @@
 .service-scene{position:absolute;width:min(100cqw,240cqh);max-width:1800px;aspect-ratio:12/5;left:50%;top:50%;transform:translate(-50%,-50%)}
 .service-counter{position:absolute;inset:0;z-index:2;pointer-events:none}
 .service-counter img{width:100%;height:100%}
-.service-chef{position:absolute;left:22.46%;top:3%;width:21.43%;z-index:1;pointer-events:none}
+.service-chef{position:absolute;left:17%;top:3%;width:21.43%;z-index:1;pointer-events:none}
 .service-chef picture,.service-chef picture img{width:100%;height:auto}
 .service-chef-mark{position:absolute;left:43.1%;top:75%;width:13.8%;height:11.8%;object-fit:contain;background:#393e75;border-radius:50%;padding:1.1%}
 .service-recipe{position:absolute;left:25%;top:64%;width:14%;min-width:72px;min-height:66px;padding:12px 14px;background:linear-gradient(130deg,#fff3cc,#e8d7ad);box-shadow:3px 7px 12px #27245a24;transform:rotate(-5deg);border-radius:2px 2px 8px 2px;z-index:4;display:flex;align-items:center;gap:12px;color:var(--ink);font-size:clamp(11px,1vw,15px);line-height:1.3;transition:transform .2s}
@@ -27,19 +27,36 @@
 .recipe-lines i{display:block;height:2px;background:#8b7754;opacity:.65}
 .recipe-lines i:last-child{width:65%}
 .recipe-arrow{margin-left:auto;font-size:18px}
-.service-serving-tray{position:absolute;left:47%;top:15%;width:27%;z-index:3;display:block;transition:transform .25s}
-.service-screen{position:relative;background:linear-gradient(140deg,#66618e,#33355f);padding:8px;border-radius:14px;box-shadow:2px 6px 0 #27245a,4px 12px 16px #27245a24;transform:rotate(2deg)}
-.service-screen picture{overflow:hidden;border-radius:7px}
-.service-screen img{width:100%;height:auto}
-.service-tray{display:block;height:20px;width:114%;margin:10px -7% 0;border-radius:50%;background:linear-gradient(#f5f3ee,#c4c2c9 55%,#8c8a9d);box-shadow:0 5px 7px #27245a24}
-.service-tray-label{display:block;width:max-content;max-width:130%;margin:14px auto 0;color:var(--ink);font-size:clamp(9px,.9vw,13px);line-height:1.4;text-align:center}
-.service-tray-label>span{margin-left:6px}
-.service-order-bell{position:absolute;left:82%;top:40%;width:7.5%;min-width:44px;z-index:3;display:block;transition:transform .2s}
-.service-order-bell svg{width:100%;filter:drop-shadow(1px 3px 2px #27245a18)}
-.service-order-bell>span{display:block;text-align:center;white-space:nowrap;font-size:clamp(10px,1vw,14px);font-weight:500;margin-top:4px}
+/* Glass, metal edges and plated work keep the showcase part of the kitchen. */
+.pastry-case{position:relative;container-type:inline-size;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:16% minmax(0,1fr);aspect-ratio:2.4;border:clamp(4px,.65vw,9px) solid #797698;border-top-color:#aaa7bd;border-bottom-color:#555378;border-radius:18px 65px 7px 7px;background:linear-gradient(135deg,#ffffff63,#c4dfdf28 60%,#a6a2c22b);box-shadow:3px 6px 0 #4c487e66,5px 10px 16px #27245a24;isolation:isolate}
+.pastry-case::before{content:'';position:absolute;right:-3%;top:6%;width:14%;height:94%;border-radius:0 90% 0 0;background:linear-gradient(90deg,#aaa6bf22,#6e698d55);border-right:3px solid #827c9e;transform:skewY(10deg);z-index:-1}
+.pastry-case::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 16%,#ffffff42 16.5%,#ffffff10 23%,transparent 23.5%,transparent 72%,#ffffff30 72.5%,transparent 80%);border-radius:inherit;z-index:3}
+.case-sign{grid-column:1/-1;align-self:center;text-align:center;color:var(--meta);font:clamp(6px,3cqw,13px)/1 'Geist Mono',monospace;text-transform:uppercase;letter-spacing:.12em}
+.case-shelf{display:contents}
+.case-item,.case-next{position:relative;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:0;padding:5% 7% 9%;color:var(--ink);border-bottom:clamp(3px,1.5cqw,8px) solid #8e8ca9;box-shadow:0 4px 0 #dddce6;transition:transform .2s;z-index:2}
+.pastry-preview{width:91%;position:relative;filter:drop-shadow(1px 3px 2px #27245a20)}
+.pastry-preview picture{overflow:hidden;border-radius:5px 5px 0 0;border:1px solid #27245a22}
+.pastry-preview img{width:100%;height:auto;display:block}
+.pastry-layers{display:block;height:clamp(3px,2.8cqw,14px);background:linear-gradient(#b2a1d7 0 28%,#fff1d8 28% 45%,#8d77b5 45% 80%,#ede2ca 80%);border-radius:0 0 4px 4px}
+.pastry-vigilante .pastry-layers{background:linear-gradient(#e8be6e 0 28%,#fff1d8 28% 45%,#b8834e 45% 80%,#ede2ca 80%)}
+.pastry-plate{display:block;width:106%;height:clamp(3px,2cqw,10px);margin-top:1%;border-radius:50%;background:linear-gradient(#fcf7ec,#ceccce 55%,#9492a7);box-shadow:0 2px 3px #27245a24}
+.case-label{display:flex;justify-content:center;gap:4px;font-size:clamp(7px,4cqw,16px);font-weight:500;line-height:1.4;margin-top:7%;white-space:nowrap}
+.case-next{justify-content:center;gap:8%;text-align:center;font-size:clamp(8px,3.8cqw,16px);line-height:1.4}
+.case-next>span:last-child{max-width:12ch}
+.case-next-short{white-space:nowrap}.case-next-full{display:none}
+.empty-plate{width:90%;height:clamp(20px,15cqw,72px);display:grid;place-items:center;border-radius:50%;border:2px solid #b6b1c5;background:radial-gradient(ellipse,#e8e4ee 49%,#bcb6cd 52%,#f4f0f8 56%,#d5cfdf 74%);box-shadow:1px 3px 3px #27245a24}
+.empty-plate>span{font-size:clamp(14px,8cqw,36px);color:var(--italic);line-height:1}
+.service-scene>.pastry-case{position:absolute;left:44%;top:18%;width:40%;z-index:3}
+.service-catalogue{padding:24px 36px 8px}
+.service-catalogue .pastry-case{width:100%;max-width:750px;margin:auto}
+.service-catalogue .case-label{font-size:clamp(10px,4cqw,18px)}
+.service-catalogue .case-next{font-size:clamp(10px,3.8cqw,17px)}
+.service-catalogue .case-next-short{display:none}.service-catalogue .case-next-full{display:inline}
+@media(min-width:1001px){.service-scene .case-next-short{display:none}.service-scene .case-next-full{display:inline}}
+.pastry-case a:focus-visible{outline:2px solid var(--italic);outline-offset:2px;border-radius:8px;box-shadow:var(--inset)}
 .service-overview .service-hint{text-align:center;line-height:24px;font-size:10px;letter-spacing:.05em}
 .service-overview [data-service-open]:focus-visible{outline:none;box-shadow:var(--inset)}
-.service-overview :is(.service-recipe,.service-serving-tray,.service-order-bell):focus-visible{outline:2px solid var(--italic);outline-offset:6px;box-shadow:none}
+.service-overview .service-recipe:focus-visible{outline:2px solid var(--italic);outline-offset:6px;box-shadow:none}
 .service-dialog{padding:0;border:0;background:transparent;color:var(--ink);width:min(960px,calc(100vw - 40px));max-width:none;max-height:calc(100svh - 40px);overflow:visible}
 .service-dialog::backdrop{background:#27245a55;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .service-paper{max-height:calc(100svh - 40px);overflow:auto;overscroll-behavior:contain;border:1px solid #27245a16;border-radius:28px;padding-bottom:28px;scrollbar-width:thin}
@@ -82,7 +99,7 @@
 .enquiry-option>summary:focus-visible{outline:none;box-shadow:var(--inset)}
 .service-fallback{display:none}
 @keyframes service-panel-in{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:none}}
-@media(hover:hover){.service-recipe:hover{transform:rotate(-2deg) translateY(-3px)}.service-serving-tray:hover,.service-order-bell:hover{transform:translateY(-4px)}}
+@media(hover:hover){.service-recipe:hover{transform:rotate(-2deg) translateY(-3px)}.case-item:hover .pastry-preview{transform:translateY(-3px)}.case-next:hover .empty-plate{box-shadow:var(--inset)}}
 .website-enquiry{border-radius:28px;padding:30px;border:1px solid #27245a12;min-width:0}
 .website-enquiry fieldset{margin:0 0 24px;padding:0;border:0;min-width:0}
 .website-enquiry legend{font-size:13px;font-weight:500;margin-bottom:12px}
@@ -130,13 +147,6 @@
  .service-actions{margin-top:12px;gap:12px}
  .service-actions a{min-height:44px;padding-inline:18px;font-size:12px}
  .service-scene{width:min(145cqw,240cqh)}
- .service-serving-tray{width:25%}
- .service-screen{padding:5px;border-radius:10px}
- .service-screen picture{border-radius:5px}
- .service-tray{height:12px;margin-top:8px}
- .service-tray-label{font-size:10px;margin-top:10px}
- .service-order-bell{left:74%;top:40%;width:8%}
- .service-order-bell>span{font-size:10px}
  .service-recipe{padding:10px;gap:7px;font-size:12px;min-width:90px;min-height:50px}
  .recipe-lines{width:12px;gap:4px}
  .recipe-arrow{display:none}
@@ -148,6 +158,7 @@
  .service-heading{padding-top:10px}
  .service-flavours{font-size:10px}
  .service-intro>p{font-size:13px;margin-top:12px}
+ .service-catalogue{padding:24px 16px 8px}
  .service-dialog{width:100%;max-height:calc(100svh - 16px);margin:auto auto 0}
  .service-paper{max-height:calc(100svh - 16px);border-radius:24px 24px 0 0;padding-bottom:24px}
  .service-panel-header{padding:20px;gap:12px}
@@ -201,4 +212,4 @@
  .service-stage{grid-column:2;grid-row:1}
  .service-overview .service-hint{grid-column:2;grid-row:2;font-size:8px}
 }
-@media(prefers-reduced-motion:reduce){.service-dialog[open] .service-paper{animation:none}.service-recipe,.service-serving-tray,.service-order-bell{transition:none}.service-recipe:hover{transform:rotate(-5deg)}.service-serving-tray:hover,.service-order-bell:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.service-dialog[open] .service-paper{animation:none}.service-recipe,.case-item,.case-next{transition:none}.service-recipe:hover{transform:rotate(-5deg)}.case-item:hover .pastry-preview{transform:none}}

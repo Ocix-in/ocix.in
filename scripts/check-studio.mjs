@@ -77,6 +77,18 @@ try {
         assert((await page.locator('.tools-actions a').first().getAttribute('href')).includes('view=roast'));
         assert.equal(await page.locator('.tools-actions .pop-amber').count(),1);
       }
+      if(route!=='/'){
+        assert(await page.locator('.kitchen-back').isVisible(),'Back control must be visible on every screen');
+        if(route!=='/contact'){
+          if(width<=1000)await page.locator('.mobile-menu>summary').click();
+          const active=page.locator(`${width>1000?'.desktop-nav':'.mobile-menu'} [data-current-page]`);
+          assert.equal(await active.getAttribute('href'),'/');await active.click();assert.equal(new URL(page.url()).pathname,'/','Active nav returns home');
+          if(width<=1000)await page.locator('.mobile-menu>summary').click();
+          await page.locator(`${width>1000?'.desktop-nav':'.mobile-menu'} a[href="${route}"]`).click();
+          assert.equal(new URL(page.url()).pathname,route,'Inactive nav still opens its page');
+        }
+        await page.locator('.kitchen-back').click();assert.equal(new URL(page.url()).pathname,'/','Back button returns home');
+      }
       results.push({route,width,passed:true});
     }
     await page.goto('http://127.0.0.1:4178/#ocix-menu');

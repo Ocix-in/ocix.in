@@ -4,539 +4,152 @@
     "height": 568,
     "geometry": {
       "width": 320,
-      "viewport": 320,
-      "controls": [
-        {
-          "x": 16,
-          "right": 198.734375,
-          "width": 182.734375
-        },
-        {
-          "x": 16,
-          "right": 135.890625,
-          "width": 119.890625
-        },
-        {
-          "x": 48,
-          "right": 64,
-          "width": 16
-        },
-        {
-          "x": 48,
-          "right": 64,
-          "width": 16
-        },
-        {
-          "x": 35,
-          "right": 285,
-          "width": 250
-        },
-        {
-          "x": 35,
-          "right": 285,
-          "width": 250
-        },
-        {
-          "x": 35,
-          "right": 285,
-          "width": 250
-        },
-        {
-          "x": 35,
-          "right": 285,
-          "width": 250
-        },
-        {
-          "x": 35,
-          "right": 253.34375,
-          "width": 218.34375
-        }
-      ]
+      "height": 568
     },
-    "formEncoding": true,
-    "localDraft": true,
-    "clipboard": true,
-    "clipboardFallback": true,
-    "homeEntry": true
+    "compactOverview": true,
+    "why": true,
+    "realWorkPreview": true,
+    "socialFirst": true,
+    "optionalForm": true,
+    "focusAndClose": true,
+    "emailAndCopy": true,
+    "noPriceFigures": true,
+    "legacyLinks": true
   },
   {
     "width": 375,
     "height": 667,
     "geometry": {
       "width": 375,
-      "viewport": 375,
-      "controls": [
-        {
-          "x": 16,
-          "right": 195.34375,
-          "width": 179.34375
-        },
-        {
-          "x": 215.34375,
-          "right": 334.78125,
-          "width": 119.4375
-        },
-        {
-          "x": 48,
-          "right": 64,
-          "width": 16
-        },
-        {
-          "x": 48,
-          "right": 64,
-          "width": 16
-        },
-        {
-          "x": 35,
-          "right": 340,
-          "width": 305
-        },
-        {
-          "x": 35,
-          "right": 340,
-          "width": 305
-        },
-        {
-          "x": 35,
-          "right": 340,
-          "width": 305
-        },
-        {
-          "x": 35,
-          "right": 340,
-          "width": 305
-        },
-        {
-          "x": 35,
-          "right": 250.25,
-          "width": 215.25
-        }
-      ]
+      "height": 667
     },
-    "formEncoding": true,
-    "localDraft": true,
-    "clipboard": true,
-    "clipboardFallback": true,
-    "homeEntry": true
+    "compactOverview": true,
+    "why": true,
+    "realWorkPreview": true,
+    "socialFirst": true,
+    "optionalForm": true,
+    "focusAndClose": true,
+    "emailAndCopy": true,
+    "noPriceFigures": true,
+    "legacyLinks": true
   },
   {
     "width": 390,
     "height": 844,
     "geometry": {
       "width": 390,
-      "viewport": 390,
-      "controls": [
-        {
-          "x": 16,
-          "right": 195.34375,
-          "width": 179.34375
-        },
-        {
-          "x": 215.34375,
-          "right": 334.78125,
-          "width": 119.4375
-        },
-        {
-          "x": 48,
-          "right": 64,
-          "width": 16
-        },
-        {
-          "x": 48,
-          "right": 64,
-          "width": 16
-        },
-        {
-          "x": 35,
-          "right": 355,
-          "width": 320
-        },
-        {
-          "x": 35,
-          "right": 355,
-          "width": 320
-        },
-        {
-          "x": 35,
-          "right": 355,
-          "width": 320
-        },
-        {
-          "x": 35,
-          "right": 355,
-          "width": 320
-        },
-        {
-          "x": 35,
-          "right": 250.25,
-          "width": 215.25
-        }
-      ]
+      "height": 844
     },
-    "formEncoding": true,
-    "localDraft": true,
-    "clipboard": true,
-    "clipboardFallback": true,
-    "homeEntry": true
+    "compactOverview": true,
+    "why": true,
+    "realWorkPreview": true,
+    "socialFirst": true,
+    "optionalForm": true,
+    "focusAndClose": true,
+    "emailAndCopy": true,
+    "noPriceFigures": true,
+    "legacyLinks": true
   },
   {
     "width": 600,
     "height": 900,
     "geometry": {
       "width": 600,
-      "viewport": 600,
-      "controls": [
-        {
-          "x": 16,
-          "right": 195.34375,
-          "width": 179.34375
-        },
-        {
-          "x": 215.34375,
-          "right": 334.78125,
-          "width": 119.4375
-        },
-        {
-          "x": 48,
-          "right": 64,
-          "width": 16
-        },
-        {
-          "x": 220.484375,
-          "right": 236.484375,
-          "width": 16
-        },
-        {
-          "x": 35,
-          "right": 565,
-          "width": 530
-        },
-        {
-          "x": 35,
-          "right": 565,
-          "width": 530
-        },
-        {
-          "x": 35,
-          "right": 565,
-          "width": 530
-        },
-        {
-          "x": 35,
-          "right": 565,
-          "width": 530
-        },
-        {
-          "x": 35,
-          "right": 250.25,
-          "width": 215.25
-        }
-      ]
+      "height": 900
     },
-    "formEncoding": true,
-    "localDraft": true,
-    "clipboard": true,
-    "clipboardFallback": true,
-    "homeEntry": true
+    "compactOverview": true,
+    "why": true,
+    "realWorkPreview": true,
+    "socialFirst": true,
+    "optionalForm": true,
+    "focusAndClose": true,
+    "emailAndCopy": true,
+    "noPriceFigures": true,
+    "legacyLinks": true
   },
   {
     "width": 768,
     "height": 1024,
     "geometry": {
       "width": 768,
-      "viewport": 768,
-      "controls": [
-        {
-          "x": 16,
-          "right": 195.34375,
-          "width": 179.34375
-        },
-        {
-          "x": 209.34375,
-          "right": 328.78125,
-          "width": 119.4375
-        },
-        {
-          "x": 364.390625,
-          "right": 380.390625,
-          "width": 16
-        },
-        {
-          "x": 536.875,
-          "right": 552.875,
-          "width": 16
-        },
-        {
-          "x": 351.390625,
-          "right": 729,
-          "width": 377.609375
-        },
-        {
-          "x": 351.390625,
-          "right": 729,
-          "width": 377.609375
-        },
-        {
-          "x": 351.390625,
-          "right": 729,
-          "width": 377.609375
-        },
-        {
-          "x": 351.390625,
-          "right": 729,
-          "width": 377.609375
-        },
-        {
-          "x": 351.390625,
-          "right": 566.640625,
-          "width": 215.25
-        }
-      ]
+      "height": 1024
     },
-    "formEncoding": true,
-    "localDraft": true,
-    "clipboard": true,
-    "clipboardFallback": true,
-    "homeEntry": true
+    "compactOverview": true,
+    "why": true,
+    "realWorkPreview": true,
+    "socialFirst": true,
+    "optionalForm": true,
+    "focusAndClose": true,
+    "emailAndCopy": true,
+    "noPriceFigures": true,
+    "legacyLinks": true
   },
   {
     "width": 1001,
     "height": 768,
     "geometry": {
       "width": 1001,
-      "viewport": 1001,
-      "controls": [
-        {
-          "x": 40,
-          "right": 241.609375,
-          "width": 201.609375
-        },
-        {
-          "x": 253.609375,
-          "right": 373.046875,
-          "width": 119.4375
-        },
-        {
-          "x": 472.796875,
-          "right": 488.796875,
-          "width": 16
-        },
-        {
-          "x": 645.28125,
-          "right": 661.28125,
-          "width": 16
-        },
-        {
-          "x": 459.796875,
-          "right": 689.890625,
-          "width": 230.09375
-        },
-        {
-          "x": 705.890625,
-          "right": 936,
-          "width": 230.109375
-        },
-        {
-          "x": 459.796875,
-          "right": 936,
-          "width": 476.203125
-        },
-        {
-          "x": 459.796875,
-          "right": 936,
-          "width": 476.203125
-        },
-        {
-          "x": 459.796875,
-          "right": 675.046875,
-          "width": 215.25
-        }
-      ]
+      "height": 768
     },
-    "formEncoding": true,
-    "localDraft": true,
-    "clipboard": true,
-    "clipboardFallback": true,
-    "homeEntry": true
+    "compactOverview": true,
+    "why": true,
+    "realWorkPreview": true,
+    "socialFirst": true,
+    "optionalForm": true,
+    "focusAndClose": true,
+    "emailAndCopy": true,
+    "noPriceFigures": true,
+    "legacyLinks": true
   },
   {
     "width": 1280,
     "height": 900,
     "geometry": {
       "width": 1280,
-      "viewport": 1280,
-      "controls": [
-        {
-          "x": 64,
-          "right": 265.609375,
-          "width": 201.609375
-        },
-        {
-          "x": 289.609375,
-          "right": 409.046875,
-          "width": 119.4375
-        },
-        {
-          "x": 616.796875,
-          "right": 632.796875,
-          "width": 16
-        },
-        {
-          "x": 789.28125,
-          "right": 805.28125,
-          "width": 16
-        },
-        {
-          "x": 603.796875,
-          "right": 886.390625,
-          "width": 282.59375
-        },
-        {
-          "x": 902.390625,
-          "right": 1185,
-          "width": 282.609375
-        },
-        {
-          "x": 603.796875,
-          "right": 1185,
-          "width": 581.203125
-        },
-        {
-          "x": 603.796875,
-          "right": 1185,
-          "width": 581.203125
-        },
-        {
-          "x": 603.796875,
-          "right": 819.046875,
-          "width": 215.25
-        }
-      ]
+      "height": 900
     },
-    "formEncoding": true,
-    "localDraft": true,
-    "clipboard": true,
-    "clipboardFallback": true,
-    "homeEntry": true
+    "compactOverview": true,
+    "why": true,
+    "realWorkPreview": true,
+    "socialFirst": true,
+    "optionalForm": true,
+    "focusAndClose": true,
+    "emailAndCopy": true,
+    "noPriceFigures": true,
+    "legacyLinks": true
   },
   {
     "width": 1440,
     "height": 900,
     "geometry": {
       "width": 1440,
-      "viewport": 1440,
-      "controls": [
-        {
-          "x": 64,
-          "right": 265.609375,
-          "width": 201.609375
-        },
-        {
-          "x": 289.609375,
-          "right": 409.046875,
-          "width": 119.4375
-        },
-        {
-          "x": 680.796875,
-          "right": 696.796875,
-          "width": 16
-        },
-        {
-          "x": 853.28125,
-          "right": 869.28125,
-          "width": 16
-        },
-        {
-          "x": 667.796875,
-          "right": 998.390625,
-          "width": 330.59375
-        },
-        {
-          "x": 1014.390625,
-          "right": 1345,
-          "width": 330.609375
-        },
-        {
-          "x": 667.796875,
-          "right": 1345,
-          "width": 677.203125
-        },
-        {
-          "x": 667.796875,
-          "right": 1345,
-          "width": 677.203125
-        },
-        {
-          "x": 667.796875,
-          "right": 883.046875,
-          "width": 215.25
-        }
-      ]
+      "height": 900
     },
-    "formEncoding": true,
-    "localDraft": true,
-    "clipboard": true,
-    "clipboardFallback": true,
-    "homeEntry": true
+    "compactOverview": true,
+    "why": true,
+    "realWorkPreview": true,
+    "socialFirst": true,
+    "optionalForm": true,
+    "focusAndClose": true,
+    "emailAndCopy": true,
+    "noPriceFigures": true,
+    "legacyLinks": true
   },
   {
     "width": 844,
     "height": 390,
     "geometry": {
       "width": 844,
-      "viewport": 844,
-      "controls": [
-        {
-          "x": 16,
-          "right": 195.34375,
-          "width": 179.34375
-        },
-        {
-          "x": 209.34375,
-          "right": 328.78125,
-          "width": 119.4375
-        },
-        {
-          "x": 394.796875,
-          "right": 410.796875,
-          "width": 16
-        },
-        {
-          "x": 567.28125,
-          "right": 583.28125,
-          "width": 16
-        },
-        {
-          "x": 381.796875,
-          "right": 805,
-          "width": 423.203125
-        },
-        {
-          "x": 381.796875,
-          "right": 805,
-          "width": 423.203125
-        },
-        {
-          "x": 381.796875,
-          "right": 805,
-          "width": 423.203125
-        },
-        {
-          "x": 381.796875,
-          "right": 805,
-          "width": 423.203125
-        },
-        {
-          "x": 381.796875,
-          "right": 597.046875,
-          "width": 215.25
-        }
-      ]
+      "height": 390
     },
-    "formEncoding": true,
-    "localDraft": true,
-    "clipboard": true,
-    "clipboardFallback": true,
-    "homeEntry": true
+    "compactOverview": true,
+    "why": true,
+    "realWorkPreview": true,
+    "socialFirst": true,
+    "optionalForm": true,
+    "focusAndClose": true,
+    "emailAndCopy": true,
+    "noPriceFigures": true,
+    "legacyLinks": true
   }
 ]

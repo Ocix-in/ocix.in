@@ -1,41 +1,36 @@
 import { ServiceBell } from './ServiceBell';
+import { ContactButtons } from './ContactButtons';
+
+function PortfolioPreview({className='',priority=false}:{className?:string;priority?:boolean}) {
+  return <picture className={className}><source type="image/avif" srcSet="/assets/services/portfolio-640.avif 640w, /assets/services/portfolio-1280.avif 1280w" sizes={priority?'(max-width:600px) 45vw, 30vw':'(max-width:600px) calc(100vw - 56px), 840px'}/><img src="/assets/services/portfolio-640.webp" srcSet="/assets/services/portfolio-640.webp 640w, /assets/services/portfolio-1280.webp 1280w" sizes={priority?'(max-width:600px) 45vw, 30vw':'(max-width:600px) calc(100vw - 56px), 840px'} width="1280" height="720" loading={priority?'eager':'lazy'} fetchPriority={priority?'high':undefined} alt="The real vishaldevlift.in personal portfolio: a large serif headline and an interactive 3D weightlifting scene."/></picture>;
+}
+function PanelHeader({eyebrow,title,id}:{eyebrow:string;title:string;id:string}){
+  return <header className="service-panel-header"><div><p className="eyebrow">{eyebrow}</p><h2 id={id}>{title}</h2></div><button type="button" className="service-close neu" data-dialog-close aria-label="Close panel">×</button></header>;
+}
+const ingredients=[
+  ['A signature recipe','Creative design, made for you.','A layout shaped around your business, with thoughtful details and playful touches that make a memorable first impression.'],
+  ['Your own flavour','An identity people remember.','Fonts, colours and a visual style chosen around your business. A website that feels like you, from the first glance to the smallest detail.'],
+  ['A fair bill','Thoughtful, competitive pricing.','A clear quote around the work you need. We’ll explain what’s included and agree the scope, extras and timing before building.'],
+];
+function WhyIngredients(){return <><div className="service-ingredients">{ingredients.map(([name,title,body],i)=><section className={`service-ingredient ingredient-${i}`} key={name}><span className="ingredient-number neu-in" aria-hidden="true">0{i+1}</span><p className="eyebrow">{name}</p><h3>{title}</h3><p>{body}</p></section>)}</div><div className="service-recipe-flow neu-in"><span>Share your idea</span><span aria-hidden="true">→</span><span>Taste the design</span><span aria-hidden="true">→</span><span>Go live</span></div><p className="service-panel-note">A first website or a fresh start. We’ll work out the right recipe together.</p></>}
 
 export function WebsiteServices() {
-  return <article className="website-services">
-    <section className="service-hero wrap" aria-labelledby="service-title">
-      <div className="service-words">
-        <p className="eyebrow service-eyebrow"><ServiceBell id="service-eyebrow"/>Made to order</p>
-        <h1 id="service-title">A better website<br/>for your <em>business.</em></h1>
-        <p className="service-lead">Your first website. Or a fresh start for the one you have.</p>
-        <p className="service-intro">We design and build websites for local businesses. A little personality, clear information and an easy way for your next customer to get in touch.</p>
-        <div className="service-choices" aria-label="What would you like to make?">
-          <a className="neu" href="#enquiry" data-website-kind="new"><span aria-hidden="true">＋</span>Build a new website</a>
-          <a className="neu" href="#enquiry" data-website-kind="refresh"><span aria-hidden="true">↻</span>Refresh my website</a>
-        </div>
-        <div className="service-actions"><a className="pop pop-amber" href="#enquiry">Discuss my website <span aria-hidden="true">→</span></a><a className="service-text-link" href="#how-it-works">See how it works <span aria-hidden="true">↘</span></a></div>
-      </div>
-      <figure className="service-art">
-        <picture className="service-shop"><source type="image/avif" srcSet="/assets/services/shop.avif 768w, /assets/services/shop@2x.avif 1536w" sizes="(max-width:600px) calc(100vw - 32px), 50vw"/><img src="/assets/services/shop.webp" srcSet="/assets/services/shop.webp 768w, /assets/services/shop@2x.webp 1536w" sizes="(max-width:600px) calc(100vw - 32px), 50vw" width="768" height="512" fetchPriority="high" alt="A miniature shop with a teal awning, its website on a computer and phone, and a service bell."/></picture>
-        <div className="service-chef" aria-hidden="true"><picture><source type="image/avif" srcSet="/assets/kitchen/chef.avif 600w, /assets/kitchen/chef@2x.avif 1200w" sizes="(max-width:600px) 45vw, 24vw"/><img src="/assets/kitchen/chef.webp" srcSet="/assets/kitchen/chef.webp 600w, /assets/kitchen/chef@2x.webp 1200w" sizes="(max-width:600px) 45vw, 24vw" width="600" height="700" alt=""/></picture><img className="service-chef-mark" src="/assets/ocix-badge.webp" width="56" height="56" alt=""/></div>
-        <figcaption className="eyebrow">From our kitchen to your corner of the world.</figcaption>
-      </figure>
-    </section>
+  return <>
+    <article className="website-services service-overview" aria-labelledby="service-title">
+      <div className="service-heading wrap"><div><p className="eyebrow service-eyebrow"><ServiceBell id="service-eyebrow"/>Made to order</p><h1 id="service-title">A website,<br/><em>cooked to your taste.</em></h1><p className="service-flavours">Original ideas <span>·</span> Your own identity <span>·</span> A fair quote</p></div><div className="service-intro"><p>Custom websites for local businesses.<br/> Your personality, in every detail.</p><div className="service-actions"><a className="pop pop-amber" href="#enquiry" data-service-open="enquiry" aria-haspopup="dialog">Talk to us <span aria-hidden="true">→</span></a><a className="service-work-link neu" href="#our-work" data-service-open="our-work" aria-haspopup="dialog">View our work <span aria-hidden="true">↗</span></a></div></div></div>
+      <div className="service-stage"><div className="service-scene" aria-label="Our made-to-order kitchen: pick a recipe, lift the tray or ring the bell.">
+        <picture className="service-counter" aria-hidden="true"><source type="image/avif" srcSet="/assets/kitchen/kitchen-base.avif 1440w, /assets/kitchen/kitchen-base@2x.avif 2880w" sizes="(max-width:1000px) 155vw, 100vw"/><img src="/assets/kitchen/kitchen-base.webp" srcSet="/assets/kitchen/kitchen-base.webp 1440w, /assets/kitchen/kitchen-base@2x.webp 2880w" sizes="(max-width:1000px) 155vw, 100vw" width="1440" height="600" alt=""/></picture>
+        <div className="service-chef" aria-hidden="true"><picture><source type="image/avif" srcSet="/assets/kitchen/chef.avif 600w, /assets/kitchen/chef@2x.avif 1200w" sizes="(max-width:1000px) 34vw, 22vw"/><img src="/assets/kitchen/chef.webp" srcSet="/assets/kitchen/chef.webp 600w, /assets/kitchen/chef@2x.webp 1200w" sizes="(max-width:1000px) 34vw, 22vw" width="600" height="700" alt="" fetchPriority="high"/></picture><img className="service-chef-mark" src="/assets/ocix-badge.webp" width="56" height="56" alt=""/></div>
+        <a className="service-recipe" href="#why-ocix" data-service-open="why-ocix" aria-haspopup="dialog"><span className="recipe-lines" aria-hidden="true"><i/><i/><i/></span><span>Why this<br/><strong>kitchen?</strong></span><span className="recipe-arrow" aria-hidden="true">↗</span></a>
+        <a className="service-serving-tray" href="#our-work" data-service-open="our-work" aria-haspopup="dialog" aria-label="View our work: vishaldevlift.in"><div className="service-screen"><PortfolioPreview priority/></div><span className="service-tray" aria-hidden="true"/><span className="service-tray-label">Freshly served <span aria-hidden="true">↗</span></span></a>
+        <a className="service-order-bell" href="#enquiry" data-service-open="enquiry" aria-haspopup="dialog"><ServiceBell id="service-order"/><span>Say hello</span></a>
+      </div></div>
+      <p className="service-hint eyebrow">Pick a recipe. Lift the tray. Ring the bell.</p>
+    </article>
 
-    <section id="how-it-works" className="service-process wrap neu-in" aria-label="How your website comes together">
-      <ol>{[['Tell us about your business','What you do, who you help and what your website needs to do.'],['Review your design','We agree the scope and quote, then shape a design with your feedback.'],['Go live','We build, check it on phones and desktops, and help you launch.']].map(([title,body],i)=><li key={title}><span className="service-step neu">0{i+1}</span><div><h2>{title}</h2><p>{body}</p></div></li>)}</ol>
-    </section>
-
-    <section className="service-details wrap" aria-labelledby="service-details-title">
-      <div><p className="eyebrow">Useful, with a little personality</p><h2 id="service-details-title">Your business.<br/><em>Easy to find. Easy to know.</em></h2><p>For shops, cafés, studios and other local businesses. We’ll work out what belongs on your site together.</p></div>
-      <ul className="service-features">
-        <li><span aria-hidden="true">01</span><div><h3>Made for phones, too</h3><p>A clear, comfortable experience on the screen your customers have with them.</p></div></li>
-        <li><span aria-hidden="true">02</span><div><h3>The details that matter</h3><p>Your services, photos, opening hours and location, presented with care.</p></div></li>
-        <li><span aria-hidden="true">03</span><div><h3>A simple way to get in touch</h3><p>Calls, email or an enquiry. We’ll choose what works for your business.</p></div></li>
-      </ul>
-    </section>
-
-    <section id="enquiry" className="service-enquiry wrap" aria-labelledby="enquiry-title">
-      <div className="enquiry-words"><p className="eyebrow">Let’s make something good</p><h2 id="enquiry-title">What’s your<br/><em>order?</em></h2><p>Tell us a little about your business and the website you have in mind. We’ll start with a conversation.</p><p>Each project is different. We’ll agree the work, price and timing with you before building.</p><a className="service-email" href="mailto:support@ocix.in">support@ocix.in <span aria-hidden="true">↗</span></a><p className="enquiry-note">The form prepares an email draft. You review and send it from your email app.</p></div>
+    <dialog id="why-ocix" className="service-dialog" aria-labelledby="why-title"><div className="service-paper neu"><PanelHeader eyebrow="Our special ingredients" title="Why this kitchen?" id="why-title"/><WhyIngredients/><a className="service-panel-next" href="#enquiry" data-service-open="enquiry">Let’s talk about your website <span aria-hidden="true">→</span></a></div></dialog>
+    <dialog id="our-work" className="service-dialog service-work-dialog" aria-labelledby="work-title"><div className="service-paper neu"><PanelHeader eyebrow="Fresh from the kitchen · Personal portfolio" title="A little proof of personality." id="work-title"/><figure className="service-work-preview"><PortfolioPreview/><figcaption><strong>vishaldevlift.in</strong><span>3D scenes · Playful interactions · A distinct visual identity</span></figcaption></figure><div className="service-work-actions"><a className="pop" href="https://www.vishaldevlift.in/" target="_blank" rel="noopener noreferrer">Open live website <span aria-hidden="true">↗</span></a><a className="service-panel-next" href="#enquiry" data-service-open="enquiry">Let’s cook up yours <span aria-hidden="true">→</span></a></div></div></dialog>
+    <dialog id="enquiry" className="service-dialog service-contact-dialog" aria-labelledby="enquiry-title"><div className="service-paper neu"><PanelHeader eyebrow="Ring the bell" title="What’s your order?" id="enquiry-title"/><div className="service-contact-layout"><section className="service-direct-contact" aria-labelledby="direct-contact-title"><h3 id="direct-contact-title">Say hello to the kitchen.</h3><p>A quick message is plenty. Tell us about your business, share an idea, or send the website you’d like to refresh.</p><ContactButtons/><a className="service-email" href="mailto:support@ocix.in">support@ocix.in <span aria-hidden="true">↗</span></a><p className="service-panel-note">We’ll agree the recipe, the work and the timing together.</p></section><section className="service-brief" aria-labelledby="brief-title"><h3 id="brief-title">Prefer to write a little more?</h3><p>Leave a few details in a short brief. It prepares an email for you to review and send.</p><details className="enquiry-option"><summary className="neu">Fill in a short brief <span aria-hidden="true">＋</span></summary>
       <form className="website-enquiry neu" action="mailto:support@ocix.in" method="post" encType="text/plain" data-website-enquiry>
         <fieldset><legend>I’d like to…</legend><div className="enquiry-types"><label><input type="radio" name="project" value="new" defaultChecked/><span>Build a new website</span></label><label><input type="radio" name="project" value="refresh"/><span>Refresh my website</span></label></div></fieldset>
         <div className="enquiry-fields"><label>Business name<input id="business-name" name="business" autoComplete="organization" required maxLength={100} placeholder="Your business"/></label><label>Your email<input name="email" type="email" autoComplete="email" required maxLength={254} placeholder="you@example.com"/></label><label className="enquiry-wide">Current website <small>(optional)</small><input name="website" type="url" autoComplete="url" maxLength={300} placeholder="https://your-website.com"/></label><label className="enquiry-wide">What would you like your website to do?<textarea name="details" required rows={4} maxLength={1200} placeholder="Tell us what you do, what you’d like to show and how customers should contact you."/></label></div>
@@ -48,7 +43,7 @@ export function WebsiteServices() {
           <label>Enquiry text<textarea data-enquiry-text readOnly rows={8}/></label>
           <button className="neu enquiry-copy" data-enquiry-copy type="button">Copy enquiry</button><p className="enquiry-status" role="status" aria-live="polite"/>
         </div>
-      </form>
-    </section>
-  </article>;
+      </form>        </details></section></div></div></dialog>
+    <noscript><style>{'.kitchen-site.service-page{height:auto;min-height:100svh;display:block}.service-overview{height:auto;min-height:70svh;grid-template-rows:auto 320px 24px}.service-fallback{display:block!important;padding:32px 0}.service-fallback h2{margin-bottom:24px}.service-fallback p{margin:16px 0}'}</style><section className="service-fallback wrap"><h2>Why this kitchen?</h2><WhyIngredients/><h2>Fresh from the kitchen</h2><a href="https://www.vishaldevlift.in/">View the vishaldevlift.in personal portfolio ↗</a><h2>Talk to us</h2><p>Say hello on a social channel or email support@ocix.in with your idea.</p><ContactButtons/></section></noscript>
+  </>;
 }

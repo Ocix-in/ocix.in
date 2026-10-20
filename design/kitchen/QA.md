@@ -2,6 +2,12 @@
 
 Verification notes for the production static build. The original unit tests remain unchanged.
 
+## Compact made-to-order kitchen · 20 October 2026
+
+Replaced the long service landing page with a first-viewport kitchen using the existing counter, chef and OCIX mark. A recipe card opens Why OCIX, the serving tray opens a real vishaldevlift.in screenshot, and the bell opens social-first contact. Desktop panels have blurred backdrops; phone panels rise as bottom sheets. The contact panel places Email, X, Instagram and Reddit on the left on desktop and first on phones, with the email brief closed until requested. No price figures or percentage-saving claims appear.
+
+The original seven unit tests and build pass. Nine dedicated viewport checks cover overview fit, all panels, social order, optional brief, validation, local email/copy preparation, keyboard focus and old section links. Fifteen Axe WCAG A/AA scans pass. Shared menu/contact checks pass at twenty page/viewport pairs; all thirty-two article previews and fridge keyboard/fallback checks pass. The production script remains within budget at 9.34 KB without hydration; the service stylesheet stays route-specific. Fresh mobile Lighthouse: service **Performance 95, Accessibility 100, CLS 0, LCP 2.6 s**; home **Performance 93, Accessibility 100, CLS 0, LCP 3.1 s**. See [screenshots, reports and source provenance](services-review/README.md).
+
 ## Navbar position and menu cleanup · 20 October 2026
 
 The desktop header uses equal flexible side columns around the navbar, keeping navigation centered across pages and widths even when the right-side control is hidden. Removed The menu from desktop and mobile navigation; the hero's Today’s menu remains available. All seven unit tests, nine service/header viewport checks and twenty studio page/viewport checks pass. The header checks assert center alignment and no collisions; mobile navigation checks follow the business link instead of the removed menu entry.

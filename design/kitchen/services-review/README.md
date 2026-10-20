@@ -1,25 +1,27 @@
-# Made to order · 20 October 2026
+# Made to order · compact kitchen · 20 October 2026
 
-The new `/services/websites` page introduces OCIX's website design/build service for local businesses. It has new-website and redesign entry points, an illustrated hero, three process steps, practical business features, and an enquiry form. Desktop/mobile navigation, the mobile home action row, a small kitchen counter bell and the contact page link to it. The four-product menu stays curated separately.
+`/services/websites` now fits its first viewport instead of presenting a long business landing page. Its familiar kitchen contains three interactive objects: the paper recipe opens Why OCIX, the serving tray opens the work preview, and the brass bell opens contact. The short overview also has clear Talk to us and View our work buttons. Dialogs blur the background, become bottom sheets on phones, keep close controls visible, and return keyboard focus to the original overview control.
 
-The enquiry prepares an encoded email to `support@ocix.in` in the browser. Visitors review and send it with their own email app. Copy/select fallback is available without an email handler or clipboard permission. The form retains native mailto and direct email fallbacks. It never claims an enquiry was sent, stores no form details and requires no backend or new analytics events.
+Why OCIX explains original design, custom typography/colours and a scoped, competitive quote. It contains no price figures or percentage-saving claims. The work panel shows a real local screenshot of vishaldevlift.in, labels it as a personal portfolio and offers an explicit live-site link. It loads no third-party iframe. Source provenance is in [service-source](../service-source/README.md).
 
-The chef and logo reuse the existing OCIX assets. The shop illustration uses a generated transparent PNG, exported to 1×/2× AVIF and WebP. Source and full prompt are in [service-source](../service-source/README.md). Phone form fields use 16 px text to avoid focus zoom. The mobile home retains its first-viewport business/menu actions, fridge/chef framing and Vigilante dock.
+Email, X, Instagram and Reddit buttons appear on the left of contact on desktop and first on phones. The form is optional and collapsed until requested. It prepares an encoded email to `support@ocix.in` in the browser. Visitors review and send it with their own email app. Copy/select fallback is available without an email handler or clipboard permission. It never claims an enquiry was sent, stores no form details and requires no backend or new analytics events. Without JavaScript a readable fallback presents the ingredients, portfolio link and direct contact channels.
 
 ## Checks
 
-`npm run test:services` checks nine service/home viewport pairs from 320 px phones through desktop and landscape. It verifies horizontal fit, visible controls and home CTA, header spacing, project selection, required fields, email subject/body encoding, local preparation, invalidating an old draft after editing, clipboard success and fallback, page metadata and sitemap inclusion. It starts its own production preview on port 4183. Results are in [results.json](results.json).
+`npm run test:services` passes at nine viewports from 320×568 through desktop and short landscape. It verifies no overview scrolling, all scene controls visible, centered desktop navigation, all three panels, social-first contact, optional-form disclosure, keyboard focus and return, validation, encoded email preparation, invalidating stale drafts after edits, clipboard success/fallback, no POST, no price figures, old process links, metadata and sitemap inclusion. It starts its own production preview on port 4183. Results are in [results.json](results.json).
 
-- [Desktop service page](services-1440x900.png)
-- [Phone service page](services-390x844.png)
+- [Desktop kitchen](services-1440x900.png)
+- [Phone kitchen](services-390x844.png)
 - [Small phone](services-320x568.png)
-- [Tablet](services-768x1024.png)
-- [Prepared enquiry on a phone](enquiry-390x844.png)
+- [Short landscape](services-844x390.png)
+- [Why OCIX](why-1440x900.png)
+- [Work preview](work-1440x900.png)
+- [Social contact and optional brief](contact-1440x900.png)
+- [Phone contact](contact-390x844.png)
+- [Prepared phone enquiry](enquiry-390x844.png)
 
-The production build and all seven original unit tests pass. Browser JavaScript is 8.88 KB with no React hydration, within the existing 10 KB budget. Broader layout, welcome, chef, menu and recipe checks are documented in [QA](../QA.md).
+The production build and all seven original unit tests pass. Shared menu/contact checks pass at twenty page/viewport pairs; the fridge suite passes all thirty-two article previews and its keyboard/fallback checks. Browser JavaScript is 9.34 KB with no React hydration, within the existing 10 KB budget. The service stylesheet is content-hashed and loaded only on this route; the home stylesheet remains unchanged.
 
-Six Axe WCAG A/AA scans cover the initial service page and prepared enquiry on desktop and two phone sizes; no violations were found. See [accessibility results](accessibility-results.json).
+Fifteen Axe WCAG A/AA scans cover the overview, Why OCIX, work, social contact and prepared enquiry at desktop and two phone sizes, with no violations. See [accessibility results](accessibility-results.json).
 
-Mobile Lighthouse with default throttling: service **Performance 95, Accessibility 100, CLS 0**, LCP 2.7 s; home **Performance 93, Accessibility 100, CLS 0**, LCP 3.1 s. [Service report](lighthouse-service-mobile.report.html) · [Home report](lighthouse-home-mobile.report.html).
-
-Service art uses width-based responsive sources so phones receive an appropriately sized image. Its dedicated stylesheet is content-hashed and linked from prerendered service HTML only; home loads the small shared business-entry styles.
+Mobile Lighthouse with default throttling: service **Performance 95, Accessibility 100, CLS 0**, LCP 2.6 s. See the [service report](lighthouse-service-mobile.report.html). Home remains **Performance 93, Accessibility 100, CLS 0**, LCP 3.1 s; see the [home report](lighthouse-home-mobile.report.html).

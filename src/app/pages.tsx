@@ -1,3 +1,4 @@
+import { ContactButtons } from './components/ContactButtons';
 import { WebsiteServices } from './components/WebsiteServices';
 import { Art, DishArt, ProductPage } from './components/Kitchen';
 import { articles } from './content';
@@ -6,7 +7,7 @@ import { RecipeFridge, ArticleDialog } from './components/RecipeFridge';
 
 export const pages = [
   { path: '/', title: 'OCIX | A small kitchen for software', description: 'OCIX builds software that brings more fun to everyday life: games, playful tools and fresh ways to make progress. Explore Vigilante, free GitHub tools and what’s in development.' },
-  { path: '/services/websites', title: 'Websites for local businesses | Made to order by OCIX', description: 'Your first website, or a fresh start for the one you have. OCIX designs and builds websites for local businesses. Tell us about your project and prepare an email enquiry.' },
+  { path: '/services/websites', title: 'Websites for local businesses | Made to order by OCIX', description: 'OCIX cooks up custom websites for local businesses. Explore our work, meet the kitchen and get in touch on social media or with an optional email brief.' },
   { path: '/about', title: 'Meet the cook | OCIX', description: 'OCIX builds software that brings fun to everyday life. Meet the studio, explore what we make and find our email and social channels.' },
   { path: '/products/vigilante', title: 'Vigilante | GitHub accountability by OCIX', description: 'Connect a repository, choose a daily target and rebuild a settlement with verified GitHub work. Learn the loop, access boundaries and recovery rules.' },
   { path: '/products/draftshield', title: 'DraftShield | In development at OCIX', description: 'An unofficial draft-review concept for the X composer. DraftShield is in development and is not yet available.' },
@@ -19,8 +20,6 @@ export const pages = [
   { path: '/blog', title: 'Recipes | Developer writing from OCIX', description: 'Practical developer writing from OCIX about projects, GitHub activity and follow-through, with further guides on the Vigilante blog.' },
   ...articles.map(article => ({ path: `/blog/${article.slug}`, title: `${article.title} | OCIX`, description: article.description })),
 ];
-
-function ContactButtons(){return <nav className="contact-buttons" aria-label="Contact and follow OCIX">{[['mailto:support@ocix.in','✉','Email OCIX'],['https://x.com/Ocixdotin','𝕏','X'],['https://www.instagram.com/ocix.in','◎','Instagram'],['https://www.reddit.com/user/ocix_dot_in/','↗','Reddit']].map(([href,icon,label])=><a className="neu" href={href} key={href}><span aria-hidden="true">{icon}</span>{label}</a>)}</nav>}
 
 function OriginalPageContent({ path }: { path: string }) {
   const article = articles.find(item => path === `/blog/${item.slug}`);

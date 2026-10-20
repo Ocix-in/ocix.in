@@ -6,7 +6,7 @@ import { KitchenHome } from './components/Kitchen';
 import '../styles/kitchen.css';
 
 export default function App({ path = '/' }: { path?: string }) {
-  return <div className={`kitchen-site ${path === '/' ? 'home-page' : ''}`}>
+  return <div className={`kitchen-site ${path === '/' ? 'home-page' : path === '/services/websites' ? 'service-page' : ''}`}>
     <a href="#main" className="skip-link">Skip to content</a>
     <SiteHeader home={path === '/'} path={path} />
     <main id="main">{path === '/' ? <KitchenHome/> : <PageContent path={path}/>}</main>

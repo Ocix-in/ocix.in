@@ -50,6 +50,18 @@ document.addEventListener('close', event => {
 
 document.addEventListener('click', async event => {
   const target = event.target as HTMLElement;
+  const service = target.closest<HTMLElement>('[data-service-open]');
+  if(service && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey){
+    const panel=document.getElementById(service.dataset.serviceOpen!);
+    if(panel instanceof HTMLDialogElement){
+      event.preventDefault();
+      const previous=document.querySelector<HTMLDialogElement>('.service-dialog[open]');
+      const returnTo=previous?dialogOpeners.get(previous)||service:service;
+      if(previous&&previous!==panel)previous.close();
+      openDialog(panel,returnTo);
+    }
+    return;
+  }
   const opener = target.closest<HTMLElement>('[data-menu-open]');
   if (opener) {
     const menu = document.querySelector<HTMLDialogElement>('#ocix-menu');
@@ -115,7 +127,7 @@ document.addEventListener('keydown', event => {
   if (event.key !== 'Tab') return;
   const dialog = document.querySelector<HTMLDialogElement>('dialog[open]');
   if (!dialog) return;
-  const controls = [...dialog.querySelectorAll<HTMLElement>('button, a[href]')].filter(el=>el.getClientRects().length);
+  const controls = [...dialog.querySelectorAll<HTMLElement>('button, a[href], input, textarea, select, summary, [tabindex]')].filter(el=>el.tabIndex>=0&&!el.hasAttribute('disabled')&&el.checkVisibility());
   const first = controls[0], last = controls[controls.length - 1];
   if (event.shiftKey && document.activeElement === first) {event.preventDefault();last.focus()}
   else if (!event.shiftKey && document.activeElement === last) {event.preventDefault();first.focus()}
@@ -167,12 +179,6 @@ else document.addEventListener('DOMContentLoaded',scheduleChefWelcome,{once:true
 // Build an email draft locally; no enquiry details are posted or added to analytics.
 document.addEventListener('click', async event => {
   const target=event.target as Element;
-  const choice=target.closest<HTMLElement>('[data-website-kind]');
-  if(choice){
-    const radio=document.querySelector<HTMLInputElement>(`[name="project"][value="${choice.dataset.websiteKind}"]`);
-    if(radio){radio.checked=true;radio.dispatchEvent(new Event('input',{bubbles:true}))}
-    document.querySelector<HTMLElement>('#business-name')?.focus({preventScroll:true});
-  }
   const copy=target.closest('[data-enquiry-copy]');
   if(!copy)return;
   const form=copy.closest('form')!;
@@ -201,3 +207,14 @@ document.addEventListener('submit', event => {
   draft.querySelector<HTMLElement>('.enquiry-status')!.textContent='';
   draft.querySelector<HTMLElement>('h3')!.focus();
 });
+
+// Keep shared links to the former process/enquiry sections useful.
+function openServiceHash(){
+  if(location.pathname.replace(/\/+$/,'')==='/services/websites' && location.hash){
+    const id=location.hash==='#how-it-works'?'why-ocix':location.hash.slice(1);
+    const panel=document.getElementById(id);
+    if(panel?.matches('.service-dialog'))document.querySelector<HTMLElement>(`[data-service-open="${id}"]`)?.click();
+  }
+}
+window.addEventListener('hashchange',openServiceHash);
+openServiceHash();

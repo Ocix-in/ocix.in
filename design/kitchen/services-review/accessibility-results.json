@@ -2,7 +2,25 @@
   {
     "width": 1440,
     "height": 900,
-    "state": "service page",
+    "state": "kitchen overview",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "state": "why OCIX",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "state": "work preview",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "state": "social contact",
     "violations": []
   },
   {
@@ -14,7 +32,25 @@
   {
     "width": 390,
     "height": 844,
-    "state": "service page",
+    "state": "kitchen overview",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "state": "why OCIX",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "state": "work preview",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "state": "social contact",
     "violations": []
   },
   {
@@ -26,7 +62,25 @@
   {
     "width": 320,
     "height": 568,
-    "state": "service page",
+    "state": "kitchen overview",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "state": "why OCIX",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "state": "work preview",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "state": "social contact",
     "violations": []
   },
   {

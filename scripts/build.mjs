@@ -1,4 +1,5 @@
 import { build } from 'vite';
+import { createHash } from 'node:crypto';
 import { mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 import path from 'node:path';
@@ -8,6 +9,10 @@ await build();
 await build({ build: { ssr: 'src/entry-server.tsx', outDir: '.ssg', emptyOutDir: true }, ssr: { noExternal: ['lucide-react'] } });
 const { pages, articles, render } = await import(pathToFileURL(path.resolve('.ssg/entry-server.js')).href);
 const template = await readFile('dist/index.html', 'utf8');
+// The business service stylesheet is needed only on its own landing page.
+const serviceStyles = await readFile('src/styles/services.css', 'utf8');
+const serviceStylePath = `/assets/services-${createHash('sha256').update(serviceStyles).digest('hex').slice(0,10)}.css`;
+await writeFile(`dist${serviceStylePath}`, serviceStyles);
 if (!template.includes('<!--page-head-->') || !template.includes('<div id="root"></div>')) throw new Error('Missing prerender slots');
 const escape = text => String(text).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const routes = [...pages, { path: '/404', title: 'Page not found | OCIX', description: 'That page is not available. Explore OCIX products, tools and contact options.' }];
@@ -38,7 +43,8 @@ for (const page of routes) {
   const graph = { '@context': 'https://schema.org', '@graph': [organization, founder, entity] };
   const heroPreload = page.path === '/' ? `<link rel="preload" as="image" type="image/avif" href="/assets/kitchen/kitchen-mobile.avif" media="(max-width: 700px)" fetchpriority="high"/>
     <link rel="preload" as="image" type="image/avif" imagesrcset="/assets/kitchen/kitchen-base.avif 1x, /assets/kitchen/kitchen-base@2x.avif 2x" media="(min-width: 701px)" fetchpriority="high"/>` : '';
-  const head = `${heroPreload}<title>${escape(page.title)}</title>
+  const pageStyles = page.path === '/services/websites' ? `<link rel="stylesheet" href="${serviceStylePath}"/>` : '';
+  const head = `${heroPreload}${pageStyles}<title>${escape(page.title)}</title>
     <meta name="description" content="${escape(page.description)}"/>
     <meta name="author" content="${article ? escape(article.author) : 'OCIX'}"/>
     <meta name="robots" content="${page.path === '/404' ? 'noindex, follow' : 'index, follow, max-image-preview:large'}"/>

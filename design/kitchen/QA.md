@@ -1,6 +1,14 @@
 # Kitchen redesign · verification
 
-Verified 18 October 2026 against the production static build. No existing tests were edited or removed.
+Verification notes for the production static build. The original unit tests remain unchanged.
+
+## Made-to-order websites · 20 October 2026
+
+Added `/services/websites` with original OCIX branding, a custom clay shop/device illustration, new/redesign choices, the process and a local email-draft enquiry to support@ocix.in. Desktop/mobile navigation and the contact page point to it; phone home has a visible business entry beside Today’s menu, and a small service bell sits on the kitchen counter. The product menu continues to show its four products.
+
+The form validates required information, preserves Unicode and reserved characters in the encoded mailto subject/body, and offers copying/selecting the prepared draft. It submits no enquiry data and makes no delivery claim. Visitors review and send the email themselves. Mobile inputs use 16 px text. All source artwork and the built-in Image Generation prompt are retained; the original chef and mark are reused.
+
+Build and all 7 original unit tests pass. Nine dedicated viewport pairs cover service-page fit, header spacing, home entry and Taste visibility, enquiry preparation, clearing a stale draft after edits, project selection, copy fallback, canonical metadata and sitemap inclusion. All 37 shared-layout and 11 mobile welcome viewports pass. All 20 studio page/viewport checks, 32 article previews and 5 chef lifecycle viewports pass; six service/form Axe WCAG A/AA scans report no violations. The service-only CSS is content-hashed and linked only from its prerendered page. Fresh mobile Lighthouse: service **Performance 95, Accessibility 100, CLS 0, LCP 2.7 s**; home **Performance 93, Accessibility 100, CLS 0, LCP 3.1 s**. Browser JavaScript is 8.88 KB, with no hydration. See [service screenshots and results](services-review/README.md).
 
 ## Quieter chef and transparent favicon · 20 October 2026
 

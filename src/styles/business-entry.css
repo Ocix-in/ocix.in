@@ -1,0 +1,21 @@
+/* Custom orders share the kitchen's materials, with room for the business story. */
+.desktop-nav a[aria-current=page]{color:var(--italic);box-shadow:var(--inset);border-radius:999px}
+.home-business{display:none}
+.service-bell{position:absolute;left:22%;top:48%;width:7%;min-width:44px;z-index:3;display:grid;justify-items:center;transition:transform .2s}
+.service-bell svg{width:100%;filter:drop-shadow(1px 3px 2px #27245a18)}
+.service-bell>span{display:block;white-space:nowrap;background:#eddbb9;color:var(--ink);padding:3px 6px;font-size:clamp(7px,.7vw,11px);line-height:1.3;box-shadow:1px 3px 4px #27245a22;transform:rotate(-4deg);border-radius:2px}
+.service-bell:hover{transform:translateY(-3px) rotate(-2deg)}
+.service-bell:focus-visible{outline-offset:3px;border-radius:12px}
+@media(min-width:1001px) and (max-width:1200px){.desktop-nav a{font-size:13px;padding-inline:10px}}
+@media(max-width:1000px){
+ .home-actions{display:flex;align-items:center;gap:10px;margin-top:10px}
+ .home-business{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 12px;border:1px solid #27245a24;border-radius:16px;font-size:12px;font-weight:600;min-height:44px}
+ .home-business svg{width:25px;height:22px;flex:none}
+ .home-business>span:last-child{font-size:18px}
+ .home-actions .menu-open{margin-top:0;font-size:12px;padding:9px 12px;gap:7px;min-height:44px}
+ .home-actions .menu-open-arrow{margin-left:0;font-size:18px}
+ .home-actions .menu-open-icon{width:18px;height:18px}
+ .service-bell>span{font-size:8px}
+}
+@media(max-width:359px){.home-actions{gap:8px}.home-business{padding-inline:10px;gap:5px}.home-business svg{width:21px}.home-actions .menu-open{padding-inline:10px;gap:5px}.home-actions .menu-open-icon{width:16px}.home-business,.home-actions .menu-open{font-size:11px}.service-choices a{flex-basis:100%;justify-content:flex-start}}
+@media(prefers-reduced-motion:reduce){.service-bell{transition:none}.service-bell:hover{transform:none}}

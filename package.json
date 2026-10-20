@@ -10,6 +10,8 @@
     "preview": "node scripts/preview.mjs",
     "assets:kitchen": "node scripts/optimize-kitchen.mjs",
     "assets:brand": "node scripts/optimize-brand.mjs",
+    "assets:services": "node scripts/optimize-services.mjs",
+    "test:services": "node scripts/check-services.mjs",
     "test:layout": "node scripts/check-layout.mjs",
     "test:studio": "node scripts/check-studio.mjs",
     "test:fridge": "node scripts/check-fridge.mjs",

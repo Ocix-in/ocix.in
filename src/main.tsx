@@ -1,10 +1,12 @@
 import { inject } from '@vercel/analytics';
 import './styles/index.css';
 import './styles/kitchen.css';
+import './styles/business-entry.css';
 
 // Production pages are complete HTML. Links and <details> need no hydration.
 // Keep the Vite development experience without shipping React or article text.
 if (import.meta.env.DEV) {
+  await import('./styles/services.css');
   const [{ createElement }, { createRoot }, { default: App }] = await Promise.all([
     import('react'), import('react-dom/client'), import('./app/App'),
   ]);
@@ -160,3 +162,42 @@ function scheduleChefWelcome(){
 }
 if(document.readyState!=='loading')scheduleChefWelcome();
 else document.addEventListener('DOMContentLoaded',scheduleChefWelcome,{once:true});
+
+
+// Build an email draft locally; no enquiry details are posted or added to analytics.
+document.addEventListener('click', async event => {
+  const target=event.target as Element;
+  const choice=target.closest<HTMLElement>('[data-website-kind]');
+  if(choice){
+    const radio=document.querySelector<HTMLInputElement>(`[name="project"][value="${choice.dataset.websiteKind}"]`);
+    if(radio){radio.checked=true;radio.dispatchEvent(new Event('input',{bubbles:true}))}
+    document.querySelector<HTMLElement>('#business-name')?.focus({preventScroll:true});
+  }
+  const copy=target.closest('[data-enquiry-copy]');
+  if(!copy)return;
+  const form=copy.closest('form')!;
+  const draft=form.querySelector<HTMLTextAreaElement>('[data-enquiry-text]')!;
+  const status=form.querySelector<HTMLElement>('.enquiry-status')!;
+  try{await navigator.clipboard.writeText(draft.value);status.textContent='Enquiry copied. Paste it into an email to support@ocix.in.'}
+  catch{draft.focus();draft.select();status.textContent='Select and copy the enquiry above, then email support@ocix.in.'}
+});
+document.addEventListener('input', event => {
+  const draft=(event.target as Element).closest('[data-website-enquiry]')?.querySelector<HTMLElement>('.enquiry-draft');
+  if(draft)draft.hidden=true;
+});
+document.addEventListener('submit', event => {
+  const form=event.target as HTMLFormElement;
+  if(!form.matches('[data-website-enquiry]'))return;
+  event.preventDefault();
+  const data=new FormData(form);
+  const value=(name:string)=>String(data.get(name)||'').trim();
+  const kind=value('project')==='refresh'?'Refresh my website':'Build a new website';
+  const subject=`Website enquiry: ${value('business')}`;
+  const body=`Hello OCIX,\n\nI’d like to discuss a website for my business.\n\nBusiness: ${value('business')}\nProject: ${kind}\nReply email: ${value('email')}\nCurrent website: ${value('website')||'None provided'}\n\nWhat I have in mind:\n${value('details')}`;
+  const draft=form.querySelector<HTMLElement>('.enquiry-draft')!;
+  draft.querySelector<HTMLAnchorElement>('[data-enquiry-email]')!.href=`mailto:support@ocix.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  draft.querySelector<HTMLTextAreaElement>('[data-enquiry-text]')!.value=`To: support@ocix.in\nSubject: ${subject}\n\n${body}`;
+  draft.hidden=false;
+  draft.querySelector<HTMLElement>('.enquiry-status')!.textContent='';
+  draft.querySelector<HTMLElement>('h3')!.focus();
+});

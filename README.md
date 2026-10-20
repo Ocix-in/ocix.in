@@ -1,6 +1,6 @@
 # OCIX · a small kitchen for software
 
-OCIX is Vishal Pandey’s independent software studio in India. Vigilante is served; DraftShield, GymX and Do It! are still cooking. The site has no waitlist, beta form or email capture.
+OCIX is Vishal Pandey’s independent software studio in India. Vigilante is served; DraftShield, GymX and Do It! are still cooking. The site has no waitlist or beta form. Made-to-order websites for local businesses are available at `/services/websites`; its enquiry form prepares an email locally for the visitor to review and send.
 
 ## Run and publish
 
@@ -53,6 +53,16 @@ Run `npm run test:studio` after building to check the menu keyboard behavior and
 
 Run `npm run test:fridge` to check the shared fridge artwork and notes at four widths, all eight article previews, keyboard close/focus return, note title fit and failed-load fallbacks. It starts its own preview on port 4180. Screenshots and reports are in `design/kitchen/fridge-review/`. In development, Vite renders the requested article on demand; production fetches its existing prerendered HTML.
 
-The purple circular Chef OCIX guide has a pop-out mascot with a waving hand. Its welcome opens automatically once per browsing session using the visitor’s device-local time, with links to the served product and Recipes. The chef’s head moves gently; reduced motion disables it. Run `npm run test:welcome` to check first-viewport fit at 11 sizes, guide/CTA/footer spacing, four time-zone greetings, motion preferences and glow removal. It starts a preview on port 4181. See `design/kitchen/welcome-review/` for screenshots and reports.
+The purple circular Chef OCIX guide has a pop-out mascot with a waving hand. Its 2.5-second welcome opens on fresh home arrivals and explicit home reloads using the visitor’s device-local time, with links to the served product and Recipes. The chef’s head moves gently; reduced motion disables it. Run `npm run test:welcome` to check first-viewport fit at 11 sizes, guide/CTA/footer spacing, four time-zone greetings, motion preferences and glow removal. It starts a preview on port 4181. See `design/kitchen/welcome-review/` for screenshots and reports.
 
-Run `npm run test:chef` to verify the automatic welcome, session dismissal, reopening from the popped-out hat, mobile CTA visibility, reduced motion and avoidance of open menus. General layout checks use a dismissed welcome; this dedicated suite covers first visits. Screenshots and results are in `design/kitchen/chef-popout-review/`.
+Run `npm run test:chef` to verify quiet internal navigation, automatic home greetings, 2.5-second retreat, manual reopening, mobile CTA visibility, reduced motion and avoidance of open menus. General layout checks freeze their clock; this dedicated suite covers first visits. Screenshots and results are in `design/kitchen/chef-popout-review/`.
+
+## Made-to-order websites
+
+`/services/websites` is a static, shareable landing page for new websites and redesigns. “For businesses” appears in desktop/mobile navigation and beside the mobile home menu. A small brass service bell on the kitchen counter links to the same page. The service stays separate from the product catalogue. Small shared entry styles live in `business-entry.css`; `scripts/build.mjs` adds a content-hashed `services.css` link only to the service page, keeping that stylesheet off the home page’s loading path.
+
+The enquiry form builds an encoded email draft addressed to `support@ocix.in`, with business name, reply email, project type, optional current website and project details. Preparing the draft performs no network submission. The visitor opens their email app to review and send it; copy/select fallback works without an email handler or clipboard permission. The form also retains a native mailto action and a direct email link without JavaScript. No API key, form provider or backend is required.
+
+Run `npm run assets:services` to reproduce 1×/2× AVIF/WebP exports from `design/kitchen/service-source/shop-original.png`. The shop illustration was generated with the built-in Image Generation tool; the chef and logo reuse the original OCIX artwork. Source prompt and provenance are saved beside the PNG.
+
+After building, run `npm run test:services` for nine viewport checks, home/service navigation, validation, email encoding, local draft preparation, clipboard fallback, metadata and sitemap coverage. It uses preview port 4183 and the usual `OCIX_CHROME_PATH` option. Screenshots and results are saved in `design/kitchen/services-review/`.

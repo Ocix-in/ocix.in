@@ -1,0 +1,38 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "state": "service page",
+    "violations": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "state": "prepared enquiry",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "state": "service page",
+    "violations": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "state": "prepared enquiry",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "state": "service page",
+    "violations": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "state": "prepared enquiry",
+    "violations": []
+  }
+]

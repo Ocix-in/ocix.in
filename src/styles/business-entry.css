@@ -1,4 +1,5 @@
 /* Custom orders share the kitchen's materials, with room for the business story. */
+@media(min-width:1001px){.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.site-header>.brand{justify-self:start}.desktop-nav{justify-self:center}.site-header>:is(.kitchen-open,.back){justify-self:end}}
 .desktop-nav a[aria-current=page]{color:var(--italic);box-shadow:var(--inset);border-radius:999px}
 .home-business{display:none}
 .service-bell{position:absolute;left:22%;top:48%;width:7%;min-width:44px;z-index:3;display:grid;justify-items:center;transition:transform .2s}

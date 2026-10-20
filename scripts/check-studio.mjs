@@ -52,9 +52,10 @@ try {
         await page.locator('[data-menu-close]').click();
         if(width<=1000){
           await page.locator('.mobile-menu summary').click();
-          await page.locator('.mobile-menu [data-menu-open]').click();
-          await page.keyboard.press('Escape');
-          await page.waitForFunction(()=>document.querySelector('.mobile-menu summary')===document.activeElement);
+          assert.equal(await page.locator('.mobile-menu a[href="/#ocix-menu"]').count(),0);
+          await page.locator('.mobile-menu a[href="/services/websites"]').click();
+          assert(new URL(page.url()).pathname==='/services/websites','Mobile business navigation must work');
+          await page.goto('http://127.0.0.1:4178/');
         }
       }
       if(route==='/about') {

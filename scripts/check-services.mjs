@@ -26,9 +26,12 @@ try{
     assert(geometry.width<=width,`Service page overflows at ${width}`);
     assert(geometry.controls.every(rect=>rect.x>=0&&rect.right<=width&&rect.width>0),`Controls must fit at ${width}`);
     assert.equal(await page.locator('h1').count(),1);
+    assert.equal(await page.locator('.site-header a[href="/#ocix-menu"]').count(),0,'The menu must stay out of the navbar');
     if(width>1000){
       const header=await page.locator('.site-header').evaluate(el=>[...el.children].filter(child=>getComputedStyle(child).display!=='none').map(child=>{const r=child.getBoundingClientRect();return {x:r.x,right:r.right}}));
       assert(header.every((rect,i)=>i===0||rect.x>=header[i-1].right),'Header controls must not overlap');
+      const nav=await page.locator('.desktop-nav').boundingBox();
+      assert(Math.abs(nav.x+nav.width/2-width/2)<1,'Navbar must remain centered');
     }
     assert.equal(await page.locator('[data-website-enquiry]').evaluate(form=>form.checkValidity()),false,'Empty enquiry must require details');
     await page.locator('[data-website-kind=refresh]').click();

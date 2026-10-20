@@ -2,6 +2,10 @@
 
 Verification notes for the production static build. The original unit tests remain unchanged.
 
+## Navbar position and menu cleanup · 20 October 2026
+
+The desktop header uses equal flexible side columns around the navbar, keeping navigation centered across pages and widths even when the right-side control is hidden. Removed The menu from desktop and mobile navigation; the hero's Today’s menu remains available. All seven unit tests, nine service/header viewport checks and twenty studio page/viewport checks pass. The header checks assert center alignment and no collisions; mobile navigation checks follow the business link instead of the removed menu entry.
+
 ## Made-to-order websites · 20 October 2026
 
 Added `/services/websites` with original OCIX branding, a custom clay shop/device illustration, new/redesign choices, the process and a local email-draft enquiry to support@ocix.in. Desktop/mobile navigation and the contact page point to it; phone home has a visible business entry beside Today’s menu, and a small service bell sits on the kitchen counter. The product menu continues to show its four products.

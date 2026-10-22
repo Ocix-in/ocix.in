@@ -49,6 +49,7 @@ test('404 is rendered but excluded from the sitemap, and crawl files survive the
   assert.ok(htmlFor('/404').includes('noindex, follow') && htmlFor('/404').includes('Page not found'));
   assert.ok(!routes.includes('/404'));
   assert.ok(readFileSync(path.join(root, 'robots.txt'), 'utf8').includes('Sitemap: https://ocix.in/sitemap.xml'));
+  assert.match(readFileSync(path.join(root, 'llms.txt'), 'utf8'), /^# OCIX\n\n> OCIX \(ocix\.in\) is an independent software studio/);
   const publisherLine = readFileSync('public/ads.txt', 'utf8');
   assert.match(publisherLine, /^google\.com, pub-\d+, DIRECT, [a-f0-9]+\s*$/);
   assert.equal(readFileSync(path.join(root, 'ads.txt'), 'utf8'), publisherLine);

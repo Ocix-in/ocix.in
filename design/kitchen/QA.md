@@ -2,6 +2,12 @@
 
 Verification notes for the production static build. The original unit tests remain unchanged.
 
+## Consistent favicon on refresh · 26 October 2026
+
+The shared HTML head now declares one transparent 96 px mark-only PNG before page metadata. Removed the competing 16/32 px PNG and ICO declarations; a new filename replaces the legacy cached URLs. The root ICO, touch and app icons remain transparent mark-only fallbacks. Brand generation reproduces the primary PNG.
+
+The build and all seven original unit tests pass. All 21 generated pages, including 404, declare exactly the same primary favicon. The public, built and served PNGs match; all four corners have zero alpha. In-app browser checks confirm the same icon URL after a fresh home load, home refresh, navbar navigation to Recipes and Recipes refresh. Browser chrome’s displayed favicon is outside the permitted UI inspection surface; the verification covers the page declarations and served icon.
+
 ## Return navigation and the pastry case · 20 October 2026
 
 Every interior page has a round back-to-kitchen button beside the logo, visible at all screen widths. The active navbar link includes a return arrow and leads home on its next click; other tabs still open their pages. This behavior is shared with the mobile menu, including contact and policy links. Desktop navigation stays centered. The service header now has a teal-dot Taking orders control, shortened to Orders on phones, which opens contact.

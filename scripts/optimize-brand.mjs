@@ -12,6 +12,9 @@ const mark=await sharp(data,{raw:info}).resize(400,400,{fit:'contain',background
 const canvas=await sharp({create:{width:448,height:448,channels:4,background:'#00000000'}}).composite([{input:mark}]).png().toBuffer();
 await sharp(canvas).webp({quality:94}).toFile('public/assets/ocix-mark.webp');
 await sharp(canvas).resize(128,128).webp({quality:85}).toFile('public/assets/ocix-badge.webp');
+// One transparent, mark-only tab icon with a fresh URL for legacy favicon caches.
+// Keep this versioned filename and the declaration in index.html in sync.
+await sharp(canvas).resize(96,96).png().toFile('public/favicon-ocix-20261026.png');
 for(const [name,size] of [['favicon-16x16',16],['favicon-32x32',32],['apple-touch-icon',180],['android-chrome-192x192',192],['android-chrome-512x512',512]]){
  const image=sharp(canvas).resize(size,size);
  await image.png({palette:size>=180,colours:128,effort:10}).toFile(`${dir}/${name}.png`);
